@@ -4,11 +4,11 @@ An end-to-end OCR solution designed to recognize complex mathematical symbols an
 
 ## 🌟 Key Features
 
-**Multi-Format Support:** Process standard image formats (PNG, JPG, JPEG, GIF, WebP) or multi-page PDF documents[cite: 32].
-**Interactive Selection:** Use an integrated drawable canvas to draw precise bounding boxes around specific equations[cite: 32].
-**Intelligent OCR Engine:** Powered by the `ocr_text` model, which utilizes the **Donut-OCR architecture** and was trained on the **Harvard im2latex dataset**[cite: 31].
-**Web-Based Interface:** Built using **Streamlit** for a seamless, user-friendly experience[cite: 32].
-**Real-time Conversion:** Instantly converts selected regions into Markdown and raw LaTeX code for immediate use[cite: 32].
+**Multi-Format Support:** Process standard image formats (PNG, JPG, JPEG, GIF, WebP) or multi-page PDF documents.
+**Interactive Selection:** Use an integrated drawable canvas to draw precise bounding boxes around specific equations.
+**Intelligent OCR Engine:** Powered by the `ocr_text` model, which utilizes the **Donut-OCR architecture** and was trained on the **Harvard im2latex dataset**.
+**Web-Based Interface:** Built using **Streamlit** for a seamless, user-friendly experience.
+**Real-time Conversion:** Instantly converts selected regions into Markdown and raw LaTeX code for immediate use.
 
 ## 🛠️ Technology Stack
 

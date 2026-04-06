@@ -31,8 +31,8 @@ An end-to-end OCR solution designed to recognize complex mathematical symbols an
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/PrkRaju2003/Automated-Math-Recognition.git](https://github.com/PrkRaju2003/texify.git)
-   cd texify
+   git clone [https://github.com/PrkRaju2003/ocr_chat.git](https://github.com/PrkRaju2003/ocr_chat.git)
+   cd ocr_chat
 
    pip install streamlit pandas streamlit-drawable-canvas pypdfium2 pillow ocr_text
 

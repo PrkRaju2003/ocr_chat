@@ -1,0 +1,1229 @@
+{
+    "ocr_text": {
+        "scores": {
+            "bleu": 0.8735848727394223,
+            "meteor": 0.8932459321874002,
+            "edit": 0.054098289949735284
+        },
+        "text": [
+            {
+                "prediction": "Let us first consider a system of classical point masses in gravitational interaction in a space of dimension d=3.",
+                "reference": "Let us first consider a system of classical point masses in gravitational interaction in a space of dimension d=3."
+            },
+            {
+                "prediction": "\\left(\\alpha^{\\prime}\\right)^{-1}\\,e^{-\\phi/2}f_{16}\\,s i m\\ g^{-24}\\sqrt{N}\\ ,",
+                "reference": "\\left(\\alpha^{\\prime}\\right)^{-1}e^{-\\phi/2}f_{16}\\,s i m\\ g^{-24}\\sqrt{N}\\ ,"
+            },
+            {
+                "prediction": "(,)=(,)_{1}+(,)_{2}\\,.",
+                "reference": "\\left(,\\right)=\\left(,\\right)_{1}+\\left(,\\right)_{2}."
+            },
+            {
+                "prediction": "\\int_{k5}=\\int\\frac{d^{4}k}{(2\\pi)^{4}}\\frac{1}{2\\ell}\\sum_{k^{5}}\\;,",
+                "reference": "\\int_{k5}=\\int{\\frac{d^{4}k}{(2\\pi)^{4}}}{\\frac{1}{2\\ell}}\\sum_{k^{5}}\\ ,"
+            },
+            {
+                "prediction": "\\tilde{f}_{2}=\\Phi(x-z_{2},x-z_{2})",
+                "reference": "\\tilde{f}_{2}=\\Phi(x-z_{2},x-z_{2})"
+            },
+            {
+                "prediction": "\\mathbb{C}_{\\mu}=\\mathbb{C}, for any \\mu\\in\\mathbb{N}; *local algebras* and *local* algebraic K_i^{loc}-theory were introduced in .",
+                "reference": "\\mathbb{C}_{\\mu}=\\mathbb{C}, for any \\mu\\in\\mathbb{N}; *local algebras* and *local* algebraic K^{loc}_{i}-theory were introduced in ."
+            },
+            {
+                "prediction": "In this description, in order to account for the contribution of the magnetic charge Q_B to the mass, the Smarr mass formula is generalized; it becomes a cubic equation.",
+                "reference": "In this description, in order to account for the contribution of the magnetic charge Q_{B} to the mass, the Smarr mass formula is generalized; it becomes a cubic equation."
+            },
+            {
+                "prediction": "\\left[ \\sum_{p>q \\ge 0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q} - \\sum_{p>q>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q} \\right]\\,.\\,\n\\end{aligned}The expressions inside each pair of square brackets obtain level width of two-variable telescopes.The same thing is that the distance between two-variable telescopes is the same as the opposite way.The same thing is that the distance between two-variable telescopes is the same as the opposite way.The same thing is that the distance between two-variable telescopes is the same as the opposite way.The same thing is that the distance between two-variable telescopes is the same as the opposite way.The same thing is that the distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom is the same as the opposite way.The distance between two-variable degrees of freedom",
+                "reference": "\\left[\n\\sum_{p>q \\ge 0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q}\n-\\sum_{p>q>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q}\n\\right]\n\\right\\}\\,.\\\\\n\\end{aligned}The expressions inside each pair of square brackets both involve a kind of two-variable telescoping sum\u2013the only terms that do not cancel are those forq=0.Thus,we obtain\\begin{aligned}\n\\frac{S_3}{8} &=& 2k(2k-1) \\times\\\\\n&& \\left\\{\n\\sum_{p>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k}\n-\\sum_{p>0}\\binom{2k-2}{k+p}\\binom{2k-2}{k-1}\n\\right\\}\\,.\\\\\n\\end{aligned}Taking out the factors that are independent ofp,we are left with two easily-evaluated sums,giving\\begin{aligned}\nS_3 = 8k(2k-1) \\!\\!\\!&\\times&\\!\\!\\!"
+            },
+            {
+                "prediction": "\\frac{\\phi^{\\prime\\prime}}{A}+\\frac{1}{A}\\left(-\\frac{1}{2}\\frac{A^{\\prime}}{A}+2\\frac{B^{\\prime}}{B}+\\frac{2}{r}\\right)\\phi^{\\prime}-\\frac{2}{r^{2}}\\phi-\\lambda\\phi(\\phi^{2}-\\eta^{2})=0\\,.",
+                "reference": "{\\frac{\\phi^{\\prime\\prime}}{A}}+{\\frac{1}{A}}\\left(-{\\frac{1}{2}}{\\frac{A^{\\prime}}{A}}+2{\\frac{B^{\\prime}}{B}}+{\\frac{2}{r}}\\right)\\phi^{\\prime}-{\\frac{2}{r^{2}}}\\phi-\\lambda\\phi(\\phi^{2}-\\eta^{2})=0\\,."
+            },
+            {
+                "prediction": "\\Delta_{\\mu\\nu}(p)=\\frac{4\\pi}{\\kappa}\\frac{\\mu}{p^{2}(p^{2}+\\mu^{2})}(\\mu\\epsilon_{\\mu\\nu\\lambda}p^{\\lambda}+\\delta_{\\mu\\nu}p^{2}-p_{\\mu}p_{\\nu})",
+                "reference": "\\Delta_{\\mu\\nu}(p)=\\frac{4\\pi}{\\kappa}\\frac{\\mu}{p^{2}(p^{2}+\\mu^{2})}(\\mu\\epsilon_{\\mu\\nu\\lambda}p^{\\lambda}+\\delta_{\\mu\\nu}p^{2}-p_{\\mu}p_{\\nu})"
+            },
+            {
+                "prediction": "While the branching ratio for B_s\\to\\mu^+\\mu^- turns out to be rather close to SM prediction, although a bit lower, the central value for the one of B_d\\to\\mu^+\\mu^- is by a factor of 3.5 higher than its SM value.",
+                "reference": "While the branching ratio for B_s\\to\\mu^+\\mu^- turns out to be rather close to SM prediction, although a bit lower, the central value for the one of B_d\\to\\mu^+\\mu^- is by a factor of 3.5 higher than its SM value."
+            },
+            {
+                "prediction": "In this article we show how \\mu_{si} can be maximized.",
+                "reference": "In this article we show how \\mu_{si} can be maximized."
+            },
+            {
+                "prediction": "W^{(1)}=\\frac{1}{Z^{(1)}N}\\sum_{R,S}\\frac{d_{R}}{d_{S}}\\exp\\left[-\\frac{g^{2}A_{1}}{2}C_{2}(R)-\\frac{g^{2}A_{2}}{2}C_{2}(S)\\right]\\int d U\\mathrm{Tr}[U]\\chi_{R}(U)\\chi_{S}^{\\dagger}(U),",
+                "reference": "{\\cal W}^{(1)}={\\frac{1}{{\\cal Z}^{(1)}N}}\\sum_{R,S}\\frac{d_{R}}{d_{S}}\\exp\\left[-{\\frac{g^{2}A_{1}}{2}}C_{2}(R)-{\\frac{g^{2}A_{2}}{2}}C_{2}(S)\\right]\\int d U\\mathrm{Tr}[U]\\chi_{R}(U)\\chi_{S}^{\\dagger}(U),"
+            },
+            {
+                "prediction": "Spectral functions are then defined as A(\\omega)=-\\frac{1}{\\pi}\\Im[G(\\omega)], where the spectral broadening is given by the small imaginary component of the energy, \\eta, which regularizes the correlation function.",
+                "reference": "Spectral functions are then defined as A(\\omega)=-\\frac{1}{\\pi}\\Im[G(\\omega)], where the spectral broadening is given by the small imaginary component of the energy, \\eta, which regularizes the correlation function."
+            },
+            {
+                "prediction": "c_{l,m}=\\eta(\\tau)^{-3}\\sum_{-|x|<y\\leq|x|}\\mathrm{sign}(x)\\ q^{(k+2)x^{2}-k y^{2}}",
+                "reference": "c_{l,m}=\\eta(\\tau)^{-3}\\sum_{-|x|<y\\leq|x|}\\mathrm{sign}(x)~q^{(k+2)x^{2}-k y^{2}}"
+            },
+            {
+                "prediction": "The elastic net is characterized by the presence of ridge regression term \\ell^2-norm) and it is defined by the following convex minimization problem: \n\\min_{\\mathbf{x}}\\left\\{\\tau_1\\|\\mathbf{x}\\|_1+\\tau_2\\|\\mathbf{x}\\|_2^2+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_2^2\\right\\},where\\tau_1and\\tau_2are non-negative parameters.An improvement for the EN model was proposed in where a combination of the\\ell^2-penalty and an adaptive version of the\\ell^1-norm have been implemented by considering the minimization problem\n\\min_{\\mathbf{x}}\\left\\{\\tau_1\\sum_{i=1}^n\\omega_i|x_i|+\\tau_2\\|\\mathbf{x}\\|_2^2+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_2^2\\right\\},where the adaptive weights are computed using a solution given by the EN minimization problem[EN1_intro].If we let the solution of EN to be\\mathbf{\\hat{x}}(EN),then the weights are given by the equation\\omega_i=1/(|\\hat{x}_i(EN)|+(1/m))^\\varthetawhere\\varthetais",
+                "reference": "The elastic net is characterized by the presence of ridge regression term \\ell^{2}-norm) and it is defined by the following convex minimization problem: \\label{EN1_intro}\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\|\\mathbf{x}\\|_{1} + \\tau_{2}\\|\\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},where\\tau_{1}and\\tau_{2}are non-negative parameters.An improvement for the EN model was proposed in where a combination of the\\ell^{2}-penalty and an adaptive version of the\\ell^{1}-norm have been implemented by considering the minimization problem\\label{EN2_intro}\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\sum_{i=1}^{n}\\omega_{i}|x_{i}| + \\tau_{2}\\|\\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},where the adaptive weights are computed using a solution given by the EN minimization problem[EN1_intro].If we let the solution of EN to be\\mathbf{\\hat{x}}(EN),then the weights are given by the equation\\omega_{i}=1/(|\\hat{x}_{i}(EN)|+(1/m))^{\\vartheta}where\\varthetais a positive constant.A variant of the above model was propose"
+            },
+            {
+                "prediction": "Finally, the bend in the wires will lead to a potential from the currents in the z-direction, which requires the atom to have enough kinetic energy to overcome it and therefore sets an upper bound to the adiabaticity that can be reached.",
+                "reference": "Finally, the bend in the wires will lead to a potential from the currents in the z-direction, which requires the atom to have enough kinetic energy to overcome it and therefore sets an upper bound to the adiabaticity that can be reached."
+            },
+            {
+                "prediction": "\\int_{-\\epsilon}^{\\infty}d l\\,\\mathrm{e}^{-l\\zeta}\\int_{-\\epsilon}^{\\infty}d l^{\\prime}\\mathrm{e}^{-l^{\\prime}\\zeta}l l^{\\prime}\\frac{l^{\\prime}-l}{l+l^{\\prime}}\\{3\\,\\delta^{\\prime\\prime}(l)-\\frac{3}{4}t\\,\\delta(l)\\}=0.",
+                "reference": "\\int_{-\\epsilon}^{\\infty}d l\\:\\mathrm{e}^{-l\\zeta}\\int_{-\\epsilon}^{\\infty}d l^{\\prime}\\mathrm{e}^{-l^{\\prime}\\zeta}l l^{\\prime}{\\frac{l^{\\prime}-l}{l+l^{\\prime}}}\\{3\\,\\delta^{\\prime\\prime}(l)-{\\frac{3}{4}}t\\,\\delta(l)\\}=0."
+            },
+            {
+                "prediction": "The central obstacle was moved from a central position a_1 =\na_2 = 2cm to one side in increments of0.1or0.2cm,to give a range of differenta_1anda_2,witha_2 denoting the width of the narrow channel.",
+                "reference": "The central obstacle was moved from a central position a_1 =\na_2 = 2cm to one side in increments of0.1or0.2cm,to give a range of differenta_1anda_2,witha_2 denoting the width of the narrow channel."
+            },
+            {
+                "prediction": "I_{1}(y,\\mp r)=\\int_{0}^{\\infty}\\frac{d x}{\\sqrt{x^{2}+y^{2}}}\\frac{1}{\\exp(\\sqrt{x^{2}+y^{2}}\\mp r)+1},",
+                "reference": "I_{1}(y,\\mp r)=\\int_{0}^{\\infty}\\frac{d x}{\\sqrt{x^{2}+y^{2}}}\\frac{1}{\\exp(\\sqrt{x^{2}+y^{2}}\\mp r)+1},"
+            },
+            {
+                "prediction": "g_{a\\bar{b}}=\\partial_{a}\\,\\partial_{\\bar{b}}\\,K(z,\\bar{z})\\ .",
+                "reference": "g_{a\\bar{b}}=\\partial_{a}\\,\\partial_{\\bar{b}}\\,K(z,\\bar{z})\\ ."
+            },
+            {
+                "prediction": "H'|\\Psi^{(0)}\\rangle=E_0|\\Psi^{(0)}\\rangle is solved for the wavefunction over the quantum impurity and bath, |\\Psi^{(0)}\\rangle.",
+                "reference": "H'|\\Psi^{(0)}\\rangle=E_0|\\Psi^{(0)}\\rangle is solved for the wavefunction over the quantum impurity and bath, |\\Psi^{(0)}\\rangle."
+            },
+            {
+                "prediction": "It can be expressed as P_{{\\mathrm{tr}}}=\\cos\\Theta_{{\\mathrm{LC}}}=\\left({1-\\frac{{B_{{\\mathrm{in}}}}}{{B_{{\\mathrm{bd}}}}}}\\right)^{1/2} and is shown in Fig.",
+                "reference": "It can be expressed as P_{\\rm tr}=\\cos{\\Theta_{\\rm LC}}=\\left(1-\\frac{B_{\\rm in}}{B_{\\rm bd}}\\right)^{1/2} and is shown in Fig."
+            },
+            {
+                "prediction": "H_{i j}^{a}=F_{i j}^{a}-g f_{\\;\\;b c}^{a}A_{i}^{b}A_{j}^{c},",
+                "reference": "H_{i j}^{a}=F_{i j}^{a}-g f_{\\;\\;b c}^{a}A_{i}^{b}A_{j}^{c},"
+            },
+            {
+                "prediction": "\\mathrm{Tr}(\\gamma_{g})=-2~,~~~\\mathrm{Tr}(\\gamma_{R_{s}})=\\mathrm{Tr}(\\gamma_{g R_{s}})=0~.",
+                "reference": "{\\mathrm{Tr}}(\\gamma_{g})=-2~,~~~{\\mathrm{Tr}}(\\gamma_{R_{s}})={\\mathrm{Tr}}(\\gamma_{g R_{s}})=0~."
+            },
+            {
+                "prediction": "S-\\ln Z=-\\alpha N-\\beta^{\\rho}P_{\\rho}\\ .",
+                "reference": "S-\\ln{\\cal Z}=-\\alpha{\\cal N}-\\beta^{\\rho}{\\cal P}_{\\rho}\\ ."
+            },
+            {
+                "prediction": "Here \\kappa\\in C^2(M) is such that the operator -\\Delta_g+\\kappa is coercive.",
+                "reference": "Here \\kappa\\in C^2(M) is such that the operator -\\Delta_g+\\kappa is coercive."
+            },
+            {
+                "prediction": "\\epsilon_{\\mathrm{vac}}=\\left\\langle{\\frac{\\beta(g)}{8g}}G\\cdot G\\right\\rangle",
+                "reference": "\\epsilon_{\\mathrm{vac}}=\\left<\\frac{\\beta(g)}{8g}G\\cdot G\\right>"
+            },
+            {
+                "prediction": "Indeed, if we concentrate on B^0_s-\\bar B^0_s mixing, b\\to s\\mu^+\\mu^- and b\\to s\\nu\\bar\\nu observables there are only four new parameters to our disposal: the three reduced couplings of which the first one is generally complex and the other two real.",
+                "reference": "Indeed, if we concentrate on B_s^0-\\bar B_s^0 mixing, b\\to s\\mu^+\\mu^- and b\\to s\\nu\\bar\\nu observables there are only four new parameters to our disposal: the three *reduced couplings* of which the first one is generally complex and the other two real."
+            },
+            {
+                "prediction": "where the constant parameter Q_o is the value of the electric charge Q_E in absence of magnetic charge Q_B.",
+                "reference": "where the constant parameter Q_{o} is the value of the electric charge Q_{E} in absence of magnetic charge Q_{B}."
+            },
+            {
+                "prediction": "(N_{c}+\\tilde{N}_{c},\\overline{{{N_{c}+\\tilde{N}_{c}}}})(1,1,0,\\beta_{i}),\\quad i=1,2,3",
+                "reference": "(N_{c}+\\tilde{N}_{c},\\overline{{{N_{c}+\\tilde{N}_{c}}}})(1,1,0,\\beta_{i}),\\ \\ \\ i=1,2,3"
+            },
+            {
+                "prediction": "\\delta_{k}A_{\\mu}=[D_{\\mu},[A_{\\nu_{1}},[\\ldots,[A_{\\nu_{k-1}},L^{\\nu_{1}\\ldots\\nu_{k-1}}]\\ldots]]].",
+                "reference": "\\delta_{k}A_{\\mu}=[D_{\\mu},[A_{\\nu_{1}},[\\ldots,[A_{\\nu_{k-1}},L^{\\nu_{1}\\ldots\\nu_{k-1}}]\\ldots]]]."
+            },
+            {
+                "prediction": "# Formalism\n\n## Magnitude of the 21-cm Signal\n\nThe 21-cm transition results from hyperfine splitting in the 1S ground state of the hydrogen atom when the magnetic moments of the proton and electron flip between aligned (triplet state) and anti-aligned (singlet state).",
+                "reference": "# Formalism\n\n## Magnitude of the 21-cm Signal\n\nThe 21-cm transition results from hyperfine splitting in the 1\\mathrm{S} ground state of the hydrogen atom when the magnetic moments of the proton and electron flip between aligned (triplet state) and anti-aligned (singlet state)."
+            },
+            {
+                "prediction": "V_{a b\\ \\ m n}^{k}=\\frac{1}{g}\\ E_{a}^{r}\\ E_{b}^{s}\\epsilon_{r s(m}\\ \\delta_{n)}^{i}.",
+                "reference": "V_{a b\\ \\ m n}^{k}=\\frac{1}{g}\\ E_{a}^{r}\\ E_{b}^{s}\\epsilon_{r s(m}\\ \\delta_{n)}^{i}."
+            },
+            {
+                "prediction": "In fact, in CMOS circuits, the dynamic power consumption is described by the following equation : P_{dyn}=C_{eff}.V^2.f where C_{eff} represents the circuit effective capacitance, V, the supply voltage associated to the clock frequency f .",
+                "reference": "In fact, in CMOS circuits, the dynamic power consumption is described by the following equation : \\label{DVFS-P-EQUATION}\nP_{dyn}=C_{eff}.V^2.f where C_{eff} represents the circuit effective capacitance, V, the supply voltage associated to the clock frequency f ."
+            },
+            {
+                "prediction": "\\phi_{\\eta}(q_{z},q_{0})=\\left(\\frac{1}{\\pi}\\right)^{1/2}\\exp\\left\\{-\\frac{1}{2}\\left(e^{-2\\eta}q_{u}^{2}+e^{2\\eta}q_{v}^{2}\\right)\\right\\}.",
+                "reference": "\\phi_{\\eta}(q_{z},q_{0})=\\left({\\frac{1}{\\pi}}\\right)^{1/2}\\exp\\left\\{-{\\frac{1}{2}}\\left(e^{-2\\eta}q_{u}^{2}+e^{2\\eta}q_{v}^{2}\\right)\\right\\}."
+            },
+            {
+                "prediction": "Taking the spatial domain to be the whole space, the velocity can be recovered from the vorticity via the Biot-Savart Law,\n\nu(x)=c\\int\\nabla\\frac{1}{|x-y|}\\times\\omega(y)\\,dy;\n\nthis makes ([vorticity]) a closed (non-local) system for the vorticity field alone.",
+                "reference": "Taking the spatial domain to be the whole space, the velocity can be recovered from the vorticity via the Biot-Savart Law,\n\nu(x)=c\\int\\nabla\\frac{1}{|x-y|}\\times\\omega(y)\\,dy;\n\nthis makes ([vorticity]) a closed (non-local) system for the vorticity field alone."
+            },
+            {
+                "prediction": "For a channel just slightly wider than 2R, the foam adopts a crystalline structure with only a few columns of bubbles (double staircase and staircase structure).",
+                "reference": "For a channel just slightly wider than 2R, the foam adopts a crystalline structure with only a few columns of bubbles (double staircase and staircase structure)."
+            },
+            {
+                "prediction": "The motion of the foam was recorded using a 1312\\times1082 pixel digital video camera running at 25 fps.",
+                "reference": "The motion of the foam was recorded using a 1312\\times1082 pixel digital video camera running at 25\u00a0fps."
+            },
+            {
+                "prediction": "## Enclosed Channel\n\nThe enclosed channel tests were carried out with a Hele-Shaw plate separation of h=0.1 cm.",
+                "reference": "## Enclosed Channel\n\nThe enclosed channel tests were carried out with a Hele-Shaw plate separation of h=0.1\u00a0cm."
+            },
+            {
+                "prediction": "R_{\\mu\\nu}-\\frac{1}{2}R g_{\\mu\\nu}=0",
+                "reference": "R_{\\mu\\nu}-\\frac{1}{2}R g_{\\mu\\nu}=0"
+            },
+            {
+                "prediction": "\\frac{1}{2\\lambda f^{2}}\\int\\,d^{4}X\\,\\frac{d^{4}q}{\\left(2\\pi\\right)^{4}}\\left(\\varphi(X)\\right)^{2}\\tilde{\\pi}_{0}(q)\\left[\\partial_{q}^{2}+\\frac{4i\\lambda}{q^{2}-\\Sigma^{2}(q)}\\right]\\tilde{\\pi}_{0}(q),",
+                "reference": "\\frac{1}{2\\lambda f^{2}}\\int\\;d^{4}X\\,\\frac{d^{4}q}{\\left(2\\pi\\right)^{4}}\\left(\\varphi(X)\\right)^{2}\\tilde{\\pi}_{0}(q)\\left[\\partial_{q}^{2}+\\frac{4i\\lambda}{q^{2}-\\Sigma^{2}(q)}\\right]\\tilde{\\pi}_{0}(q),"
+            },
+            {
+                "prediction": "Let (B,g_B) and (N,g_N) be two riemannian manifolds of dimensions b and n, respectively.",
+                "reference": "Let (B,g_B) and (N,g_N) be two riemannian manifolds of dimensions b and n, respectively."
+            },
+            {
+                "prediction": "M=\\left(\\frac{2\\sqrt{2}}{3}\\right)~\\frac{m^{3}}{\\lambda}+~\\hbar m\\left[\\frac{1}{6}\\sqrt{\\frac{3}{2}}-\\frac{3}{\\pi\\sqrt{2}}\\right]",
+                "reference": "M=\\left(\\frac{2\\sqrt{2}}{3}\\right)~\\frac{m^{3}}{\\lambda}+~\\hbar m\\left[\\frac{1}{6}\\sqrt{\\frac{3}{2}}-\\frac{3}{\\pi\\sqrt{2}}\\right]"
+            },
+            {
+                "prediction": "The essential idea for static quantities is that the Schmidt decomposition of a mean-field bulk state defines a manifestly *finite* quantum impurity mapping; for a cluster of l impurity sites there are (at most) l bath sites.",
+                "reference": "The essential idea for static quantities is that the Schmidt decomposition of a mean-field bulk state defines a manifestly *finite* quantum impurity mapping: for a cluster of l impurity sites there are (at most) l bath sites."
+            },
+            {
+                "prediction": "\\frac{g_{Y M}^{2}N}{J^{3}}\\frac{J^{4}}{N^{2}}\\frac{g^{2}N}{J^{2}}",
+                "reference": "\\frac{g_{Y M}^{2}N}{J^{3}}\\frac{J^{4}}{N^{2}}\\frac{g^{2}N}{J^{2}}"
+            },
+            {
+                "prediction": "Classification is based on the observation that high values of the coefficients in the solution \\mathbf{\\hat{x}} are associated with the columns of A of a single class, corresponding to the identity of the probe.",
+                "reference": "Classification is based on the observation that high values of the coefficients in the solution \\mathbf{\\hat{x}} are associated with the columns of A of a single class, corresponding to the identity of the probe."
+            },
+            {
+                "prediction": "The pattern of 5\\times60 parallel 0.8-mm-diameter holes shown in Fig.",
+                "reference": "The pattern of 5\\times60 parallel 0.8-mm-diameter holes shown in Fig."
+            },
+            {
+                "prediction": "E_{4s}=2(Q+Q^{-1})+\\xi_{1}+\\xi_{1}^{-1}+\\xi_{2}+\\xi_{2}^{-1}",
+                "reference": "E_{4s}=2(Q+Q^{-1})+\\xi_{1}+\\xi_{1}^{-1}+\\xi_{2}+\\xi_{2}^{-1}"
+            },
+            {
+                "prediction": "H_{T}=H_{1}+\\Sigma_{i=1}^{3}c^{i}\\,\\phi_{i},\\ \\ \\ \\ H_{1}=-\\frac{1}{2}r^{2}q_{x x}-p\\,q_{x x}",
+                "reference": "{\\cal H}_{T}={\\cal H}_{1}+\\Sigma_{i=1}^{3}c^{i}\\,\\phi_{i},\\;\\;\\;\\;\\;{\\cal H}_{1}=-\\frac{1}{2}r^{2}q_{x x}-p\\,q_{x x}"
+            },
+            {
+                "prediction": "A=a r^{\\beta},\\quad B=b r^{\\beta+2};\\qquad a/b=c(\\beta+2)/(\\beta-2),",
+                "reference": "A=a r^{\\beta},\\quad B=b r^{\\beta+2};\\qquad a/b=c(\\beta+2)/(\\beta-2),"
+            },
+            {
+                "prediction": "The first stars are expected to be very massive resulting in surface temperatures of order 10^5 K , though evidence for such objects is currently limited to abundance patterns in low-mass stars in the Milky Way .",
+                "reference": "The first stars are expected to be very massive resulting in surface temperatures of order 10^5 K , though evidence for such objects is currently limited to abundance patterns in low-mass stars in the Milky Way ."
+            },
+            {
+                "prediction": "e^{i S_{e f f}(x)}=\\int d\\bar{\\psi}d\\psi e^{i\\int\\tilde{L}_{f}d t}",
+                "reference": "e^{i S_{e f f}(x)}=\\int d\\bar{\\psi}d\\psi e^{i\\int\\tilde{L}_{f}d t}"
+            },
+            {
+                "prediction": "The electrons which remain trapped during the 2.3 \\mus prior to the train arrival are cleared out during the first 6 of the 20 bunch passages, reabsorbed either in the detector or the vacuum chamber wall.",
+                "reference": "The electrons which remain trapped during the 2.3\u00a0\\mus prior to the train arrival are cleared out during the first 6 of the 20 bunch passages, reabsorbed either in the detector or the vacuum chamber wall."
+            },
+            {
+                "prediction": "J_{\\mu}=-\\frac{i e}{2}\\bigg[\\Phi^{*}D_{\\mu}\\Phi-\\Phi\\big(D_{\\mu}\\Phi\\big)^{*}\\bigg]\\,.",
+                "reference": "J_{\\mu}=-{\\frac{i e}{2}}\\bigg[\\Phi^{\\ast}D_{\\mu}\\Phi-\\Phi\\big(D_{\\mu}\\Phi\\big)^{\\ast}\\bigg]\\,."
+            },
+            {
+                "prediction": "S=\\frac{1}{G}\\int d x d t\\,\\sqrt{-\\bar{g}}\\,e^{-2\\bar{\\phi}}(\\bar{R}+4(\\bar{\\nabla}\\bar{\\phi})^{2}+4\\lambda^{2})-\\frac{1}{2}\\int d x d t\\,\\sqrt{-\\bar{g}}\\,\\sum_{i=1}^{N}(\\bar{\\nabla}f_{i})^{2},",
+                "reference": "S=\\frac{1}{G}\\int d x d t\\:\\sqrt{-\\bar{g}}\\:e^{-2\\bar{\\phi}}(\\bar{R}+4(\\bar{\\nabla}\\bar{\\phi})^{2}+4\\lambda^{2})-\\frac{1}{2}\\int d x d t\\:\\sqrt{-\\bar{g}}\\:\\sum_{i=1}^{N}(\\bar{\\nabla}f_{i})^{2},"
+            },
+            {
+                "prediction": "In general, the collisional coupling is a sum over collision-partners, x_c=\\sum_i\\frac{n_i\\kappa_{10}^i}{A_{10}}\\frac{T_*}{T_\\gamma} where n_i is the number density of species i, and \\kappa_{10}^i=\\kappa_{10}^i(T_{\\rm K})is the rate coefficient for spin de-excitation via collisions with speciesi.",
+                "reference": "In general, the collisional coupling is a sum over collision-partners, x_c=\\sum_i\\frac{n_i\\kappa_{10}^i}{A_{10}}\\frac{T_{\\ast}}{T_{\\gamma}}\\label{eq:xc} where n_i is the number density of species i, and \\kappa_{10}^i =\n\\kappa_{10}^i(T_{\\text{K}})is the rate coefficient for spin de-excitation via collisions with speciesi."
+            },
+            {
+                "prediction": "A superscript * labels results which have been obtained in the isospin symmetric limit.",
+                "reference": "A superscript * labels results which have been obtained in the isospin symmetric limit."
+            },
+            {
+                "prediction": "The redshift evolution of the 21-cm signal, \\delta T_b(z), as measured relative to the CMB, also depends on the mean hydrogen ionized fraction, \\overline{x}_i, and in general on the baryon over-density and proper motions along the line of sight, though the last two effects should be negligible for studies of the all-sky spectrum, leaving , \\delta T_b \\simeq 27(1-\\overline{x}_i)\\left(\\frac{\\Omega_{\\rm b,0}h^2}{0.023}\\right)\\left(\\frac{0.15}{\\Omega_{\\rm m,0}h^2}\\frac{1+z}{10}\\right)^{1/2}\\left(1-\\frac{T_{\\gamma}}{T_{\\rm S}}\\right),\n where h is the Hubble parameter today in units of 100\\,\\rm\nkm\\,s^{-1}\\,Mpc^{-1},and\\Omega_{\\rm b,0}and\\Omega_{\\rm m,0} are the fractional contributions of baryons and matter to the critical energy density, respectively.",
+                "reference": "The redshift evolution of the 21-cm signal, \\delta T_b(z), as measured relative to the CMB, also depends on the mean hydrogen ionized fraction, \\overline{x}_i, and in general on the baryon over-density and proper motions along the line of sight, though the last two effects should be negligible for studies of the all-sky spectrum, leaving , \\delta T_b\\simeq27(1-\\overline{x}_i)\\left(\\frac{\\Omega_{\\text{b},0}h^2}{0.023}\\right)\\left(\\frac{0.15}{\\Omega_{\\text{m},0}h^2}\\frac{1+z}{10}\\right)^{1/2}\\left(1-\\frac{T_{\\gamma}}{T_{\\mathrm{S}}}\\right),\\label{eq:dTb} where h is the Hubble parameter today in units of 100 \\ \\mathrm{km} \\\n\\mathrm{s}^{-1} \\ \\mathrm{Mpc}^{-1},and\\Omega_{\\text{b},0}and\\Omega_{\\text{m},0} are the fractional contributions of baryons and matter to the critical energy density, respectively."
+            },
+            {
+                "prediction": "\\mathbf{J}^{2}=(\\mathbf{J}^{2})^{\\dagger}=G(\\mathbf{J}^{2})^{+}G,",
+                "reference": "\\mathbf{J}^{2}=(\\mathbf{J}^{2})^{\\dagger}=G(\\mathbf{J}^{2})^{+}G,"
+            },
+            {
+                "prediction": "\\mathbf{\\hat{x}}\\in\\mathbb{R}^n",
+                "reference": "\\mathbf{\\hat{x}}\\in\\mathbb{R}^{n}"
+            },
+            {
+                "prediction": "X_{\\pm z^{a}}=\\theta_{a\\bar{a}}S^{N}\\bar{z}^{\\bar{a}}(S^{\\dagger})^{N}+\\sum_{n=0}^{N-1}\\lambda_{a,n}|n\\rangle\\langle n|\\otimes P_{0}^{(2)},",
+                "reference": "X_{\\pm z^{a}}=\\theta_{a\\bar{a}}S^{N}\\bar{z}^{\\bar{a}}(S^{\\dagger})^{N}+\\sum_{n=0}^{N-1}\\lambda_{a,n}|n\\rangle\\langle n|\\otimes P_{0}^{(2)},"
+            },
+            {
+                "prediction": "Let V:\\mathbb{X}\\to[1,+\\infty) be a measurable function such that V(x_0)=1 for some x_0\\in\\mathbb{X}.",
+                "reference": "Let V:\\mathbb{X}\\rightarrow[1,+\\infty) be a measurable function such that V(x_0)=1 for some x_0\\in\\mathbb{X}."
+            },
+            {
+                "prediction": "The visibility can be therefore adjusted with a resolution of V_{n+1}-V_n\\approx0.06.",
+                "reference": "The visibility can be therefore adjusted with a resolution of V_{n+1}-V_n\\approx0.06."
+            },
+            {
+                "prediction": "\\delta_{i=j}=\\delta_{+-}=\\delta_{-+}=1,\\quad\\delta_{i\\neq j}=\\delta_{i+}=\\delta_{i-}=\\delta_{++}=\\delta_{--}=0.",
+                "reference": "\\delta_{i=j}=\\delta_{+-}=\\delta_{-+}=1,\\quad\\delta_{i\\neq j}=\\delta_{i+}=\\delta_{i-}=\\delta_{++}=\\delta_{--}=0."
+            },
+            {
+                "prediction": "In order to obtain more precise quantitative properties of the previous equation, one can wonder about the rate of convergence of g(t,x) to the asymptotic profile G(x).",
+                "reference": "In order to obtain more precise quantitative properties of the previous equation, one can wonder about the rate of convergence of g(t,x) to the asymptotic profile G(x)."
+            },
+            {
+                "prediction": "I_{L(R)}^{A}=-\\epsilon^{A B C}[I_{L(R)}^{B},I_{L(R)}^{C}],",
+                "reference": "I_{L(R)}^{A}=-\\epsilon^{A B C}[I_{L(R)}^{B},I_{L(R)}^{C}],"
+            },
+            {
+                "prediction": "Q^{M}=\\dot{g}_{0}\\int_{\\phi(\\Sigma)}\\sum_{i=1}^{l}\\beta_{i}\\eta_{i}\\int_{N_{i}}\\frac{1}{\\sqrt{g}}\\delta^{D}(x-z_{i}(u))\\sqrt{g_{u}}",
+                "reference": "Q^{M}=\\dot{g}_{0}\\int_{\\phi(\\Sigma)}\\sum_{i=1}^{l}\\beta_{i}\\eta_{i}\\int_{N_{i}}\\frac1{\\sqrt{g}}\\delta^{D}(x-z_{i}(u))\\sqrt{g_{u}}"
+            },
+            {
+                "prediction": "\\varphi\\sim A+B\\mathrm{sign}(t)|\\vec{k}t|^{\\epsilon}.",
+                "reference": "\\varphi\\sim A+B\\mathrm{sign}(t)|\\vec{k}t|^{\\epsilon}."
+            },
+            {
+                "prediction": "Improvement |\n|:---------:|:------------:|:----------------:|:----------------:|:----------------:|\n| CPU (MPI) |      8       | \\sim6 Hr |      1.0\\times      |\n|      16       | \\sim4 Hr |      1.5\\times      |\n|      32       | \\sim1.5 Hr |      4.0\\times      |\n|      64       | \\sim1 Hr |      6.0\\times      |\n|       GPU       |      1       | \\sim1 Hr |      6.0\\times      |\n\nThe approximate times taken to simulate the propagation of an atom through our atom chip system on both GPU and CPU.",
+                "reference": "Improvement |\n|:---------:|:------------:|:--------------------:|:----------------:|\n| CPU (MPI) |      8       |  \\sim6 Hr  |   1.0\\times    |\n|           |      16      |  \\sim4 Hr  |   1.5\\times    |\n|           |      32      | \\sim1.5 Hr |   4.0\\times    |\n|           |      64      |  \\sim1 Hr  |   6.0\\times    |\n|    GPU    |      1       |  \\sim1 Hr  |   6.0\\times    |\n\nThe approximate times taken to simulate the propagation of an atom through our atom chip system on both GPU and CPU."
+            },
+            {
+                "prediction": "For a given observable, D_i, we estimate the probability that a SN is of Type Ia, P(\\mathrm{Ia}|D_i).",
+                "reference": "For a given observable, D_{i}, we estimate the probability that a SN is of Type Ia, P({\\rm Ia}|D_{i})."
+            },
+            {
+                "prediction": "Q_{a,b}(\\mu,\\nu;N)=p_{a,b}(\\mu,\\nu;0;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}p_{a,b}(\\mu,\\nu;\\lambda;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}m_{a,b}(\\mu,\\nu;\\lambda;N).",
+                "reference": "Q_{a,b}(\\mu,\\nu;N)=p_{a,b}(\\mu,\\nu;0;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}p_{a,b}(\\mu,\\nu;\\lambda;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}m_{a,b}(\\mu,\\nu;\\lambda;N)."
+            },
+            {
+                "prediction": "Z(j_{k})=e^{i Z_{c}(j_{k})}",
+                "reference": "Z({j_{k}})=e^{i Z_{c}({j_{k}})}"
+            },
+            {
+                "prediction": "\\sum_{i,j,k,l=1}^{h}a_{i j}^{p}A_{i k}A_{j l}\\overline{{{a}}}_{k l}^{q}=\\sum_{i,j,k,l,m,n=1}^{h}b_{i j m}^{p}A_{i k}A_{j l}A_{m n}\\overline{{{b}}}_{k l n}^{q}.",
+                "reference": "\\sum_{i,j,k,l=1}^{h}a_{i j}^{p}A_{i k}A_{j l}\\overline{{a}}_{k l}^{q}=\\sum_{i,j,k,l,m,n=1}^{h}b_{i j m}^{p}A_{i k}A_{j l}A_{m n}\\overline{{b}}_{k l n}^{q}."
+            },
+            {
+                "prediction": "The elliptical shape and tilt that show up on the distribution of the teleported states on the Z-X plane is due to the non-ideal entanglement and some residual rotation of the entangled pair used on the protocol, respectively.",
+                "reference": "The elliptical shape and tilt that show up on the distribution of the teleported states on the Z-X plane is due to the non-ideal entanglement and some residual rotation of the entangled pair used on the protocol, respectively."
+            },
+            {
+                "prediction": "The same type of singularity has also been identified in 11D supergravity , but is not yet as comprehensively studied.",
+                "reference": "The same type of singularity has also been identified in 11D supergravity , but is not yet as comprehensively studied."
+            },
+            {
+                "prediction": "t_{a}(M)-t_{a}^{*}(M)=t_{a}(M)(R-R^{*})t_{a}^{*}(M)",
+                "reference": "t_{a}(M)-t_{a}^{*}(M)=t_{a}(M)(R-R^{*})t_{a}^{*}(M)"
+            },
+            {
+                "prediction": "A local version of BMO, usually denoted by bmo, is defined by finiteness of the following expression, \\|f\\|_{bmo} = \\sup_{x \\in \\mathbb{R}^3, 0 < r < \\delta} \\Omega \\bigl(f, I(x,r)\\bigr) \n+ \\sup_{x \\in \\mathbb{R}^3, r \\ge \\delta} \\frac{1}{\\|I(x,r)\\|} \\int_{I(x,r)} \\|f(y)\\| \\, dy, for some positive \\delta.",
+                "reference": "A local version of BMO, usually denoted by bmo, is defined by finiteness of the following expression, \\|f\\|_{bmo} = \\sup_{x \\in \\mathbb{R}^3, 0 < r < \\delta} \\Omega \\bigl(f, I(x,r)\\bigr)\n + \\sup_{x \\in \\mathbb{R}^3, r \\ge \\delta} \\frac{1}{|I(x,r)|} \\int_{I(x,r)} |f(y)| \\, dy, for some positive \\delta."
+            },
+            {
+                "prediction": "q_{j}(x_{0})=A_{j+1},\\quad q_{j}^{\\prime}(x_{0})=B_{j+1},\\quad j=0,1,\\ldots,n-1.",
+                "reference": "q_{j}(x_{0})=A_{j+1},\\quad q_{j}^{\\prime}(x_{0})=B_{j+1},\\quad j=0,1,\\ldots,n-1."
+            },
+            {
+                "prediction": "\\delta B=\\frac{1}{2}\\delta\\bar{\\theta}\\Gamma_{M N}\\theta(d X^{M}d X^{N}+\\bar{\\theta}\\Gamma^{M}d\\theta d X^{N}+\\frac{1}{3}\\bar{\\theta}\\Gamma^{M}d\\theta\\bar{\\theta}\\Gamma^{N}d\\theta)",
+                "reference": "\\delta B={\\frac{1}{2}}\\delta\\bar{\\theta}\\Gamma_{M N}\\theta(d X^{M}d X^{N}+\\bar{\\theta}\\Gamma^{M}d\\theta d X^{N}+{\\frac{1}{3}}\\bar{\\theta}\\Gamma^{M}d\\theta\\bar{\\theta}\\Gamma^{N}d\\theta)"
+            },
+            {
+                "prediction": "V(z)=A^{2}e^{-2\\alpha z}-2A e^{-\\alpha z}\\ ,\\ A,\\alpha>0\\ .",
+                "reference": "V(z)=A^{2}e^{-2\\alpha z}-2A e^{-\\alpha z}\\ ,\\ A,\\alpha>0\\ ."
+            },
+            {
+                "prediction": "g_{i j}(x)=\\frac{1}{a^{2}}\\,\\delta_{i j},\\;\\;\\phi^{a}(x)=\\phi^{a},\\;\\;\\;\\;(a,\\phi^{a}\\!:\\;\\mathrm{const.})",
+                "reference": "g_{i j}(x)={\\frac{1}{a^{2}}}\\,\\delta_{i j},~~\\phi^{a}(x)=\\phi^{a},\\quad(a,\\phi^{a}\\!:~\\mathrm{const.})"
+            },
+            {
+                "prediction": "H=\\frac{1}{4\\pi}\\left(P^{2}+4\\omega^{2}\\,e^{2\\gamma Q}\\right)",
+                "reference": "H=\\frac{1}{4\\pi}\\left(P^{2}+4\\omega^{2}\\,e^{2\\gamma Q}\\right)"
+            },
+            {
+                "prediction": "\\frac{d V}{d\\Phi}=-\\frac{w\\Phi}{\\Phi_{_0}^{2}}\\,.",
+                "reference": "{\\frac{d V}{d\\Phi}}=-{\\frac{w\\Phi}{\\Phi_{\\!_{0}}^{2}}}\\,."
+            },
+            {
+                "prediction": "{\\mathcal{L}}=-{\\frac{1}{2}}F\\wedge^{*}F+{\\frac{1}{2}}|D\\phi|^{2}-U(\\phi)",
+                "reference": "{\\mathcal L}=-\\frac{1}{2}F\\wedge^{*}F+\\frac{1}{2}|D\\phi|^{2}-U(\\phi)"
+            },
+            {
+                "prediction": "\\hat{g}=-(d x^{0})^{2}+(d x^{1})^{2}+\\left(d r^{2}+r^{2}d\\Omega_{8}^{2}\\right)\\,,",
+                "reference": "\\hat{g}=-(d x^{0})^{2}+(d x^{1})^{2}+\\Big(d r^{2}+r^{2}d\\Omega_{8}^{2}\\Big)\\;,"
+            },
+            {
+                "prediction": "The likelihood P(D|\\text{Ia}) is difficult to model directly since D is multi-dimensional.",
+                "reference": "The likelihood P(\\boldsymbol{D}|{\\rm Ia}) is difficult to model directly since \\boldsymbol{D} is multi-dimensional."
+            },
+            {
+                "prediction": "An anisotropic barostat with P_x=P_y=P_z=0 is used in the equilibration, leading to a tetragonal simulation box before running the tensile test.",
+                "reference": "An anisotropic barostat with P_{x}=P_{y}=P_{z}=0 is used in the equilibration, leading to a tetragonal simulation box before running the tensile test."
+            },
+            {
+                "prediction": "As a consequence, and due to the limited length of the wavepackets L_{coh}\\approx21\\mum ), phase plates have to be inserted by pairs, one on each arm of the interferometer (phase plates are plane-parallel BK7 optical windows).",
+                "reference": "As a consequence, and due to the limited length of the wavepackets L_{coh}\\approx21\\mum ), phase plates have to be inserted by pairs, one on each arm of the interferometer (phase plates are plane-parallel BK7 optical windows)."
+            },
+            {
+                "prediction": "<\\frac{1}{2},m_{s}|\\psi_{-}^{(\\frac{1}{2})}(g)>\\equiv D_{m_{s}-\\frac{1}{2}}^{(\\frac{1}{2})}(g)=<g,l+\\frac{1}{2}|T_{m_{s}-}^{\\frac{1}{2}}|g,l>.",
+                "reference": "<\\frac{1}{2},m_{s}|{\\psi}_{-}^{(\\frac{1}{2})}(g)>\\equiv D_{m_{s}-\\frac{1}{2}}^{(\\frac{1}{2})}(g)=<g,l+\\frac{1}{2}|T_{m_{s}-}^{\\frac{1}{2}}|g,l>."
+            },
+            {
+                "prediction": "\\vec{E}(\\tau)=\\left[\\frac{d^{2}}{d\\tau^{2}}-(2/\\tau)\\frac{d}{d\\tau}\\right]\\vec{G}(\\tau)",
+                "reference": "\\vec{E}(\\tau)=\\left[{\\frac{d^{2}}{d\\tau^{2}}}-(2/\\tau){\\frac{d}{d\\tau}}\\right]\\vec{G}(\\tau)"
+            },
+            {
+                "prediction": "V_{n s}(\\tilde{x})=\\left(\\frac{\\tilde{m}N^{2}}{16\\pi}\\right)N g^{2n s-1}\\tilde{x}^{2}\\left\\{\\tilde{x}^{2}-\\frac{2\\tilde{b}}{3}\\tilde{x}+\\frac{\\tilde{b}^{2}}{3}-(-1)^{n s}\\tilde{c}\\right\\}\\,.",
+                "reference": "V_{n s}({\\tilde{x}})=\\left(\\frac{{\\tilde{m}}N^{2}}{16\\pi}\\right)N g^{2n s-1}{\\tilde{x}}^{2}\\left\\{{\\tilde{x}}^{2}-\\frac{2{\\tilde{b}}}{3}{\\tilde{x}}+\\frac{{\\tilde{b}}^{2}}{3}-(-1)^{n s}{\\tilde{c}}\\right\\}\\,."
+            },
+            {
+                "prediction": "V_{\\pm}=\\frac{a(a\\mp\\frac{\\mu}{\\sqrt{2}})f^{2}+(a(b\\mp\\frac{\\nu}{\\sqrt{2}})+b(a\\mp\\frac{\\mu}{\\sqrt{2}}))f+b(b\\mp\\frac{\\nu}{\\sqrt{2}})}{(f^{\\prime})^{2}}\\pm\\frac{a}{\\sqrt{2}}.",
+                "reference": "V_{\\pm}=\\frac{a(a\\mp\\frac{\\mu}{\\sqrt{2}})f^{2}+(a(b\\mp\\frac{\\nu}{\\sqrt{2}})+b(a\\mp\\frac{\\mu}{\\sqrt{2}}))f+b(b\\mp\\frac{\\nu}{\\sqrt{2}})}{(f^{\\prime})^{2}}\\pm\\frac{a}{\\sqrt{2}}."
+            },
+            {
+                "prediction": "L_{0}=\\Phi(w)=\\triangle\\Phi(w),",
+                "reference": "L_{0}=\\Phi(w)=\\bigtriangleup\\Phi(w),"
+            },
+            {
+                "prediction": "Static, local expectation values are defined as \\langle\\Psi^{(0)}|\\hat{O}|\\Psi^{(0)}\\rangle, while non-local expectation values, such as the energy for the impurity cluster, can be defined through a partial trace of the density matrices with the Hamiltonian, as defined in Ref.",
+                "reference": "Static, local expectation values are defined as \\langle\\Psi^{(0)}|{\\hat O}|\\Psi^{(0)}\\rangle, while non-local expectation values, such as the energy for the impurity cluster, can be defined through a partial trace of the density matrices with the Hamiltonian, as defined in Ref."
+            },
+            {
+                "prediction": "I=2\\left(\\frac{\\alpha}{\\sinh^{2}A+\\sin^{2}\\frac{\\gamma}{2}}-\\frac{\\sinh\\frac{2A}{\\alpha}}{\\sinh2A}\\ \\frac{1}{(\\sinh^{2}\\frac{A}{\\alpha}+\\sin^{2}\\frac{[\\gamma]}{2\\alpha})}\\right)\\ \\ .",
+                "reference": "I=2\\left({\\frac{\\alpha}{\\sinh^{2}A+\\sin^{2}{\\frac{\\gamma}{2}}}}-{\\frac{\\sinh{\\frac{2A}{\\alpha}}}{\\sinh{2A}}}~{\\frac{1}{(\\sinh^{2}{\\frac{A}{\\alpha}}+\\sin^{2}{\\frac{[\\gamma]}{2\\alpha}})}}\\right)~~."
+            },
+            {
+                "prediction": "\\Delta E_{\\mathrm{up}}=\\frac{1}{T^{(0)}}\\frac{4e^{S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})+4e^{S^{(0)}}}{4e^{2S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})-1},",
+                "reference": "\\Delta E_{\\mathrm{up}}=\\frac{1}{T^{(0)}}\\frac{4e^{S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})+4e^{S^{(0)}}}{4e^{2S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})-1},"
+            },
+            {
+                "prediction": "These models serve as soluble paradigms for symmetry breaking phenomena, in both strong interaction particle physics and in condensed matter physics . We consider these models in the 't Hooft limit,",
+                "reference": "These models serve as soluble paradigms for symmetry breaking phenomena in both strong interaction particle physics and in condensed matter physics . We consider these models in the \u2019t\u00a0Hooft limit,"
+            },
+            {
+                "prediction": "If this is the case, the detection of the idler photon in a state |\\phi\\rangle_i will project the signal photon onto an entangled state between wavevector and wavelength; once the information about the wavelength is traced out, the signal photon will be left in a statistical mixture of different wavevectors, which will not couple well into the fundamental mode of an optical fiber.",
+                "reference": "If this is the case, the detection of the idler photon in a state \\vert\\phi\\rangle_{i} will project the signal photon onto an entangled state between wavevector and wavelength; once the information about the wavelength is traced out, the signal photon will be left in a statistical mixture of different wavevectors, which will not couple well into the fundamental mode of an optical fiber."
+            },
+            {
+                "prediction": "## Relativistic hydrodynamics on 2 + 1-dimensional curved backgrounds\n\nIn the hydrodynamic limit the energy\u2013momentum tensor T^{\\mu\\nu} of a neutral fluid is a function of the local temperature T(x), of the velocity field u^\\mu(x), of the background metric g_{\\mu\\nu}(x) and of their covariant derivatives.",
+                "reference": "## Relativistic hydrodynamics on 2+1-dimensional curved backgrounds\n\nIn the hydrodynamic limit the energy\u2013momentum tensor T^{\\mu\\nu} of a neutral fluid is a function of the local temperature T(x), of the velocity field u^\\mu(x), of the background metric g_{\\mu\\nu}(x) and of their covariant derivatives."
+            }
+        ]
+    },
+    "pix2tex": {
+        "scores": {
+            "bleu": 0.4125098862722938,
+            "meteor": 0.5486314772529743,
+            "edit": 0.3414895887711637
+        },
+        "text": [
+            {
+                "prediction": "{\\begin{array}{l}{\\operatorname{Let~us~fricensidera~of~classicalpoint~masses~in~gravitational~interaction}}\\\\ {\\ln{\\textrm{a s p a c e~o f~d i m e n s i o n}}~d=3.}\\end{array}}",
+                "reference": "Let us first consider a system of classical point masses in gravitational interaction in a space of dimension d=3."
+            },
+            {
+                "prediction": "\\left(\\alpha^{\\prime}\\right)^{-1}e^{-\\phi/2}f_{16}\\,s i m\\ g^{-24}\\sqrt{N}\\ ,",
+                "reference": "\\left(\\alpha^{\\prime}\\right)^{-1}e^{-\\phi/2}f_{16}\\,s i m\\ g^{-24}\\sqrt{N}\\ ,"
+            },
+            {
+                "prediction": "\\left(,\\right)=\\left(,\\right)_{1}+\\left(,\\right)_{2}.",
+                "reference": "\\left(,\\right)=\\left(,\\right)_{1}+\\left(,\\right)_{2}."
+            },
+            {
+                "prediction": "\\int_{k5}=\\int{\\frac{d^{4}k}{\\left(2\\pi\\right)^{4}}}{\\frac{1}{2\\ell}}\\sum_{k^{5}}\\,;",
+                "reference": "\\int_{k5}=\\int{\\frac{d^{4}k}{(2\\pi)^{4}}}{\\frac{1}{2\\ell}}\\sum_{k^{5}}\\ ,"
+            },
+            {
+                "prediction": "{\\tilde{f}}_{2}=\\Phi(x-z_{2},x-z_{2})",
+                "reference": "\\tilde{f}_{2}=\\Phi(x-z_{2},x-z_{2})"
+            },
+            {
+                "prediction": "\\begin{array}{l l l l}{{{\\displaystyle\\mathbf{C}_{\\mu}}=\\,{\\mathbf{C}_{\\nu}},\\;{\\mathrm{for~any}}\\;\\mu\\;\\in\\;{\\mathrm{\\lk}};\\;\\,l o c a l\\;\\,a l g e b r a s~{\\mathrm{and}}\\;\\,l o c a l{\\mathrm{~algebraic}}\\;\\;K_{i}^{l o c a l{\\mathrm{keory}}}\\;{\\mathrm{were}}}\\end{array}",
+                "reference": "\\mathbb{C}_{\\mu}=\\mathbb{C}, for any \\mu\\in\\mathbb{N}; *local algebras* and *local* algebraic K^{loc}_{i}-theory were introduced in ."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{~In~this~Qescrupt~in~order~to~nccount~fo~coutrube~coun~of~the~magnecontic}}}\\\\ {{\\mathrm{~charge~}\\alpha_{B}~\\mathrm{to~thass,~the~Smarr~mass~formula~is~generalixed;~it~becomes~andise}}}\\end{array}",
+                "reference": "In this description, in order to account for the contribution of the magnetic charge Q_{B} to the mass, the Smarr mass formula is generalized; it becomes a cubic equation."
+            },
+            {
+                "prediction": "\\left.\\begin{array}{l}{\\left|\\operatorname{sief}\\right|\\left|\\operatorname{sun}_{-}\\left|0\\right|\\left|\\operatorname{su}\\right|\\left|\\operatorname{su}_{0}\\right|\\left|\\operatorname{su}\\right|\\left|\\operatorname{su}_{0}\\right|\\left|\\operatorname{su}_{0}\\right|\\left|\\operatorname{su}_{1}\\right|\\left|\\operatorname{su}_{0}\\right|\\left|\\operatorname{su}_{1}\\right|\\left|\\operatorname{su}_{1}\\right|}\\right\\rangle\\right|\\left|\\operatorname{limon}_{0}\\right|/\\operatorname{sun}_{0}\\right|\\left|\\operatorname{su}_{1}\\right|}\\\\ {\\operatorname{sun}_{1}\\left(\\operatorname{sub}_{0}\\left|\\operatorname{sy}_{1}\\right|\\operatorname{sun}_{1}\\right)\\left|\\operatorname{sun}_{0}\\right|\\left(\\operatorname{sun}_{0}\\right|\\left(\\operatorname{su}_{s u}_{0}_{s u}_{n}_{1}_{s y}_{0}_{n}_{2}\\right)}}\\\\ {{{t}_{\\left|\\left|\\operatorname{su}_{0}_{s u}_{0}_{s u}_{s y u}_{\\right|\\operatorname{se}_{s u}_{\\left|\\right|\\left|\\left|\\right|\\operatorname{\\right|\\operatorname{\\right|\\left|\\right|\\right|\\right|\\left|\\right|\\left|\\left|\\right|\\right|\\right.=\\right|",
+                "reference": "\\left[\n\\sum_{p>q \\ge 0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q}\n-\\sum_{p>q>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q}\n\\right]\n\\right\\}\\,.\\\\\n\\end{aligned}The expressions inside each pair of square brackets both involve a kind of two-variable telescoping sum\u2013the only terms that do not cancel are those forq=0.Thus,we obtain\\begin{aligned}\n\\frac{S_3}{8} &=& 2k(2k-1) \\times\\\\\n&& \\left\\{\n\\sum_{p>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k}\n-\\sum_{p>0}\\binom{2k-2}{k+p}\\binom{2k-2}{k-1}\n\\right\\}\\,.\\\\\n\\end{aligned}Taking out the factors that are independent ofp,we are left with two easily-evaluated sums,giving\\begin{aligned}\nS_3 = 8k(2k-1) \\!\\!\\!&\\times&\\!\\!\\!"
+            },
+            {
+                "prediction": "\\frac{\\phi^{\\prime\\prime}}{A}+\\frac{1}{A}\\left(-\\frac{1}{2}\\frac{A^{\\prime}}{A}+2\\frac{B^{\\prime}}{B}+\\frac{2}{r}\\right)\\phi^{\\prime}-\\frac{2}{r^{2}}\\phi-\\lambda\\phi(\\phi^{2}-\\eta^{2})=0\\,.",
+                "reference": "{\\frac{\\phi^{\\prime\\prime}}{A}}+{\\frac{1}{A}}\\left(-{\\frac{1}{2}}{\\frac{A^{\\prime}}{A}}+2{\\frac{B^{\\prime}}{B}}+{\\frac{2}{r}}\\right)\\phi^{\\prime}-{\\frac{2}{r^{2}}}\\phi-\\lambda\\phi(\\phi^{2}-\\eta^{2})=0\\,."
+            },
+            {
+                "prediction": "\\Delta_{\\mu\\nu}(p)=\\frac{4\\pi}{\\kappa}\\frac{\\mu}{p^{2}(p^{2}+\\mu^{2})}(\\mu\\epsilon_{\\mu\\nu\\lambda}p^{\\lambda}+\\delta_{\\mu\\nu}p^{2}-p_{\\mu}p_{\\nu})",
+                "reference": "\\Delta_{\\mu\\nu}(p)=\\frac{4\\pi}{\\kappa}\\frac{\\mu}{p^{2}(p^{2}+\\mu^{2})}(\\mu\\epsilon_{\\mu\\nu\\lambda}p^{\\lambda}+\\delta_{\\mu\\nu}p^{2}-p_{\\mu}p_{\\nu})"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Whilte~the~branchine~for~}}B_{s}\\to\\mu^{+}\\mu^{-}\\displaystyle{\\frac{t u r m s\\ o u t~t o}{\\mathrm{eme~ralue~central~value~sor~the~or~the~or~the~sor~the~of~}}B_{d}\\to\\mu^{+}\\mu^{-}\\mathrm{~ise~of~}}}\\\\ {{\\mathrm{predictor~of~}}}\\end{array}",
+                "reference": "While the branching ratio for B_s\\to\\mu^+\\mu^- turns out to be rather close to SM prediction, although a bit lower, the central value for the one of B_d\\to\\mu^+\\mu^- is by a factor of 3.5 higher than its SM value."
+            },
+            {
+                "prediction": "\\mathrm{In}\\ \\mathrm{this\\article\\we\\show\\how\\}/n_{*i}\\ \\mathrm{can\\be\\maximized}.",
+                "reference": "In this article we show how \\mu_{si} can be maximized."
+            },
+            {
+                "prediction": "W^{(1)}=\\frac{1}{Z^{(1)}N}\\sum_{R,S}\\frac{d_{R}}{d_{S}}\\exp\\left[-\\frac{g^{2}A_{1}}{2}C_{2}(R)-\\frac{g^{2}A_{2}}{2}C_{2}(S)\\right]\\int d U\\mathrm{Tr}[U]\\chi_{R}(U)\\chi_{S}^{\\dagger}(U),",
+                "reference": "{\\cal W}^{(1)}={\\frac{1}{{\\cal Z}^{(1)}N}}\\sum_{R,S}\\frac{d_{R}}{d_{S}}\\exp\\left[-{\\frac{g^{2}A_{1}}{2}}C_{2}(R)-{\\frac{g^{2}A_{2}}{2}}C_{2}(S)\\right]\\int d U\\mathrm{Tr}[U]\\chi_{R}(U)\\chi_{S}^{\\dagger}(U),"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Spectral~flnetions~are~then~defined~as~}}A(\\omega)=-{\\frac{1}{\\sigma}}\\Im[G(\\omega)],\\mathrm{,~where~the~spectral}}}\\\\ {{\\mathrm{presadenizes~the~correbary~the~sinary~componen}}}\\end{array}",
+                "reference": "Spectral functions are then defined as A(\\omega)=-\\frac{1}{\\pi}\\Im[G(\\omega)], where the spectral broadening is given by the small imaginary component of the energy, \\eta, which regularizes the correlation function."
+            },
+            {
+                "prediction": "c_{l,m}=\\eta(\\tau)^{-3}\\sum_{-|x|<y\\leq|x|}\\mathrm{sign}(x)\\ q^{(k+2)x^{2}-k y^{2}}",
+                "reference": "c_{l,m}=\\eta(\\tau)^{-3}\\sum_{-|x|<y\\leq|x|}\\mathrm{sign}(x)~q^{(k+2)x^{2}-k y^{2}}"
+            },
+            {
+                "prediction": "\\scriptstyle{\\frac{\\psi_{n i n o n}}{\\psi_{n i n}}}{\\left|\\psi_{n i}\\right|}}",
+                "reference": "The elastic net is characterized by the presence of ridge regression term \\ell^{2}-norm) and it is defined by the following convex minimization problem: \\label{EN1_intro}\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\|\\mathbf{x}\\|_{1} + \\tau_{2}\\|\\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},where\\tau_{1}and\\tau_{2}are non-negative parameters.An improvement for the EN model was proposed in where a combination of the\\ell^{2}-penalty and an adaptive version of the\\ell^{1}-norm have been implemented by considering the minimization problem\\label{EN2_intro}\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\sum_{i=1}^{n}\\omega_{i}|x_{i}| + \\tau_{2}\\|\\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},where the adaptive weights are computed using a solution given by the EN minimization problem[EN1_intro].If we let the solution of EN to be\\mathbf{\\hat{x}}(EN),then the weights are given by the equation\\omega_{i}=1/(|\\hat{x}_{i}(EN)|+(1/m))^{\\vartheta}where\\varthetais a positive constant.A variant of the above model was propose"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Flnally,~the~bend~in~the~wires~will~to~no~the~currentis~in~the~corrents~in~the~corrents~in~the}}}\\\\ {{\\mathrm{zit~and~theretion,~whires~the~ato~sum~the~renergis~co~overcine}}}\\\\ {{\\mathrm{t~and~therefore~sets~an~upper~in~the~the~ceanthed}}}\\end{array}",
+                "reference": "Finally, the bend in the wires will lead to a potential from the currents in the z-direction, which requires the atom to have enough kinetic energy to overcome it and therefore sets an upper bound to the adiabaticity that can be reached."
+            },
+            {
+                "prediction": "\\int_{-r}^{\\infty}d l\\,\\mathrm{e}^{-l\\zeta}\\int_{-r}^{\\infty}d l^{\\prime}\\mathrm{e}^{-l^{\\prime}\\zeta}l l^{\\prime}\\frac{l^{\\prime}-l}{l+l^{\\prime}}\\{3\\,\\delta^{\\prime\\prime}(l)-\\frac{3}{4}t\\,\\delta(l)\\}=0.",
+                "reference": "\\int_{-\\epsilon}^{\\infty}d l\\:\\mathrm{e}^{-l\\zeta}\\int_{-\\epsilon}^{\\infty}d l^{\\prime}\\mathrm{e}^{-l^{\\prime}\\zeta}l l^{\\prime}{\\frac{l^{\\prime}-l}{l+l^{\\prime}}}\\{3\\,\\delta^{\\prime\\prime}(l)-{\\frac{3}{4}}t\\,\\delta(l)\\}=0."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{The~central~obstacle~was~moved~from~a~central~position~}a_{1}=a_{2}=\\mathrm{2cm~to}}}\\\\ {{\\mathrm{one~side~in~ine~withe~withe~usthannel.}}}\\end{array}",
+                "reference": "The central obstacle was moved from a central position a_1 =\na_2 = 2cm to one side in increments of0.1or0.2cm,to give a range of differenta_1anda_2,witha_2 denoting the width of the narrow channel."
+            },
+            {
+                "prediction": "I_{1}(y,\\mp r)=\\int_{0}^{\\infty}\\frac{d x}{\\sqrt{x^{2}+y^{2}}}\\frac{1}{\\exp(\\sqrt{x^{2}+y^{2}}\\mp r)+1},",
+                "reference": "I_{1}(y,\\mp r)=\\int_{0}^{\\infty}\\frac{d x}{\\sqrt{x^{2}+y^{2}}}\\frac{1}{\\exp(\\sqrt{x^{2}+y^{2}}\\mp r)+1},"
+            },
+            {
+                "prediction": "g_{a\\bar{b}}=\\partial_{a}\\,\\partial_{\\bar{b}}\\,K(z,\\bar{z})\\ .",
+                "reference": "g_{a\\bar{b}}=\\partial_{a}\\,\\partial_{\\bar{b}}\\,K(z,\\bar{z})\\ ."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{H^{\\prime}\\Psi^{(0)}\\ne E_{0}|\\Psi^{(0)}\\rangle\\mathrm{~is~solved~for~the~wavefunction~over~the~quantum~impurity}}}\\end{array}",
+                "reference": "H'|\\Psi^{(0)}\\rangle=E_0|\\Psi^{(0)}\\rangle is solved for the wavefunction over the quantum impurity and bath, |\\Psi^{(0)}\\rangle."
+            },
+            {
+                "prediction": "\\begin{array}{c}{{\\mathrm{It~can~be~expressed~as}}}\\\\ {{\\mathrm{and~is~shown~in~Fig.}}}\\end{array}\\qquad P_{\\mathrm{tr}}=\\left(1-\\frac{B_{\\mathrm{in}}}{B_{\\mathrm{bd}}}\\right)^{1/2}",
+                "reference": "It can be expressed as P_{\\rm tr}=\\cos{\\Theta_{\\rm LC}}=\\left(1-\\frac{B_{\\rm in}}{B_{\\rm bd}}\\right)^{1/2} and is shown in Fig."
+            },
+            {
+                "prediction": "H_{i j}^{a}=F_{i j}^{a}-g f_{\\;\\;b c}^{a}A_{i}^{b}A_{j}^{c},",
+                "reference": "H_{i j}^{a}=F_{i j}^{a}-g f_{\\;\\;b c}^{a}A_{i}^{b}A_{j}^{c},"
+            },
+            {
+                "prediction": "\\mathrm{Tr}(\\gamma_{\\cal R})=-2~,~~~\\mathrm{Tr}(\\gamma_{\\cal R}_{.})=\\mathrm{Tr}(\\gamma_{\\cal R}_{.})=0~.",
+                "reference": "{\\mathrm{Tr}}(\\gamma_{g})=-2~,~~~{\\mathrm{Tr}}(\\gamma_{R_{s}})={\\mathrm{Tr}}(\\gamma_{g R_{s}})=0~."
+            },
+            {
+                "prediction": "S-\\ln{\\cal Z}=-\\alpha{\\cal N}-\\beta^{\\rho}{\\cal P}_{\\rho}\\ .",
+                "reference": "S-\\ln{\\cal Z}=-\\alpha{\\cal N}-\\beta^{\\rho}{\\cal P}_{\\rho}\\ ."
+            },
+            {
+                "prediction": "{\\mathrm{Here~}}\\kappa\\in C^{2}(M){\\mathrm{~is~such~that~the~operator}}-\\Delta_{g}+\\kappa{\\mathrm{~is~coercive}}.",
+                "reference": "Here \\kappa\\in C^2(M) is such that the operator -\\Delta_g+\\kappa is coercive."
+            },
+            {
+                "prediction": "\\epsilon_{\\mathrm{vac}}=\\left<\\frac{\\beta(g)}{8g}G\\cdot G\\right>",
+                "reference": "\\epsilon_{\\mathrm{vac}}=\\left<\\frac{\\beta(g)}{8g}G\\cdot G\\right>"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Inddeed,~ill~rwe~contrate~on~}B_{o}^{\\sigma}-B_{o}^{\\sigma}~o n i v i n g,~b\\to s\\mu\\bar{\\nu}~~b\\to s\\bar{\\nu}\\bar{\\nu}~~o b\\to s\\bar{\\nu}\\bar{\\nu}~~o b\\land m~s i\\bar{\\nu}~~b\\to s\\bar{\\nu}~~o n d i o~r a a~}}{{\\mathrm{theo~siraters~nea~par~s~enters~the~nad~the~conple}}}}\\\\ {{\\mathrm{ablines~of~whef~whine~sis~ene~sis~ene~is~enally~the~fie~and~the~of~fieally~raealo~raal.}}}\\end{array}",
+                "reference": "Indeed, if we concentrate on B_s^0-\\bar B_s^0 mixing, b\\to s\\mu^+\\mu^- and b\\to s\\nu\\bar\\nu observables there are only four new parameters to our disposal: the three *reduced couplings* of which the first one is generally complex and the other two real."
+            },
+            {
+                "prediction": "{\\mathrm{~where~tharthe~vant~paraneter~}}Q_{o}{\\mathrm{~is~the~value~of~the~charge}}\\;Q_{E}{\\mathrm{~in~absence}}",
+                "reference": "where the constant parameter Q_{o} is the value of the electric charge Q_{E} in absence of magnetic charge Q_{B}."
+            },
+            {
+                "prediction": "(N_{c}+\\tilde{N}_{c},\\overline{{{N_{c}+\\tilde{N}_{c}}}})(1,1,0,\\beta_{i}),\\;\\;\\;\\;{\\dot{\\imath}}=1,2,3",
+                "reference": "(N_{c}+\\tilde{N}_{c},\\overline{{{N_{c}+\\tilde{N}_{c}}}})(1,1,0,\\beta_{i}),\\ \\ \\ i=1,2,3"
+            },
+            {
+                "prediction": "\\delta_{k}A_{\\mu}=[D_{\\mu},[A_{\\nu_{1}},[...\\,,[A_{\\nu_{k-1}},L^{\\nu_{1}...\\nu_{k-1}}]\\ldots]]]].",
+                "reference": "\\delta_{k}A_{\\mu}=[D_{\\mu},[A_{\\nu_{1}},[\\ldots,[A_{\\nu_{k-1}},L^{\\nu_{1}\\ldots\\nu_{k-1}}]\\ldots]]]."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathbf{FOrmalism}}}\\\\ {{\\mathbf{M}\\mathbf{agnitua}\\circ\\mathbf{bf}\\ \\mathrm{the~2}\\mathbf{cmn~Signal}\\ \\mathrm{sgna}\\mathbf{bigma}\\mathbf{t}}}\\\\ {{\\mathbf{the~2}\\mathrm{lrem~tramsits~of~the~1serine~spition~and~eferound~state~of}}}\\\\ {{\\mathrm{~fle~alignet~ansition~antiacton~and~elerate}\\ n_{\\mathrm{state}}\\ \\mathrm{station~finglention~and~efectron~iligne}\\ \\mathrm{station~state}\\ n_{\\mathrm{state}}}}\\end{array}",
+                "reference": "# Formalism\n\n## Magnitude of the 21-cm Signal\n\nThe 21-cm transition results from hyperfine splitting in the 1\\mathrm{S} ground state of the hydrogen atom when the magnetic moments of the proton and electron flip between aligned (triplet state) and anti-aligned (singlet state)."
+            },
+            {
+                "prediction": "V_{a b}^{k}\\;\\;\\mathrm{m}n=\\frac{1}{g}\\;E_{a}^{r}\\;E_{b}^{s}\\epsilon_{r s(m}\\;\\delta_{n)}^{i}.",
+                "reference": "V_{a b\\ \\ m n}^{k}=\\frac{1}{g}\\ E_{a}^{r}\\ E_{b}^{s}\\epsilon_{r s(m}\\ \\delta_{n)}^{i}."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{~In~fact,~in~CMOS~circuits,~the~dynamic~power~consumption~is~described~by~the}}}\\\\ {{}}&{{}}\\\\ {{\\mathrm{~palsere~C_{eff}~r e p t h e~c i n c u i c e n t s~t h e~c i r e c u i c y~f~.}}}\\end{array}",
+                "reference": "In fact, in CMOS circuits, the dynamic power consumption is described by the following equation : \\label{DVFS-P-EQUATION}\nP_{dyn}=C_{eff}.V^2.f where C_{eff} represents the circuit effective capacitance, V, the supply voltage associated to the clock frequency f ."
+            },
+            {
+                "prediction": "\\phi_{\\eta}(q_{z},q_{0})=\\left({\\frac{1}{\\pi}}\\right)^{1/2}\\exp\\left\\{-{\\frac{1}{2}}\\left(e^{-2\\eta}q_{u}^{2}+e^{2\\eta}q_{v}^{2}\\right)\\right\\}.",
+                "reference": "\\phi_{\\eta}(q_{z},q_{0})=\\left({\\frac{1}{\\pi}}\\right)^{1/2}\\exp\\left\\{-{\\frac{1}{2}}\\left(e^{-2\\eta}q_{u}^{2}+e^{2\\eta}q_{v}^{2}\\right)\\right\\}."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Taking~the~spatiny~to~be~ran~the~space,~the~velocity~can~be~recovered}}}\\\\ {{\\mathrm{trom~the~vorticity~via~tha~the~Sior~the~Savart~Law.}}}\\\\ {{\\mathrm{this~the~corticity~clachl)~a~cystem~for~the~vorticiticity~field~alone.}}}\\end{array}",
+                "reference": "Taking the spatial domain to be the whole space, the velocity can be recovered from the vorticity via the Biot-Savart Law,\n\nu(x)=c\\int\\nabla\\frac{1}{|x-y|}\\times\\omega(y)\\,dy;\n\nthis makes ([vorticity]) a closed (non-local) system for the vorticity field alone."
+            },
+            {
+                "prediction": "{\\mathrm{~erith~only~a~few~columa~of~bulder~than~2R,the~stantys~a~crizystalllline~strure}}.",
+                "reference": "For a channel just slightly wider than 2R, the foam adopts a crystalline structure with only a few columns of bubbles (double staircase and staircase structure)."
+            },
+            {
+                "prediction": "{\\frac{\\mathrm{The~mothon~of~the~foam~was~recorded~using~a~1312}\\times1082~p l i x e l~d i g h t a l~v i d e o}}",
+                "reference": "The motion of the foam was recorded using a 1312\\times1082 pixel digital video camera running at 25\u00a0fps."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathbf{Enclosed~Channel}}}\\\\ {{\\mathbf{Inte}\\operatorname{enclosed~channel~tests~were~canried~out~with~a~Hele-Shanw~plate~separation}}}\\end{array}",
+                "reference": "## Enclosed Channel\n\nThe enclosed channel tests were carried out with a Hele-Shaw plate separation of h=0.1\u00a0cm."
+            },
+            {
+                "prediction": "R_{\\mu\\nu}-\\frac{1}{2}R g_{\\mu\\nu}=0",
+                "reference": "R_{\\mu\\nu}-\\frac{1}{2}R g_{\\mu\\nu}=0"
+            },
+            {
+                "prediction": "\\frac{1}{2\\lambda f^{2}}\\int\\;d^{4}X\\;\\frac{d^{4}q}{\\left(2\\pi\\right)^{4}}\\left(\\varphi(X)\\right)^{2}\\tilde{\\pi}_{0}(q)\\left[\\partial_{q}^{2}+\\frac{4i\\lambda}{q^{2}-\\Sigma^{2}(q)}\\right]\\tilde{\\pi}_{0}(q),",
+                "reference": "\\frac{1}{2\\lambda f^{2}}\\int\\;d^{4}X\\,\\frac{d^{4}q}{\\left(2\\pi\\right)^{4}}\\left(\\varphi(X)\\right)^{2}\\tilde{\\pi}_{0}(q)\\left[\\partial_{q}^{2}+\\frac{4i\\lambda}{q^{2}-\\Sigma^{2}(q)}\\right]\\tilde{\\pi}_{0}(q),"
+            },
+            {
+                "prediction": "{\\underbrace{\\mathrm{Let~}(B,g_{B}){\\mathrm{~and~}}(N,g_{N}){\\mathrm{~be~two~riemannian~manifolds~of~dimensions~}}b{\\mathrm{~and~}}n}_{\\mathrm{~optivectively.}}",
+                "reference": "Let (B,g_B) and (N,g_N) be two riemannian manifolds of dimensions b and n, respectively."
+            },
+            {
+                "prediction": "M=\\left(\\frac{2\\sqrt{2}}{3}\\right)~\\frac{m^{3}}{\\lambda}+~\\hbar m\\left[\\frac{1}{6}\\sqrt{\\frac{3}{2}}-\\frac{3}{\\pi\\sqrt{2}}\\right]",
+                "reference": "M=\\left(\\frac{2\\sqrt{2}}{3}\\right)~\\frac{m^{3}}{\\lambda}+~\\hbar m\\left[\\frac{1}{6}\\sqrt{\\frac{3}{2}}-\\frac{3}{\\pi\\sqrt{2}}\\right]"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{The~essential~idea~fat~statics~the~thechmidt~decomposityon~of~}}_{\\mathrm{ide}}\\\\ {{\\mathrm{meantield~bulk~state~defines~amanifre~the~duntim~impurity~patity~batity~mappias~flian}}\\\\ {{\\mathrm{atuaster~of~}}l~~~{\\mathrm{hmpurity~sties~chere~are~there~tare~}}^{\\mathrm{~larity~phings~fles~stathes~chates~consity~}}}\\end{array}",
+                "reference": "The essential idea for static quantities is that the Schmidt decomposition of a mean-field bulk state defines a manifestly *finite* quantum impurity mapping: for a cluster of l impurity sites there are (at most) l bath sites."
+            },
+            {
+                "prediction": "\\frac{g_{Y M}^{2}N}{J^{3}}\\frac{J^{4}}{N^{2}}\\frac{g^{2}N}{J^{2}}",
+                "reference": "\\frac{g_{Y M}^{2}N}{J^{3}}\\frac{J^{4}}{N^{2}}\\frac{g^{2}N}{J^{2}}"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Classifteation~is~bn~thased~on~that~lat~lues~of~thes~of~thecorfention}}}\\\\ {{\\mathrm{the~solution~ide~ide~ide~united~withe~columns~of~}A~o f~a~s i n g l e~c l a s s,c o r r e s p o n d e n}}\\\\ {{\\mathrm{the~the~the~ide~ide~ide~probe~probe}.}}\\end{array}",
+                "reference": "Classification is based on the observation that high values of the coefficients in the solution \\mathbf{\\hat{x}} are associated with the columns of A of a single class, corresponding to the identity of the probe."
+            },
+            {
+                "prediction": "\\prod{\\mathrm{lat~pattern~of~5~}}\\langle\\mathbb{O}\\rangle{\\mathrm{larallel~0.8thloter~loles~sluowl~in~fignom}}",
+                "reference": "The pattern of 5\\times60 parallel 0.8-mm-diameter holes shown in Fig."
+            },
+            {
+                "prediction": "E_{4s}=2(Q+Q^{-1})+\\xi_{1}+\\xi_{1}^{-1}+\\xi_{2}+\\xi_{2}^{-1}",
+                "reference": "E_{4s}=2(Q+Q^{-1})+\\xi_{1}+\\xi_{1}^{-1}+\\xi_{2}+\\xi_{2}^{-1}"
+            },
+            {
+                "prediction": "{\\cal H}_{T}={\\cal H}_{1}+\\Sigma_{i=1}^{3}c^{i}\\,\\phi_{i},\\;\\;\\;\\;\\;{\\cal H}_{1}=-\\frac{1}{2}r^{2}q_{x x}-p\\,q_{x x}",
+                "reference": "{\\cal H}_{T}={\\cal H}_{1}+\\Sigma_{i=1}^{3}c^{i}\\,\\phi_{i},\\;\\;\\;\\;\\;{\\cal H}_{1}=-\\frac{1}{2}r^{2}q_{x x}-p\\,q_{x x}"
+            },
+            {
+                "prediction": "A=a r^{\\beta},~~~B=b r^{\\beta+2};~~~~~~a/b=c(\\beta+2)/(\\beta-2),",
+                "reference": "A=a r^{\\beta},\\quad B=b r^{\\beta+2};\\qquad a/b=c(\\beta+2)/(\\beta-2),"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\Pi\\mathrm{he~firs:kexporecie~fo~beveryonssiveryoresulline~surfacesuressiver}}}\\\\ {{\\mathrm{~~~~~~~~~~~~~~~~~~~~~~~~~~\\mathrm{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{{{\\scriptstyle{{{{\\sigma~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+                "reference": "The first stars are expected to be very massive resulting in surface temperatures of order 10^5 K , though evidence for such objects is currently limited to abundance patterns in low-mass stars in the Milky Way ."
+            },
+            {
+                "prediction": "e^{i S_{e f f}(x)}=\\int d\\bar{\\psi}d\\psi e^{i\\int\\tilde{L}_{f}d t}",
+                "reference": "e^{i S_{e f f}(x)}=\\int d\\bar{\\psi}d\\psi e^{i\\int\\tilde{L}_{f}d t}"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{The~electrons~which~remaln~traped~durne~the~the~tra~tra~the~tra~trausorbed~either~the~tram~arival}}}\\\\ {{\\mathrm{are~clector~out~durine~rhe~the~withe~reabsorbed~ellar~inall}.}}\\end{array}",
+                "reference": "The electrons which remain trapped during the 2.3\u00a0\\mus prior to the train arrival are cleared out during the first 6 of the 20 bunch passages, reabsorbed either in the detector or the vacuum chamber wall."
+            },
+            {
+                "prediction": "J_{\\mu}=-{\\frac{i e}{2}}\\biggl[\\Phi^{*}D_{\\mu}\\Phi-\\Phi(D_{\\mu}\\Phi)^{*}\\biggr]\\,.",
+                "reference": "J_{\\mu}=-{\\frac{i e}{2}}\\bigg[\\Phi^{\\ast}D_{\\mu}\\Phi-\\Phi\\big(D_{\\mu}\\Phi\\big)^{\\ast}\\bigg]\\,."
+            },
+            {
+                "prediction": "S=\\frac{1}{G}\\int d x d t\\;\\sqrt{-\\bar{g}}\\,e^{-2\\bar{\\phi}}(\\bar{R}+4(\\bar{\\nabla}\\bar{\\phi})^{2}+4\\lambda^{2})-\\frac{1}{2}\\int d x d t\\;\\sqrt{-\\bar{g}}\\;\\sum_{i=1}^{N}(\\bar{\\nabla}f_{i})^{2},",
+                "reference": "S=\\frac{1}{G}\\int d x d t\\:\\sqrt{-\\bar{g}}\\:e^{-2\\bar{\\phi}}(\\bar{R}+4(\\bar{\\nabla}\\bar{\\phi})^{2}+4\\lambda^{2})-\\frac{1}{2}\\int d x d t\\:\\sqrt{-\\bar{g}}\\:\\sum_{i=1}^{N}(\\bar{\\nabla}f_{i})^{2},"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{In~general,~the~colllisionnal~coupliasionnal~couplision}}}\\\\ {{}}&{{\\mathrm{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}}\\\\ {{}}&{{\\mathrm{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}}\\\\ {{\\mathrm{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}\\\\ {{\\scriptstyle{{}}}}}\\\\ {{{{{c o e l a r a t i s i s i s i s i s i s i s i s i s i n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+                "reference": "In general, the collisional coupling is a sum over collision-partners, x_c=\\sum_i\\frac{n_i\\kappa_{10}^i}{A_{10}}\\frac{T_{\\ast}}{T_{\\gamma}}\\label{eq:xc} where n_i is the number density of species i, and \\kappa_{10}^i =\n\\kappa_{10}^i(T_{\\text{K}})is the rate coefficient for spin de-excitation via collisions with speciesi."
+            },
+            {
+                "prediction": "{\\textrm{A}}{\\mathrm{k}}{\\mathrm{superseript}}*\\left|{\\mathrm{abels~results~which~have~been~obtained~in~the~isospin~symmetrice}}\\right|\\equiv1{\\mathrm{~is~tsospin~symmetrice}},",
+                "reference": "A superscript * labels results which have been obtained in the isospin symmetric limit."
+            },
+            {
+                "prediction": "\\scriptstyle{\\frac{\\scriptstyle{\\mathrm{anentin}}}{\\scriptstyle{|\\frac{\\scriptstyle{\\mathrm{anentin}}}{\\left|\\frac{1}{\\varepsilon_{1}^{2}}\\right|}{\\left|\\frac{1}{\\varepsilon_{1}^{2}}\\right|}}}}",
+                "reference": "The redshift evolution of the 21-cm signal, \\delta T_b(z), as measured relative to the CMB, also depends on the mean hydrogen ionized fraction, \\overline{x}_i, and in general on the baryon over-density and proper motions along the line of sight, though the last two effects should be negligible for studies of the all-sky spectrum, leaving , \\delta T_b\\simeq27(1-\\overline{x}_i)\\left(\\frac{\\Omega_{\\text{b},0}h^2}{0.023}\\right)\\left(\\frac{0.15}{\\Omega_{\\text{m},0}h^2}\\frac{1+z}{10}\\right)^{1/2}\\left(1-\\frac{T_{\\gamma}}{T_{\\mathrm{S}}}\\right),\\label{eq:dTb} where h is the Hubble parameter today in units of 100 \\ \\mathrm{km} \\\n\\mathrm{s}^{-1} \\ \\mathrm{Mpc}^{-1},and\\Omega_{\\text{b},0}and\\Omega_{\\text{m},0} are the fractional contributions of baryons and matter to the critical energy density, respectively."
+            },
+            {
+                "prediction": "\\mathbf{J}^{2}=(\\mathbf{J}^{2})^{\\dagger}=G(\\mathbf{J}^{2})^{+}G,",
+                "reference": "\\mathbf{J}^{2}=(\\mathbf{J}^{2})^{\\dagger}=G(\\mathbf{J}^{2})^{+}G,"
+            },
+            {
+                "prediction": "\\mathbf{\\hat{x}}\\in\\mathbb{R}^{n}",
+                "reference": "\\mathbf{\\hat{x}}\\in\\mathbb{R}^{n}"
+            },
+            {
+                "prediction": "X_{\\pm z^{a}}=\\theta_{a\\bar{a}}S^{N}\\bar{z}^{\\bar{a}}(S^{\\dagger})^{N}+\\sum_{n=0}^{N-1}\\lambda_{a,n}|n\\rangle\\langle n|\\otimes P_{0}^{(2)},",
+                "reference": "X_{\\pm z^{a}}=\\theta_{a\\bar{a}}S^{N}\\bar{z}^{\\bar{a}}(S^{\\dagger})^{N}+\\sum_{n=0}^{N-1}\\lambda_{a,n}|n\\rangle\\langle n|\\otimes P_{0}^{(2)},"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Let~}V:\\chi\\rightarrow[1,+\\infty)~\\mathrm{be~a~measurable~function~such~that~}V(x_{0})=1~\\mathrm{for~some}}}\\end{array}",
+                "reference": "Let V:\\mathbb{X}\\rightarrow[1,+\\infty) be a measurable function such that V(x_0)=1 for some x_0\\in\\mathbb{X}."
+            },
+            {
+                "prediction": "{\\mathsf{T h e~v i s l o l l i t y~c a n~b e~t h e r e f[o r e~a d j u s t e d~w i t h~a~r e s o l u t i o n~o f~}}V_{n+1}-V_{n}\\approx0.06",
+                "reference": "The visibility can be therefore adjusted with a resolution of V_{n+1}-V_n\\approx0.06."
+            },
+            {
+                "prediction": "\\delta_{i=j}=\\delta_{+-}=\\delta_{-+}=1,\\quad\\delta_{i\\neq j}=\\delta_{i+}=\\delta_{i-}=\\delta_{++}=\\delta_{--}=0.",
+                "reference": "\\delta_{i=j}=\\delta_{+-}=\\delta_{-+}=1,\\quad\\delta_{i\\neq j}=\\delta_{i+}=\\delta_{i-}=\\delta_{++}=\\delta_{--}=0."
+            },
+            {
+                "prediction": "\\begin{array}{l}{\\mathrm{II~orderter~tooleth~more~qrecise~qllaerities~of~the~of~erties~of~the~of~evrions~equation.}}\\\\ {\\mathrm{one~can~wonder~about~the~rate~of~}g(t,x)~\\mathrm{to~the~asymptotic~proflion}}\\end{array}",
+                "reference": "In order to obtain more precise quantitative properties of the previous equation, one can wonder about the rate of convergence of g(t,x) to the asymptotic profile G(x)."
+            },
+            {
+                "prediction": "I_{L(R)}^{A}=-\\epsilon^{A B C}[I_{L(R)}^{B},I_{L(R)}^{C}],",
+                "reference": "I_{L(R)}^{A}=-\\epsilon^{A B C}[I_{L(R)}^{B},I_{L(R)}^{C}],"
+            },
+            {
+                "prediction": "Q^{M}=\\dot{g}_{0}\\int_{\\phi(\\Sigma)}\\sum_{i=1}^{l}\\beta_{i}\\eta_{i}\\int_{N_{i}}\\frac{1}{\\sqrt{g}}\\delta^{D}(x-z_{i}(u))\\sqrt{g_{u}}",
+                "reference": "Q^{M}=\\dot{g}_{0}\\int_{\\phi(\\Sigma)}\\sum_{i=1}^{l}\\beta_{i}\\eta_{i}\\int_{N_{i}}\\frac1{\\sqrt{g}}\\delta^{D}(x-z_{i}(u))\\sqrt{g_{u}}"
+            },
+            {
+                "prediction": "\\varphi\\sim A+B\\mathrm{sign}(t)|\\overline{{{k}}}t|^{\\epsilon}.",
+                "reference": "\\varphi\\sim A+B\\mathrm{sign}(t)|\\vec{k}t|^{\\epsilon}."
+            },
+            {
+                "prediction": "\\begin{array}{l l l l}{{\\mathrm{Improvent}}}&{{\\mid\\ s\\mid\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\ 1\\mid\\land\\downarrow\\atop{(\\Delta\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\mid\\ n\\ u\\ u\\ u\\ t\\ u\\ u\\ u\\ u\\ t\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\ u\\",
+                "reference": "Improvement |\n|:---------:|:------------:|:--------------------:|:----------------:|\n| CPU (MPI) |      8       |  \\sim6 Hr  |   1.0\\times    |\n|           |      16      |  \\sim4 Hr  |   1.5\\times    |\n|           |      32      | \\sim1.5 Hr |   4.0\\times    |\n|           |      64      |  \\sim1 Hr  |   6.0\\times    |\n|    GPU    |      1       |  \\sim1 Hr  |   6.0\\times    |\n\nThe approximate times taken to simulate the propagation of an atom through our atom chip system on both GPU and CPU."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\left[\\operatorname{peragivenobive,}U_{i},{\\mathrm{~we~estimate~the~probability~that~a~SN~is~of~Type~Ihe~Ize~}}\\right]}}\\end{array}",
+                "reference": "For a given observable, D_{i}, we estimate the probability that a SN is of Type Ia, P({\\rm Ia}|D_{i})."
+            },
+            {
+                "prediction": "{\\cal Q}_{a,b}(\\mu,\\nu;N)=p_{a,b}(\\mu,\\nu;0;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}p_{a,b}(\\mu,\\nu;\\lambda;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}m_{a,b}(\\mu,\\nu;\\lambda;N).",
+                "reference": "Q_{a,b}(\\mu,\\nu;N)=p_{a,b}(\\mu,\\nu;0;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}p_{a,b}(\\mu,\\nu;\\lambda;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}m_{a,b}(\\mu,\\nu;\\lambda;N)."
+            },
+            {
+                "prediction": "Z(j_{k})=e^{i Z_{c}(j_{k})}",
+                "reference": "Z({j_{k}})=e^{i Z_{c}({j_{k}})}"
+            },
+            {
+                "prediction": "\\sum_{i,j,k,l=1}^{h}\\ a_{i j}^{p}A_{i k}A_{j l}\\overline{{{a}}}_{k l}^{q}=\\sum_{i,j,k,l,m,n=1}^{h}\\flat_{i j m}^{p}A_{i k}A_{j l}A_{m n}\\overline{{{b_{k l n}}}}.",
+                "reference": "\\sum_{i,j,k,l=1}^{h}a_{i j}^{p}A_{i k}A_{j l}\\overline{{a}}_{k l}^{q}=\\sum_{i,j,k,l,m,n=1}^{h}b_{i j m}^{p}A_{i k}A_{j l}A_{m n}\\overline{{b}}_{k l n}^{q}."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{The~elliptical~shand~tilt~that~shand~that~show~up~the~dis~tribution~of~the~teieporited}}}\\\\ {{\\mathrm{station~ot~the~the~the~the~to~the~nun~ideal~ent~some~residual~of}}}\\\\ {{\\mathrm{cotation~of~the~the~of~the~the~on~the~on~the~prothe~prespedivedichely~the~prespediqaly}}}\\end{array}",
+                "reference": "The elliptical shape and tilt that show up on the distribution of the teleported states on the Z-X plane is due to the non-ideal entanglement and some residual rotation of the entangled pair used on the protocol, respectively."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\qquad\\qquad\\qquad\\qquad\\mathrm{Ile~Same~type~of~singylarity~las~also~beel~ildenl~ill~1ll~ssupergyravity~},\\mathrm{bull}}}\\\\ {{\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad}}}\\end{array}",
+                "reference": "The same type of singularity has also been identified in 11D supergravity , but is not yet as comprehensively studied."
+            },
+            {
+                "prediction": "\\iota_{a}(\\Lambda l)-t_{a}^{*}(\\Lambda l)=t_{a}(\\Lambda l)(R-R^{*})t_{a}^{*}(\\Lambda l)",
+                "reference": "t_{a}(M)-t_{a}^{*}(M)=t_{a}(M)(R-R^{*})t_{a}^{*}(M)"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{A~local~vrersion~sSM}\\mathrm{~us~usundy~deno,}\\mathrm{~linten}\\mathrm{exita}\\mathrm{~ly~den~linteness~of~the}}}\\\\ {{\\mathrm{~iomega~(sigl(x,\\bar{r})\\backslash l e,~i s i g r})}}\\\\ {{\\mathrm{~}}}&{{\\mathrm{~}}}\\\\ {{\\mathrm{~}}}\\end{array}",
+                "reference": "A local version of BMO, usually denoted by bmo, is defined by finiteness of the following expression, \\|f\\|_{bmo} = \\sup_{x \\in \\mathbb{R}^3, 0 < r < \\delta} \\Omega \\bigl(f, I(x,r)\\bigr)\n + \\sup_{x \\in \\mathbb{R}^3, r \\ge \\delta} \\frac{1}{|I(x,r)|} \\int_{I(x,r)} |f(y)| \\, dy, for some positive \\delta."
+            },
+            {
+                "prediction": "q_{j}(x_{0})=A_{j+1},\\quad q_{j}^{\\prime}(x_{0})=B_{j+1},\\quad j=0,1,\\ldots,n-1.",
+                "reference": "q_{j}(x_{0})=A_{j+1},\\quad q_{j}^{\\prime}(x_{0})=B_{j+1},\\quad j=0,1,\\ldots,n-1."
+            },
+            {
+                "prediction": "\\delta B=\\frac{1}{2}\\delta\\bar{\\theta}\\Gamma_{M N}\\theta(d X^{M}d X^{N}+\\bar{\\theta}\\Gamma^{M}d\\theta d X^{N}+\\frac{1}{3}\\bar{\\theta}\\Gamma^{M}d\\theta\\bar{\\theta}\\Gamma^{N}d\\theta)",
+                "reference": "\\delta B={\\frac{1}{2}}\\delta\\bar{\\theta}\\Gamma_{M N}\\theta(d X^{M}d X^{N}+\\bar{\\theta}\\Gamma^{M}d\\theta d X^{N}+{\\frac{1}{3}}\\bar{\\theta}\\Gamma^{M}d\\theta\\bar{\\theta}\\Gamma^{N}d\\theta)"
+            },
+            {
+                "prediction": "V(z)=A^{2}e^{-2\\alpha z}-2A e^{-\\alpha z}\\ .\\ A.\\alpha>0\\ .",
+                "reference": "V(z)=A^{2}e^{-2\\alpha z}-2A e^{-\\alpha z}\\ ,\\ A,\\alpha>0\\ ."
+            },
+            {
+                "prediction": "g_{i j}(x)=\\frac{1}{a^{2}}\\,\\delta_{i j},\\;\\;\\phi^{a}(x)=\\phi^{a},\\;\\;\\;\\;(a,\\phi^{a};\\;\\mathrm{\\;const.})",
+                "reference": "g_{i j}(x)={\\frac{1}{a^{2}}}\\,\\delta_{i j},~~\\phi^{a}(x)=\\phi^{a},\\quad(a,\\phi^{a}\\!:~\\mathrm{const.})"
+            },
+            {
+                "prediction": "{\\cal H}=\\frac{1}{4\\pi}\\left(P^{2}+4\\omega^{2}\\,e^{2\\gamma Q}\\right)",
+                "reference": "H=\\frac{1}{4\\pi}\\left(P^{2}+4\\omega^{2}\\,e^{2\\gamma Q}\\right)"
+            },
+            {
+                "prediction": "\\frac{d V}{d\\Phi}=-\\frac{w\\Phi}{\\Phi_{\\!_{0}}^{2}}\\,.",
+                "reference": "{\\frac{d V}{d\\Phi}}=-{\\frac{w\\Phi}{\\Phi_{\\!_{0}}^{2}}}\\,."
+            },
+            {
+                "prediction": "\\mathcal{L}=-\\frac{1}{2}F\\wedge^{*}F+\\frac{1}{2}|D\\phi|^{2}-U(\\phi)",
+                "reference": "{\\mathcal L}=-\\frac{1}{2}F\\wedge^{*}F+\\frac{1}{2}|D\\phi|^{2}-U(\\phi)"
+            },
+            {
+                "prediction": "\\hat{g}=-(d x^{0})^{2}+(d x^{1})^{2}+\\Big(d r^{2}+r^{2}d\\Omega_{8}^{2}\\Big)\\ ,",
+                "reference": "\\hat{g}=-(d x^{0})^{2}+(d x^{1})^{2}+\\Big(d r^{2}+r^{2}d\\Omega_{8}^{2}\\Big)\\;,"
+            },
+            {
+                "prediction": "{\\mathrm{The~hkellhood}}\\;P!D!1{\\mathrm{lk}}){\\mathrm{~is~diffactlv~since~}}D{\\mathrm{~is~multiticatlv~sinee~}}D{\\mathrm{~is~multizedimension}}.",
+                "reference": "The likelihood P(\\boldsymbol{D}|{\\rm Ia}) is difficult to model directly since \\boldsymbol{D} is multi-dimensional."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{An~anisotropic~barostat~with~}P_{x}=P_{y}=P_{z}=0~\\mathrm{is~used~in~the~tensile~teation},}}\\\\ {{\\mathrm{ieading~to~a~tetragonal~simulation~box~before~runing~the~tensile~tersit.}}}\\end{array}",
+                "reference": "An anisotropic barostat with P_{x}=P_{y}=P_{z}=0 is used in the equilibration, leading to a tetragonal simulation box before running the tensile test."
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{As~a~consequnce,~and~due~to~the~lue~lue~lue~lue~wavepacels}~\\tilde{F}_{c o l a}}}\\\\ {{\\mathrm{,phase~plates~have~loe~inve~be~patirs,~one~on~exth~am~of~the~interbe~inter}}}\\\\ {{\\mathrm{[phase~plates~planer~plane-ple~banere~planelwinalo}.}}\\end{array}",
+                "reference": "As a consequence, and due to the limited length of the wavepackets L_{coh}\\approx21\\mum ), phase plates have to be inserted by pairs, one on each arm of the interferometer (phase plates are plane-parallel BK7 optical windows)."
+            },
+            {
+                "prediction": "<\\frac{1}{2},m_{s}|\\psi_{-}^{(\\frac{1}{2})}(g)>\\equiv D_{m_{s}-\\frac{1}{2}}^{(\\frac{1}{2})}(g)=<g,l+\\frac{1}{2}|T_{m_{s}-}^{\\frac{1}{2}}|g,l>.",
+                "reference": "<\\frac{1}{2},m_{s}|{\\psi}_{-}^{(\\frac{1}{2})}(g)>\\equiv D_{m_{s}-\\frac{1}{2}}^{(\\frac{1}{2})}(g)=<g,l+\\frac{1}{2}|T_{m_{s}-}^{\\frac{1}{2}}|g,l>."
+            },
+            {
+                "prediction": "\\vec{E}(\\tau)=\\left[\\frac{d^{2}}{d\\tau^{2}}-(2/\\tau)\\frac{d}{d\\tau}\\right]\\vec{G}(\\tau)",
+                "reference": "\\vec{E}(\\tau)=\\left[{\\frac{d^{2}}{d\\tau^{2}}}-(2/\\tau){\\frac{d}{d\\tau}}\\right]\\vec{G}(\\tau)"
+            },
+            {
+                "prediction": "V_{n s}(\\tilde{x})=\\left(\\frac{\\tilde{m}N^{2}}{16\\pi}\\right)N g^{2n s-1}\\tilde{x}^{2}\\left\\{\\tilde{x}^{2}-\\frac{2\\tilde{b}}{3}\\tilde{x}+\\frac{\\tilde{b}^{2}}{3}-(-1)^{n s}\\tilde{c}\\right\\}\\,.",
+                "reference": "V_{n s}({\\tilde{x}})=\\left(\\frac{{\\tilde{m}}N^{2}}{16\\pi}\\right)N g^{2n s-1}{\\tilde{x}}^{2}\\left\\{{\\tilde{x}}^{2}-\\frac{2{\\tilde{b}}}{3}{\\tilde{x}}+\\frac{{\\tilde{b}}^{2}}{3}-(-1)^{n s}{\\tilde{c}}\\right\\}\\,."
+            },
+            {
+                "prediction": "V_{\\pm}=\\frac{a(a\\mp\\frac{\\mu}{\\sqrt{2}})f^{2}+(a(b\\mp\\frac{\\nu}{\\sqrt{2}})+b(a\\mp\\frac{\\mu}{\\sqrt{2}}))f+b(b\\mp\\frac{\\nu}{\\sqrt{2}})}{(f^{\\prime})^{2}}\\pm\\frac{a}{\\sqrt{2}}.",
+                "reference": "V_{\\pm}=\\frac{a(a\\mp\\frac{\\mu}{\\sqrt{2}})f^{2}+(a(b\\mp\\frac{\\nu}{\\sqrt{2}})+b(a\\mp\\frac{\\mu}{\\sqrt{2}}))f+b(b\\mp\\frac{\\nu}{\\sqrt{2}})}{(f^{\\prime})^{2}}\\pm\\frac{a}{\\sqrt{2}}."
+            },
+            {
+                "prediction": "{\\cal L}_{\\mathrm{o}}=\\Phi(w)=\\triangle\\Phi(w),",
+                "reference": "L_{0}=\\Phi(w)=\\bigtriangleup\\Phi(w),"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{Static,~localexion~values~are~defationed~as~}\\langle\\ w\\mathrm{holpo}\\rangle\\mathrm{(pli)}\\rangle,\\mathrm{while~non}\\mathrm{tantocalecalecalecalece}}}\\\\ {{\\mathrm{tation~valtos,~such~sthe~the~the~ine~inf~clustrot~same~defined~thefined~thefined~thefined~thefinef.}}}\\end{array}",
+                "reference": "Static, local expectation values are defined as \\langle\\Psi^{(0)}|{\\hat O}|\\Psi^{(0)}\\rangle, while non-local expectation values, such as the energy for the impurity cluster, can be defined through a partial trace of the density matrices with the Hamiltonian, as defined in Ref."
+            },
+            {
+                "prediction": "I=2\\left(\\frac{\\alpha}{\\sinh^{2}A+\\sin^{2}\\frac{\\gamma}{2}}-\\frac{\\sinh\\frac{2A}{\\alpha}}{\\sinh^{2}\\frac{A}{\\alpha}+\\sin^{2}\\frac{\\gamma\\mid}{2\\alpha}}\\right)~~~.",
+                "reference": "I=2\\left({\\frac{\\alpha}{\\sinh^{2}A+\\sin^{2}{\\frac{\\gamma}{2}}}}-{\\frac{\\sinh{\\frac{2A}{\\alpha}}}{\\sinh{2A}}}~{\\frac{1}{(\\sinh^{2}{\\frac{A}{\\alpha}}+\\sin^{2}{\\frac{[\\gamma]}{2\\alpha}})}}\\right)~~."
+            },
+            {
+                "prediction": "\\Delta E_{\\mathrm{up}}=\\frac{1}{T^{(0)}}\\frac{4e^{S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})+4e^{S^{(0)}}}{4e^{2S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})-1},",
+                "reference": "\\Delta E_{\\mathrm{up}}=\\frac{1}{T^{(0)}}\\frac{4e^{S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})+4e^{S^{(0)}}}{4e^{2S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})-1},"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{8.5\\;{\\mathrm{These~models~serw.~s}~s o l u b l e~p a r a d i g m.~f o r~s y m m e t r y~b r e a k i n e s~p h e n o m e n a}}}\\\\ {{{\\mathrm{~in~both~strous~inticle~physics~s}~a n d~i n~c o n d e n s e d~m a t t e r~p h y s i c s~,}}}\\\\ {{{\\mathrm{~We~consider~ther~these~model~in~the~thes}~t~i n~i t.~s}}}\\end{array}",
+                "reference": "These models serve as soluble paradigms for symmetry breaking phenomena in both strong interaction particle physics and in condensed matter physics . We consider these models in the \u2019t\u00a0Hooft limit,"
+            },
+            {
+                "prediction": "\\begin{array}{l}{{\\mathrm{f~t~this~is~case~the~of~the~detecthon~of~the~jle~state~beter~of~the~jlet~pheter~ef~the~jeter~of~the~jeten~wavere}}}\\\\ {{\\mathrm{fore~the~information~about~the~ise~on~waveredor~iseten~walwe}}}\\\\ {{\\mathrm{eqt~into~into~phie~of~whical~pherent~walerens}}}\\end{array}",
+                "reference": "If this is the case, the detection of the idler photon in a state \\vert\\phi\\rangle_{i} will project the signal photon onto an entangled state between wavevector and wavelength; once the information about the wavelength is traced out, the signal photon will be left in a statistical mixture of different wavevectors, which will not couple well into the fundamental mode of an optical fiber."
+            },
+            {
+                "prediction": "\\begin{array}{l l}{{\\mathrm{Relativiztic}}}&{{\\mathrm{hydrodynamics~}}~{\\mathrm{on~2+1-dimensionansional~curved}}}\\\\ {{\\mathrm{bxckgroumds}}}&{{}}\\\\ {{\\mathrm{he~the~hydrodpnamic~the~temperehe~rensor~rienserentur~ef~the~of~ancutral~curtientior~ithe~curtientie~glersitie~cor~rentie~glersitic~glar~ef~theame~cortic~gler~the~antiwatiwes}}}\\\\ {{\\mathrm{background~malwat~ess}}}&{{\\mathrm{bar~cor~cor~tis~clwatititiwariwess}}}\\end{array}",
+                "reference": "## Relativistic hydrodynamics on 2+1-dimensional curved backgrounds\n\nIn the hydrodynamic limit the energy\u2013momentum tensor T^{\\mu\\nu} of a neutral fluid is a function of the local temperature T(x), of the velocity field u^\\mu(x), of the background metric g_{\\mu\\nu}(x) and of their covariant derivatives."
+            }
+        ]
+    },
+    "nougat": {
+        "scores": {
+            "bleu": 0.6976674654493465,
+            "meteor": 0.6683314929976263,
+            "edit": 0.28815891959810025
+        },
+        "text": [
+            {
+                "prediction": "Let us first consider a system of classical point masses in gravitational interaction in a space of dimension d=3.",
+                "reference": "Let us first consider a system of classical point masses in gravitational interaction in a space of dimension d=3."
+            },
+            {
+                "prediction": "(a) 1-\\epsilon^{-\\theta/2}f_{16} _s",
+                "reference": "\\left(\\alpha^{\\prime}\\right)^{-1}e^{-\\phi/2}f_{16}\\,s i m\\ g^{-24}\\sqrt{N}\\ ,"
+            },
+            {
+                "prediction": "",
+                "reference": "\\left(,\\right)=\\left(,\\right)_{1}+\\left(,\\right)_{2}."
+            },
+            {
+                "prediction": "",
+                "reference": "\\int_{k5}=\\int{\\frac{d^{4}k}{(2\\pi)^{4}}}{\\frac{1}{2\\ell}}\\sum_{k^{5}}\\ ,"
+            },
+            {
+                "prediction": "",
+                "reference": "\\tilde{f}_{2}=\\Phi(x-z_{2},x-z_{2})"
+            },
+            {
+                "prediction": "\\mathbb{C}_{\\mu}=\\mathbb{C}, for any \\mu\\in\\mathbb{N}; _local algebras_ and _local_ algebraic K_{i}^{loc}-theory were introduced in.",
+                "reference": "\\mathbb{C}_{\\mu}=\\mathbb{C}, for any \\mu\\in\\mathbb{N}; *local algebras* and *local* algebraic K^{loc}_{i}-theory were introduced in ."
+            },
+            {
+                "prediction": "In this description, in order to account for the contribution of the magnetic charge Q_{B} to the mass, the Smarr mass formula is generalized; it becomes a cubic equation.",
+                "reference": "In this description, in order to account for the contribution of the magnetic charge Q_{B} to the mass, the Smarr mass formula is generalized; it becomes a cubic equation."
+            },
+            {
+                "prediction": "\\Left[\\ \\backslashsum_{p>q \\backslashge 0}\\backslashbinom{2k-2}{k+p-1}\\backslashbinom{2k-2}{k+q} - \\backslashsum_{p>q>0}\\backslashbinom{2k-2}{k+p-1}\\backslashbinom{2k-2}{k+q}",
+                "reference": "\\left[\n\\sum_{p>q \\ge 0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q}\n-\\sum_{p>q>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k+q}\n\\right]\n\\right\\}\\,.\\\\\n\\end{aligned}The expressions inside each pair of square brackets both involve a kind of two-variable telescoping sum\u2013the only terms that do not cancel are those forq=0.Thus,we obtain\\begin{aligned}\n\\frac{S_3}{8} &=& 2k(2k-1) \\times\\\\\n&& \\left\\{\n\\sum_{p>0}\\binom{2k-2}{k+p-1}\\binom{2k-2}{k}\n-\\sum_{p>0}\\binom{2k-2}{k+p}\\binom{2k-2}{k-1}\n\\right\\}\\,.\\\\\n\\end{aligned}Taking out the factors that are independent ofp,we are left with two easily-evaluated sums,giving\\begin{aligned}\nS_3 = 8k(2k-1) \\!\\!\\!&\\times&\\!\\!\\!"
+            },
+            {
+                "prediction": "\\frac{\\phi^{\\prime\\prime}}{A}+\\frac{1}{A}\\left(-\\frac{1}{2}\\frac{A^{\\prime}}{A}+2 \\frac{B^{\\prime}}{B}+\\frac{2}{r}\\right)\\phi^{\\prime}-\\frac{2}{r^{2}}\\phi-\\lambda \\phi(\\phi^{2}-\\eta^{2})=0\\,.",
+                "reference": "{\\frac{\\phi^{\\prime\\prime}}{A}}+{\\frac{1}{A}}\\left(-{\\frac{1}{2}}{\\frac{A^{\\prime}}{A}}+2{\\frac{B^{\\prime}}{B}}+{\\frac{2}{r}}\\right)\\phi^{\\prime}-{\\frac{2}{r^{2}}}\\phi-\\lambda\\phi(\\phi^{2}-\\eta^{2})=0\\,."
+            },
+            {
+                "prediction": "\\Lambda_{\\mu\\nu}(p)=\\frac{4\\pi}{\\kappa}\\,\\frac{\\mu}{p^{2}(p^{2}+\\mu^{2})}\\,(\\mu \\epsilon_{\\mu\\nu\\lambda}p^{\\lambda}+\\delta_{\\mu\\nu}p^{2}-p_{\\mu}p_{\\nu})",
+                "reference": "\\Delta_{\\mu\\nu}(p)=\\frac{4\\pi}{\\kappa}\\frac{\\mu}{p^{2}(p^{2}+\\mu^{2})}(\\mu\\epsilon_{\\mu\\nu\\lambda}p^{\\lambda}+\\delta_{\\mu\\nu}p^{2}-p_{\\mu}p_{\\nu})"
+            },
+            {
+                "prediction": "While the branching ratio for B_{s}\\to\\mu^{+}\\mu^{-} turns out to be rather close to SM prediction, although a bit lower, the central value for the one of B_{d}\\to\\mu^{+}\\mu^{-} is by a factor of 3.5 higher than its SM value.",
+                "reference": "While the branching ratio for B_s\\to\\mu^+\\mu^- turns out to be rather close to SM prediction, although a bit lower, the central value for the one of B_d\\to\\mu^+\\mu^- is by a factor of 3.5 higher than its SM value."
+            },
+            {
+                "prediction": "In this article we show how \\mu_{s_{i}} can be maximized.",
+                "reference": "In this article we show how \\mu_{si} can be maximized."
+            },
+            {
+                "prediction": "W^{(1)}=\\frac{1}{Z^{(1)}N}\\sum_{R,S}\\frac{d_{R}}{d_{S}}\\exp\\left[-\\frac{g^{2}A_{1} }{2}C_{2}(R)-\\frac{g^{2}A_{2}}{2}C_{2}(S)\\right]\\int dU\\mathrm{Tr}[U]\\chi_{R}(U )\\chi_{S}^{\\dagger}(U),",
+                "reference": "{\\cal W}^{(1)}={\\frac{1}{{\\cal Z}^{(1)}N}}\\sum_{R,S}\\frac{d_{R}}{d_{S}}\\exp\\left[-{\\frac{g^{2}A_{1}}{2}}C_{2}(R)-{\\frac{g^{2}A_{2}}{2}}C_{2}(S)\\right]\\int d U\\mathrm{Tr}[U]\\chi_{R}(U)\\chi_{S}^{\\dagger}(U),"
+            },
+            {
+                "prediction": "Spectral functions are then defined as A(\\omega)=-\\frac{1}{\\pi}\\Im[G(\\omega)], where the spectral broadening is given by the small imaginary component of the energy, \\eta, which regularizes the correlation function.",
+                "reference": "Spectral functions are then defined as A(\\omega)=-\\frac{1}{\\pi}\\Im[G(\\omega)], where the spectral broadening is given by the small imaginary component of the energy, \\eta, which regularizes the correlation function."
+            },
+            {
+                "prediction": "c_{l,m}=\\eta(\\tau)^{-3}\\sum_{-|x|<y<|x|} sign(x) q^{(k+2)}x^{2}-ky^{2}",
+                "reference": "c_{l,m}=\\eta(\\tau)^{-3}\\sum_{-|x|<y\\leq|x|}\\mathrm{sign}(x)~q^{(k+2)x^{2}-k y^{2}}"
+            },
+            {
+                "prediction": "The elastic net is characterized by the presence of ridge regression term \\ell^{2}-norm) and it is defined by the following convex minimization problem:\n\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\|\\mathbf{x}\\|_{1}+\\tau_{2}\\|\\mathbf{x}\\|_{2}^{2 }+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},\n\nwhere\\tau_{1}and\\tau_{2}are non-negative parameters.An improvement for the EN model was proposed in where a combination of the\\ell^{2}-penalty and an adaptive version of the\\ell^{1}-norm have been implemented by considering the minimization problem\n\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\sum_{i=1}^{n}\\omega_{i}|x_{i}|+\\tau_{2}\\| \\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},\n\nwhere the adaptive weights are computed using a solution given by the EN minimization problem[EN1_intro].If we let the solution of EN to be\\hat{\\mathbf{x}}(EN",
+                "reference": "The elastic net is characterized by the presence of ridge regression term \\ell^{2}-norm) and it is defined by the following convex minimization problem: \\label{EN1_intro}\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\|\\mathbf{x}\\|_{1} + \\tau_{2}\\|\\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},where\\tau_{1}and\\tau_{2}are non-negative parameters.An improvement for the EN model was proposed in where a combination of the\\ell^{2}-penalty and an adaptive version of the\\ell^{1}-norm have been implemented by considering the minimization problem\\label{EN2_intro}\n\\min_{\\mathbf{x}}\\left\\{\\tau_{1}\\sum_{i=1}^{n}\\omega_{i}|x_{i}| + \\tau_{2}\\|\\mathbf{x}\\|_{2}^{2}+\\frac{1}{2}\\|\\mathbf{y}-A\\mathbf{x}\\|_{2}^{2}\\right\\},where the adaptive weights are computed using a solution given by the EN minimization problem[EN1_intro].If we let the solution of EN to be\\mathbf{\\hat{x}}(EN),then the weights are given by the equation\\omega_{i}=1/(|\\hat{x}_{i}(EN)|+(1/m))^{\\vartheta}where\\varthetais a positive constant.A variant of the above model was propose"
+            },
+            {
+                "prediction": "Finally, the bend in the wires will lead to a potential from the currents in the z-direction, which requires the atom to have enough kinetic energy to overcome it and therefore sets an upper bound to the adiabaticity that can be reached.",
+                "reference": "Finally, the bend in the wires will lead to a potential from the currents in the z-direction, which requires the atom to have enough kinetic energy to overcome it and therefore sets an upper bound to the adiabaticity that can be reached."
+            },
+            {
+                "prediction": "\\int_{-\\epsilon}^{\\infty}dl\\,{\\rm e}^{-l\\zeta}\\int_{-\\epsilon}^{\\infty}dl^{ \\prime}{\\rm e}^{-l^{\\prime}\\zeta}ll^{\\prime}\\,\\frac{l^{\\prime}-l}{l+l^{\\prime}} \\{3\\,\\delta^{\\prime\\prime}\\,(l)-\\frac{3}{4}t\\,\\delta(l)\\}=0.",
+                "reference": "\\int_{-\\epsilon}^{\\infty}d l\\:\\mathrm{e}^{-l\\zeta}\\int_{-\\epsilon}^{\\infty}d l^{\\prime}\\mathrm{e}^{-l^{\\prime}\\zeta}l l^{\\prime}{\\frac{l^{\\prime}-l}{l+l^{\\prime}}}\\{3\\,\\delta^{\\prime\\prime}(l)-{\\frac{3}{4}}t\\,\\delta(l)\\}=0."
+            },
+            {
+                "prediction": "The central obstacle was moved from a central position a_{1}=a_{2}=2cm to one side in increments of0.1or0.2cm,to give a range of differenta_{1}anda_{2},witha_{2} denoting the width of the narrow channel.",
+                "reference": "The central obstacle was moved from a central position a_1 =\na_2 = 2cm to one side in increments of0.1or0.2cm,to give a range of differenta_1anda_2,witha_2 denoting the width of the narrow channel."
+            },
+            {
+                "prediction": "I_{1}(y,\\mp r)=\\int_{0}^{\\infty}\\frac{dx}{\\sqrt{x^{2}+y^{2}}}\\frac{1}{\\exp( \\sqrt{x^{2}+y^{2}}\\mp r)+1}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,",
+                "reference": "I_{1}(y,\\mp r)=\\int_{0}^{\\infty}\\frac{d x}{\\sqrt{x^{2}+y^{2}}}\\frac{1}{\\exp(\\sqrt{x^{2}+y^{2}}\\mp r)+1},"
+            },
+            {
+                "prediction": "",
+                "reference": "g_{a\\bar{b}}=\\partial_{a}\\,\\partial_{\\bar{b}}\\,K(z,\\bar{z})\\ ."
+            },
+            {
+                "prediction": "H^{\\prime}|\\Psi^{(0)}\\rangle=E_{0}|\\Psi^{(0)}\\rangle is solved for the wavefunction over the quantum impurity and bath, |\\Psi^{(0)}\\rangle.",
+                "reference": "H'|\\Psi^{(0)}\\rangle=E_0|\\Psi^{(0)}\\rangle is solved for the wavefunction over the quantum impurity and bath, |\\Psi^{(0)}\\rangle."
+            },
+            {
+                "prediction": "It can be expressed as\n\nP_{\\rm tr}=\\cos\\Theta_{\\rm LC}=\\left(1-\\frac{B_{\\rm in}}{B_{\\rm bd}}\\right)^{1/2}\n\nand is shown in Fig.",
+                "reference": "It can be expressed as P_{\\rm tr}=\\cos{\\Theta_{\\rm LC}}=\\left(1-\\frac{B_{\\rm in}}{B_{\\rm bd}}\\right)^{1/2} and is shown in Fig."
+            },
+            {
+                "prediction": "",
+                "reference": "H_{i j}^{a}=F_{i j}^{a}-g f_{\\;\\;b c}^{a}A_{i}^{b}A_{j}^{c},"
+            },
+            {
+                "prediction": "{\\rm Tr}(\\gamma_{g})=-2, {\\rm Tr}(\\gamma_{R_{s}})={\\rm Tr}(\\gamma_{gR_{s}})=0.",
+                "reference": "{\\mathrm{Tr}}(\\gamma_{g})=-2~,~~~{\\mathrm{Tr}}(\\gamma_{R_{s}})={\\mathrm{Tr}}(\\gamma_{g R_{s}})=0~."
+            },
+            {
+                "prediction": "",
+                "reference": "S-\\ln{\\cal Z}=-\\alpha{\\cal N}-\\beta^{\\rho}{\\cal P}_{\\rho}\\ ."
+            },
+            {
+                "prediction": "Here \\kappa\\in C^{2}(M) is such that the operator -\\Delta_{q}+\\kappa is coercive.",
+                "reference": "Here \\kappa\\in C^2(M) is such that the operator -\\Delta_g+\\kappa is coercive."
+            },
+            {
+                "prediction": "* [15] J. M. Campbell, _Phys. Rev. Lett._ **58** (1987) 1988.\n* [16] J. M. Campbell, _Phys. Rev. Lett._ **59** (1987) 1988.\n* [17] J. M. Campbell, _Phys. Rev. Lett._ **59** (1987) 1988.\n* [18] J. M. Campbell, _Phys. Rev. Lett._ **60** (1988) 1988.\n* [19] J. M. Campbell, _Phys. Rev. Lett._ **61** (1988) 1988.\n* [20] J. M. Campbell, _Phys. Rev. Lett._ **62** (1988) 1988.\n* [21] J. M. Campbell, _Phys. Rev. Lett._ **63** (1988) 1988.\n* [22] J. M. Campbell, _Phys. Rev. Lett._ **64** (1990) 1988.\n* [23] J. M. Campbell, _Phys. Rev. Lett._ **65** (1990) 1988.\n* [24] J. M. Campbell, _Phys. Rev. Lett._",
+                "reference": "\\epsilon_{\\mathrm{vac}}=\\left<\\frac{\\beta(g)}{8g}G\\cdot G\\right>"
+            },
+            {
+                "prediction": "Indeed, if we concentrate on B_{s}^{0}-\\bar{B}_{s}^{0} mixing, b\\to s\\mu^{+}\\mu^{-} and b\\to s\\nu\\bar{\\nu} observables there are only four new parameters to our disposal: the three reduced couplings of which the first one is generally complex and the other two real.",
+                "reference": "Indeed, if we concentrate on B_s^0-\\bar B_s^0 mixing, b\\to s\\mu^+\\mu^- and b\\to s\\nu\\bar\\nu observables there are only four new parameters to our disposal: the three *reduced couplings* of which the first one is generally complex and the other two real."
+            },
+            {
+                "prediction": "where the constant parameter Q_{o} is the value of the electric charge Q_{E} in absence of magnetic charge Q_{R}.",
+                "reference": "where the constant parameter Q_{o} is the value of the electric charge Q_{E} in absence of magnetic charge Q_{B}."
+            },
+            {
+                "prediction": "(N_{c}+\\widetilde{N}_{c},\\overline{N_{c}+\\widetilde{N}_{c}})(1,1,0,\\beta_{i}), i=1,2,3",
+                "reference": "(N_{c}+\\tilde{N}_{c},\\overline{{{N_{c}+\\tilde{N}_{c}}}})(1,1,0,\\beta_{i}),\\ \\ \\ i=1,2,3"
+            },
+            {
+                "prediction": "\\delta_{k}A_{\\mu}=[D_{\\mu},[A_{\\nu_{1}},[...,[A_{\\nu_{k-1}},L^{\\nu_{1}\\cdots\\nu_{k -1}}]]].",
+                "reference": "\\delta_{k}A_{\\mu}=[D_{\\mu},[A_{\\nu_{1}},[\\ldots,[A_{\\nu_{k-1}},L^{\\nu_{1}\\ldots\\nu_{k-1}}]\\ldots]]]."
+            },
+            {
+                "prediction": "## Formalism\n\n### Magnitude of the 21-cm Signal\n\nThe 21-cm transition results from hyperfine splitting in the 1S ground state of the hydrogen atom when the magnetic moments of the proton and electron flip between aligned (triplet state) and anti-aligned (singlet state).",
+                "reference": "# Formalism\n\n## Magnitude of the 21-cm Signal\n\nThe 21-cm transition results from hyperfine splitting in the 1\\mathrm{S} ground state of the hydrogen atom when the magnetic moments of the proton and electron flip between aligned (triplet state) and anti-aligned (singlet state)."
+            },
+            {
+                "prediction": "",
+                "reference": "V_{a b\\ \\ m n}^{k}=\\frac{1}{g}\\ E_{a}^{r}\\ E_{b}^{s}\\epsilon_{r s(m}\\ \\delta_{n)}^{i}."
+            },
+            {
+                "prediction": "In fact, in CMOS circuits, the dynamic power consumption is described by the following equation :\n\nP_{dyn}=C_{eff}.V^{2}.f\n\nwhere C_{eff} represents the circuit effective capacitance, V, the supply voltage associated to the clock frequency f.",
+                "reference": "In fact, in CMOS circuits, the dynamic power consumption is described by the following equation : \\label{DVFS-P-EQUATION}\nP_{dyn}=C_{eff}.V^2.f where C_{eff} represents the circuit effective capacitance, V, the supply voltage associated to the clock frequency f ."
+            },
+            {
+                "prediction": "\\phi_{\\eta}(q_{z},q_{0})=\\left(\\frac{1}{\\pi}\\right)^{1/2}\\exp\\left\\{-\\frac{1}{2} \\left(e^{-2\\eta}q_{u}^{2}+e^{2\\eta}q_{v}^{2}\\right)\\right\\}.",
+                "reference": "\\phi_{\\eta}(q_{z},q_{0})=\\left({\\frac{1}{\\pi}}\\right)^{1/2}\\exp\\left\\{-{\\frac{1}{2}}\\left(e^{-2\\eta}q_{u}^{2}+e^{2\\eta}q_{v}^{2}\\right)\\right\\}."
+            },
+            {
+                "prediction": "Taking the spatial domain to be the whole space, the velocity can be recovered from the vorticity via the Biot-Savart Law,\n\nu(x)=c\\int\\nabla\\frac{1}{|x-y|}\\,\\times\\omega(y)\\,dy;\n\nthis makes ([vorticity]) a closed (non-local) system for the vorticity field alone.",
+                "reference": "Taking the spatial domain to be the whole space, the velocity can be recovered from the vorticity via the Biot-Savart Law,\n\nu(x)=c\\int\\nabla\\frac{1}{|x-y|}\\times\\omega(y)\\,dy;\n\nthis makes ([vorticity]) a closed (non-local) system for the vorticity field alone."
+            },
+            {
+                "prediction": "For a channel just slightly wider than 2R, the foam adopts a crystalline structure with only a few columns of bubbles (double staircase and staircase structure).",
+                "reference": "For a channel just slightly wider than 2R, the foam adopts a crystalline structure with only a few columns of bubbles (double staircase and staircase structure)."
+            },
+            {
+                "prediction": "The motion of the foam was recorded using a 1312\\times 1082 pixel digital video camera running at 25 fps.",
+                "reference": "The motion of the foam was recorded using a 1312\\times1082 pixel digital video camera running at 25\u00a0fps."
+            },
+            {
+                "prediction": "### Enclosed Channel\n\nThe enclosed channel tests were carried out with a Hele-Shaw plate separation of h=0.1 cm.",
+                "reference": "## Enclosed Channel\n\nThe enclosed channel tests were carried out with a Hele-Shaw plate separation of h=0.1\u00a0cm."
+            },
+            {
+                "prediction": "",
+                "reference": "R_{\\mu\\nu}-\\frac{1}{2}R g_{\\mu\\nu}=0"
+            },
+            {
+                "prediction": "\\frac{1}{2\\lambda f^{2}}\\int\\,d^{4}X\\,\\frac{d^{4}q}{\\left(2\\pi\\right)^{4}}\\left( \\varphi(X)\\right)^{2}\\tilde{\\pi}_{0}(q)\\left[\\partial_{q}^{2}+\\frac{4i\\lambda}{ q^{2}-\\Sigma^{2}(q)}\\right]\\tilde{\\pi}_{0}(q),",
+                "reference": "\\frac{1}{2\\lambda f^{2}}\\int\\;d^{4}X\\,\\frac{d^{4}q}{\\left(2\\pi\\right)^{4}}\\left(\\varphi(X)\\right)^{2}\\tilde{\\pi}_{0}(q)\\left[\\partial_{q}^{2}+\\frac{4i\\lambda}{q^{2}-\\Sigma^{2}(q)}\\right]\\tilde{\\pi}_{0}(q),"
+            },
+            {
+                "prediction": "Let (B,g_{B}) and (N,g_{N}) be two riemannian manifolds of dimensions b and n, respectively.",
+                "reference": "Let (B,g_B) and (N,g_N) be two riemannian manifolds of dimensions b and n, respectively."
+            },
+            {
+                "prediction": "M=\\left(\\frac{2\\sqrt{2}}{3}\\right)\\frac{m^{3}}{\\lambda}+\\frac{nm}{\\lambda}\\left[ \\frac{1}{6}\\sqrt{\\frac{3}{2}-\\frac{3}{\\pi\\sqrt{2}}}\\right]",
+                "reference": "M=\\left(\\frac{2\\sqrt{2}}{3}\\right)~\\frac{m^{3}}{\\lambda}+~\\hbar m\\left[\\frac{1}{6}\\sqrt{\\frac{3}{2}}-\\frac{3}{\\pi\\sqrt{2}}\\right]"
+            },
+            {
+                "prediction": "The essential idea for static quantities is that the Schmidt decomposition of a mean-field bulk state defines a manifestly _finite_ quantum impurity mapping: for a cluster of l impurity sites there are (at most) l bath sites.",
+                "reference": "The essential idea for static quantities is that the Schmidt decomposition of a mean-field bulk state defines a manifestly *finite* quantum impurity mapping: for a cluster of l impurity sites there are (at most) l bath sites."
+            },
+            {
+                "prediction": "**Figure Captions**\n\n[MISSING_PAGE_POST]",
+                "reference": "\\frac{g_{Y M}^{2}N}{J^{3}}\\frac{J^{4}}{N^{2}}\\frac{g^{2}N}{J^{2}}"
+            },
+            {
+                "prediction": "Classification is based on the observation that high values of the coefficients in the solution \\hat{\\mathbf{x}} are associated with the columns of A of a single class, corresponding to the identity of the probe.",
+                "reference": "Classification is based on the observation that high values of the coefficients in the solution \\mathbf{\\hat{x}} are associated with the columns of A of a single class, corresponding to the identity of the probe."
+            },
+            {
+                "prediction": "The pattern of 5\\times 60 parallel 0.8-mm-diameter holes shown in Fig.",
+                "reference": "The pattern of 5\\times60 parallel 0.8-mm-diameter holes shown in Fig."
+            },
+            {
+                "prediction": "E_{4s}=2(Q+Q^{-1})+\\xi_{1}+\\xi_{1}^{-1}+\\xi_{2}+\\xi_{2}^{-1}",
+                "reference": "E_{4s}=2(Q+Q^{-1})+\\xi_{1}+\\xi_{1}^{-1}+\\xi_{2}+\\xi_{2}^{-1}"
+            },
+            {
+                "prediction": "H_{T}=H_{1}+\\Sigma_{i=1}^{3}c^{i}\\,\\phi_{i},\\quad\\quad H_{1}=-\\frac{1}{2}{r^{2} }q_{xx}-p\\,q_{xx}",
+                "reference": "{\\cal H}_{T}={\\cal H}_{1}+\\Sigma_{i=1}^{3}c^{i}\\,\\phi_{i},\\;\\;\\;\\;\\;{\\cal H}_{1}=-\\frac{1}{2}r^{2}q_{x x}-p\\,q_{x x}"
+            },
+            {
+                "prediction": "A=ar^{\\beta},\\quad B=b^{\\beta+2}; a/b=c(\\beta+2)/(\\beta-2),",
+                "reference": "A=a r^{\\beta},\\quad B=b r^{\\beta+2};\\qquad a/b=c(\\beta+2)/(\\beta-2),"
+            },
+            {
+                "prediction": "The first stars are expected to be very massive resulting in surface temperatures of order 10^{5} K, though evidence for such objects is currently limited to abundance patterns in low-mass stars in the Milky Way.",
+                "reference": "The first stars are expected to be very massive resulting in surface temperatures of order 10^5 K , though evidence for such objects is currently limited to abundance patterns in low-mass stars in the Milky Way ."
+            },
+            {
+                "prediction": "",
+                "reference": "e^{i S_{e f f}(x)}=\\int d\\bar{\\psi}d\\psi e^{i\\int\\tilde{L}_{f}d t}"
+            },
+            {
+                "prediction": "The electrons which remain trapped during the 2.3 \\mus prior to the train arrival are cleared out during the first 6 of the 20 bunch passages, reabsorbed either in the detector or the vacuum chamber wall.",
+                "reference": "The electrons which remain trapped during the 2.3\u00a0\\mus prior to the train arrival are cleared out during the first 6 of the 20 bunch passages, reabsorbed either in the detector or the vacuum chamber wall."
+            },
+            {
+                "prediction": "",
+                "reference": "J_{\\mu}=-{\\frac{i e}{2}}\\bigg[\\Phi^{\\ast}D_{\\mu}\\Phi-\\Phi\\big(D_{\\mu}\\Phi\\big)^{\\ast}\\bigg]\\,."
+            },
+            {
+                "prediction": "S=\\frac{1}{G}\\int dxdt\\,\\sqrt{-\\bar{g}}\\,e^{-2\\bar{\\phi}}(\\bar{R}+4(\\bar{\\nabla} \\,\\bar{\\phi})^{2}+4\\lambda^{2})-\\frac{1}{2}\\int dxdt\\,\\sqrt{-\\bar{g}}\\,\\sum_{i=1 }^{N}(\\bar{\\nabla}f_{i})^{2},",
+                "reference": "S=\\frac{1}{G}\\int d x d t\\:\\sqrt{-\\bar{g}}\\:e^{-2\\bar{\\phi}}(\\bar{R}+4(\\bar{\\nabla}\\bar{\\phi})^{2}+4\\lambda^{2})-\\frac{1}{2}\\int d x d t\\:\\sqrt{-\\bar{g}}\\:\\sum_{i=1}^{N}(\\bar{\\nabla}f_{i})^{2},"
+            },
+            {
+                "prediction": "In general, the collisional coupling is a sum over collision-partners,\n\nx_{c}=\\sum_{i}\\frac{n_{i}\\kappa_{10}^{i}}{A_{10}}\\frac{T_{*}}{T_{\\gamma}}\n\nwhere n_{i} is the number density of species i, and \\kappa_{10}^{i}=\\kappa_{10}^{i}(T_{\\rm K})is the rate coefficient for spin de-excitation via collisions with speciesi.",
+                "reference": "In general, the collisional coupling is a sum over collision-partners, x_c=\\sum_i\\frac{n_i\\kappa_{10}^i}{A_{10}}\\frac{T_{\\ast}}{T_{\\gamma}}\\label{eq:xc} where n_i is the number density of species i, and \\kappa_{10}^i =\n\\kappa_{10}^i(T_{\\text{K}})is the rate coefficient for spin de-excitation via collisions with speciesi."
+            },
+            {
+                "prediction": "A superscript * labels results which have been obtained in the isospin symmetric limit.",
+                "reference": "A superscript * labels results which have been obtained in the isospin symmetric limit."
+            },
+            {
+                "prediction": "The redshift evolution of the 21-cm signal, \\delta T_{b}(z), as measured relative to the CMB, also depends on the mean hydrogen ionized fraction, \\overline{x}_{i}, and in general on the baryon over-density and proper motions along the line of sight, though the last two effects should be negligible for studies of the all-sky spectrum, leaving,\n\n\\delta T_{b}\\simeq 27(1-\\overline{x}_{i})\\left(\\frac{\\Omega_{\\rm b,0}h^{2}}{0.0 23}\\right)\\left(\\frac{0.15}{\\Omega_{\\rm m,0}h^{2}}\\frac{1+z}{10}\\right)^{1/2} \\left(1-\\frac{T_{\\gamma}}{T_{\\rm S}}\\right),\n\nwhere h is the Hubble parameter today in units of 100 km s{}^{-1} Mpc{}^{-1},and\\Omega_{\\rm b,0}and\\Omega_{\\rm m,0} are the fractional contributions of baryons and matter to the critical energy density, respectively.",
+                "reference": "The redshift evolution of the 21-cm signal, \\delta T_b(z), as measured relative to the CMB, also depends on the mean hydrogen ionized fraction, \\overline{x}_i, and in general on the baryon over-density and proper motions along the line of sight, though the last two effects should be negligible for studies of the all-sky spectrum, leaving , \\delta T_b\\simeq27(1-\\overline{x}_i)\\left(\\frac{\\Omega_{\\text{b},0}h^2}{0.023}\\right)\\left(\\frac{0.15}{\\Omega_{\\text{m},0}h^2}\\frac{1+z}{10}\\right)^{1/2}\\left(1-\\frac{T_{\\gamma}}{T_{\\mathrm{S}}}\\right),\\label{eq:dTb} where h is the Hubble parameter today in units of 100 \\ \\mathrm{km} \\\n\\mathrm{s}^{-1} \\ \\mathrm{Mpc}^{-1},and\\Omega_{\\text{b},0}and\\Omega_{\\text{m},0} are the fractional contributions of baryons and matter to the critical energy density, respectively."
+            },
+            {
+                "prediction": "[11] J. M. Campbell, J. M. Campbell, and J. M. Campbell, Phys. Rev. D **63**, 023501 (2001).\n* [12] J. M. Campbell, J. M. Campbell, and J. M. Campbell, Phys. Rev. D **64**, 023501 (2001).\n* [13] J. M. Campbell, J. M. Campbell, and J. M. Campbell, J. M. Campbell, Phys. Rev. D **65**, 023502 (2002).\n* [14] J. M. Campbell, J. M. Campbell, and J. M. Campbell, J. M. Campbell, Phys. Rev. D **66**, 023502 (2002).\n* [15] J. M. Campbell, J.",
+                "reference": "\\mathbf{J}^{2}=(\\mathbf{J}^{2})^{\\dagger}=G(\\mathbf{J}^{2})^{+}G,"
+            },
+            {
+                "prediction": "## References\n\n* [1] A. B. K.",
+                "reference": "\\mathbf{\\hat{x}}\\in\\mathbb{R}^{n}"
+            },
+            {
+                "prediction": "X_{\\pm z^{a}}=\\theta_{a\\bar{a}}S^{N}\\bar{z}^{\\bar{a}}(S^{\\dagger})^{N}+\\sum_{n=0 }^{N-1}\\lambda_{a,n}|n\\rangle\\langle n|\\otimes P_{0}^{(2)}",
+                "reference": "X_{\\pm z^{a}}=\\theta_{a\\bar{a}}S^{N}\\bar{z}^{\\bar{a}}(S^{\\dagger})^{N}+\\sum_{n=0}^{N-1}\\lambda_{a,n}|n\\rangle\\langle n|\\otimes P_{0}^{(2)},"
+            },
+            {
+                "prediction": "Let V:\\mathbb{X}\\to[1,+\\infty) be a measurable function such that V(x_{0})=1 for some x_{0}\\in\\mathbb{X}.",
+                "reference": "Let V:\\mathbb{X}\\rightarrow[1,+\\infty) be a measurable function such that V(x_0)=1 for some x_0\\in\\mathbb{X}."
+            },
+            {
+                "prediction": "The visibility can be therefore adjusted with a resolution of V_{n+1}-V_{n}\\approx 0.06.",
+                "reference": "The visibility can be therefore adjusted with a resolution of V_{n+1}-V_n\\approx0.06."
+            },
+            {
+                "prediction": "\\delta_{i=j}=\\delta_{+-}=\\delta_{-+}=1,\\quad\\delta_{i\\neq j}=\\delta_{i+}=\\delta_{i-}= \\delta_{++}=\\delta_{--}=0.",
+                "reference": "\\delta_{i=j}=\\delta_{+-}=\\delta_{-+}=1,\\quad\\delta_{i\\neq j}=\\delta_{i+}=\\delta_{i-}=\\delta_{++}=\\delta_{--}=0."
+            },
+            {
+                "prediction": "In order to obtain more precise quantitative properties of the previous equation, one can wonder about the rate of convergence of g(t,x) to the asymptotic profile G(x).",
+                "reference": "In order to obtain more precise quantitative properties of the previous equation, one can wonder about the rate of convergence of g(t,x) to the asymptotic profile G(x)."
+            },
+            {
+                "prediction": "",
+                "reference": "I_{L(R)}^{A}=-\\epsilon^{A B C}[I_{L(R)}^{B},I_{L(R)}^{C}],"
+            },
+            {
+                "prediction": "Q^{M}=\\dot{g}_{0}\\int_{\\phi(\\Sigma)}\\sum_{i=1}^{l}\\beta_{i}\\eta_{i}\\int_{N_{i}} \\frac{1}{\\sqrt{g}}\\delta^{D}(x-z_{i}(u))\\sqrt{g_{u}}",
+                "reference": "Q^{M}=\\dot{g}_{0}\\int_{\\phi(\\Sigma)}\\sum_{i=1}^{l}\\beta_{i}\\eta_{i}\\int_{N_{i}}\\frac1{\\sqrt{g}}\\delta^{D}(x-z_{i}(u))\\sqrt{g_{u}}"
+            },
+            {
+                "prediction": "* [16] A. A. Belinskii, _Phys. Rev._ **108** (1968) 1235.\n* [17] A. A. Belinskii, _Phys. Rev._ **108** (1969) 1235.\n* [18] A. A. Belinskii, _Phys. Rev._ **108** (1973) 1235.\n* [19] A. A. Belinskii, _Phys. Rev._ **108** (1974) 1235.\n* [20] A. A. Belinskii, _Phys. Rev._ **108** (1975) 1235.\n* [21] A. A. Belinskii, _Phys. Rev._ **108** (1978) 1235.\n* [22] A. A. Belinskii, _Phys. Rev._ **108** (1979) 1235.\n* [23] A. A. Belinskii, _Phys. Rev._ **108** (1979) 1235.\n* [24] A. A. Belinskii, _Phys. Rev._ **108** (1983) 1235.\n* [25] A. A. Belinskii, _Phys. Rev._ **",
+                "reference": "\\varphi\\sim A+B\\mathrm{sign}(t)|\\vec{k}t|^{\\epsilon}."
+            },
+            {
+                "prediction": "Improvement | :-------:|:-------:|:-------:|:-------:|  CPU (MPI) |8|\\sim6 Hr |1.0\\times|||16|\\sim4 Hr |1.5\\times|||32|\\sim1.5 Hr |4.0\\times|||64|\\sim1 Hr |6.0\\times|| GPU |1|\\sim1 Hr |6.0\\times|\n\nThe approximate times taken to simulate the propagation of an atom through our atom chip system on both GPU and CPU.",
+                "reference": "Improvement |\n|:---------:|:------------:|:--------------------:|:----------------:|\n| CPU (MPI) |      8       |  \\sim6 Hr  |   1.0\\times    |\n|           |      16      |  \\sim4 Hr  |   1.5\\times    |\n|           |      32      | \\sim1.5 Hr |   4.0\\times    |\n|           |      64      |  \\sim1 Hr  |   6.0\\times    |\n|    GPU    |      1       |  \\sim1 Hr  |   6.0\\times    |\n\nThe approximate times taken to simulate the propagation of an atom through our atom chip system on both GPU and CPU."
+            },
+            {
+                "prediction": "For a given observable, D_{i}, we estimate the probability that a SN is of Type Ia, P({\\rm Ia}|D_{i}).",
+                "reference": "For a given observable, D_{i}, we estimate the probability that a SN is of Type Ia, P({\\rm Ia}|D_{i})."
+            },
+            {
+                "prediction": "Q_{a,b}(\\mu,\\nu;N)=p_{a,b}(\\mu,\\nu;0;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}p_{a, b}(\\mu,\\nu;\\lambda;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}m_{a,b}(\\mu,\\nu; \\lambda;N).",
+                "reference": "Q_{a,b}(\\mu,\\nu;N)=p_{a,b}(\\mu,\\nu;0;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}p_{a,b}(\\mu,\\nu;\\lambda;N)+\\sum_{\\lambda=1}^{\\infty}(-1)^{\\lambda}m_{a,b}(\\mu,\\nu;\\lambda;N)."
+            },
+            {
+                "prediction": "**Figure Captions",
+                "reference": "Z({j_{k}})=e^{i Z_{c}({j_{k}})}"
+            },
+            {
+                "prediction": "\\sum_{ij,k,l,m}^{p}A_{ik}A_{jl}a_{kl}=\\sum_{ij,k,l,m}^{h}b_{ijm}^{p}A_{ik}A_{jl}A_{mn} \\overline{b}_{kln}^{q}.",
+                "reference": "\\sum_{i,j,k,l=1}^{h}a_{i j}^{p}A_{i k}A_{j l}\\overline{{a}}_{k l}^{q}=\\sum_{i,j,k,l,m,n=1}^{h}b_{i j m}^{p}A_{i k}A_{j l}A_{m n}\\overline{{b}}_{k l n}^{q}."
+            },
+            {
+                "prediction": "The elliptical shape and tilt that show up on the distribution of the teleported states on the Z-X plane is due to the non-ideal entanglement and some residual rotation of the entangled pair used on the protocol, respectively.",
+                "reference": "The elliptical shape and tilt that show up on the distribution of the teleported states on the Z-X plane is due to the non-ideal entanglement and some residual rotation of the entangled pair used on the protocol, respectively."
+            },
+            {
+                "prediction": "The same type of singularity has also been identified in 11D supergravity, but is not yet as comprehensively studied.",
+                "reference": "The same type of singularity has also been identified in 11D supergravity , but is not yet as comprehensively studied."
+            },
+            {
+                "prediction": "t_{a}(M)-t_{a}(M)=t_{a}(M)(R-R^{*})t_{a}(M)",
+                "reference": "t_{a}(M)-t_{a}^{*}(M)=t_{a}(M)(R-R^{*})t_{a}^{*}(M)"
+            },
+            {
+                "prediction": "A local version of BMO, usually denoted by bmo, is defined by finiteness of the following expression, \\\\|f|_{bmo}_} = |_sup_{x \\backslashin \\backslashmathbb\\{R\\}^{\\frown}3, 0 < r <\\backslashdelta\\} \\backslashOmega \\backslashbigl(f, I(x,r)\\backslashbigr)\n\n* \\backslashsup_{x \\backslashin \\backslashmathbb\\{R\\}^{\\frown}3, r \\backslashge \\backslashdelta\\}\\backslashfrac\\{1\\}\\{|I(x,r)|\\}\\backslashint_{\\_}{I(x,r)\\} |f(y)|, dy, for some positive \\delta.",
+                "reference": "A local version of BMO, usually denoted by bmo, is defined by finiteness of the following expression, \\|f\\|_{bmo} = \\sup_{x \\in \\mathbb{R}^3, 0 < r < \\delta} \\Omega \\bigl(f, I(x,r)\\bigr)\n + \\sup_{x \\in \\mathbb{R}^3, r \\ge \\delta} \\frac{1}{|I(x,r)|} \\int_{I(x,r)} |f(y)| \\, dy, for some positive \\delta."
+            },
+            {
+                "prediction": "q_{j}(x_{0})=A_{j+1},\\quad q_{j}^{\\prime}(x_{0})=B_{j+1},\\quad j=0,1,...,n-1.",
+                "reference": "q_{j}(x_{0})=A_{j+1},\\quad q_{j}^{\\prime}(x_{0})=B_{j+1},\\quad j=0,1,\\ldots,n-1."
+            },
+            {
+                "prediction": "\\delta B=\\frac{1}{2}\\delta\\bar{\\theta}\\Gamma_{MN}\\theta(dX^{M}dX^{N}+\\bar{\\theta} ^{M}d\\theta dX^{N}+\\frac{1}{3}\\bar{\\theta}^{M}d\\theta\\bar{\\theta}\\Gamma^{N}d\\theta)",
+                "reference": "\\delta B={\\frac{1}{2}}\\delta\\bar{\\theta}\\Gamma_{M N}\\theta(d X^{M}d X^{N}+\\bar{\\theta}\\Gamma^{M}d\\theta d X^{N}+{\\frac{1}{3}}\\bar{\\theta}\\Gamma^{M}d\\theta\\bar{\\theta}\\Gamma^{N}d\\theta)"
+            },
+            {
+                "prediction": "V(z)=A^{2}e^{-2\\alpha z}-2Ae^{-\\alpha z},A,\\alpha>0.",
+                "reference": "V(z)=A^{2}e^{-2\\alpha z}-2A e^{-\\alpha z}\\ ,\\ A,\\alpha>0\\ ."
+            },
+            {
+                "prediction": "g_{ij}(x)=\\frac{1}{a^{2}}\\,\\delta_{ij},\\quad\\phi^{a}(x)=\\phi^{a},\\quad(a,\\phi^{a }\\,:\\,\\,{\\rm const.})",
+                "reference": "g_{i j}(x)={\\frac{1}{a^{2}}}\\,\\delta_{i j},~~\\phi^{a}(x)=\\phi^{a},\\quad(a,\\phi^{a}\\!:~\\mathrm{const.})"
+            },
+            {
+                "prediction": "",
+                "reference": "H=\\frac{1}{4\\pi}\\left(P^{2}+4\\omega^{2}\\,e^{2\\gamma Q}\\right)"
+            },
+            {
+                "prediction": "## References\n\n* [1] A. B. K. Jain, Phys. Rev. D **48**, 1992 (1993).\n* [2] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [3] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [4] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [5] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [6] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [7] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [8] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [9] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994).\n* [10] A. B. K. Jain, Phys. Rev. D **49**, 1994 (1994",
+                "reference": "{\\frac{d V}{d\\Phi}}=-{\\frac{w\\Phi}{\\Phi_{\\!_{0}}^{2}}}\\,."
+            },
+            {
+                "prediction": "\\delta=-\\frac{1}{2}F\\,\\Lambda^{*}F+\\frac{1}{2}|D\\phi|^{2}-U(\\phi)",
+                "reference": "{\\mathcal L}=-\\frac{1}{2}F\\wedge^{*}F+\\frac{1}{2}|D\\phi|^{2}-U(\\phi)"
+            },
+            {
+                "prediction": "\\dot{q}=-(dx^{0})^{2}+(dx^{1})^{2}+\\left(dr^{2}+r^{2}d\\Omega_{8}^{2}\\right)",
+                "reference": "\\hat{g}=-(d x^{0})^{2}+(d x^{1})^{2}+\\Big(d r^{2}+r^{2}d\\Omega_{8}^{2}\\Big)\\;,"
+            },
+            {
+                "prediction": "The likelihood P(D|\\mbox{Ia}) is difficult to model directly since D is multi-dimensional.",
+                "reference": "The likelihood P(\\boldsymbol{D}|{\\rm Ia}) is difficult to model directly since \\boldsymbol{D} is multi-dimensional."
+            },
+            {
+                "prediction": "An anisotropic barostat with P_{x}=P_{y}=P_{z}=0 is used in the equilibration, leading to a tetragonal simulation box before running the tensile test.",
+                "reference": "An anisotropic barostat with P_{x}=P_{y}=P_{z}=0 is used in the equilibration, leading to a tetragonal simulation box before running the tensile test."
+            },
+            {
+                "prediction": "As a consequence, and due to the limited length of the wavepackets L_{coh}\\approx 21\\mum, ), phase plates have to be inserted by pairs, one on each arm of the interferometer (phase plates are plane-parallel BK7 optical windows).",
+                "reference": "As a consequence, and due to the limited length of the wavepackets L_{coh}\\approx21\\mum ), phase plates have to be inserted by pairs, one on each arm of the interferometer (phase plates are plane-parallel BK7 optical windows)."
+            },
+            {
+                "prediction": "<\\frac{1}{2},m_{s}|\\psi_{-}^{(\\frac{1}{2})}(g)>\\equiv D_{m_{s}-\\frac{1}{2}}^{( \\frac{1}{2})}(g)=<g,l+\\frac{1}{2}|T_{m_{s}}^{\\frac{1}{2}}-|g,l>.",
+                "reference": "<\\frac{1}{2},m_{s}|{\\psi}_{-}^{(\\frac{1}{2})}(g)>\\equiv D_{m_{s}-\\frac{1}{2}}^{(\\frac{1}{2})}(g)=<g,l+\\frac{1}{2}|T_{m_{s}-}^{\\frac{1}{2}}|g,l>."
+            },
+            {
+                "prediction": "\\frac{d^{2}}{d\\tau}=\\frac{d}{d\\tau}\\frac{d}{d\\tau}\\frac{d}{d\\tau}",
+                "reference": "\\vec{E}(\\tau)=\\left[{\\frac{d^{2}}{d\\tau^{2}}}-(2/\\tau){\\frac{d}{d\\tau}}\\right]\\vec{G}(\\tau)"
+            },
+            {
+                "prediction": "V_{ns}(\\tilde{x})=\\left(\\frac{\\tilde{m}N^{2}}{16\\pi}\\right)Ng^{2ns-1}\\tilde{x}^{ 2}\\left\\{\\tilde{x}^{2}-\\frac{2\\tilde{b}}{3}\\tilde{x}+\\frac{\\tilde{b}^{2}}{3}-( -1)^{ns}\\tilde{c}\\right\\}\\,.",
+                "reference": "V_{n s}({\\tilde{x}})=\\left(\\frac{{\\tilde{m}}N^{2}}{16\\pi}\\right)N g^{2n s-1}{\\tilde{x}}^{2}\\left\\{{\\tilde{x}}^{2}-\\frac{2{\\tilde{b}}}{3}{\\tilde{x}}+\\frac{{\\tilde{b}}^{2}}{3}-(-1)^{n s}{\\tilde{c}}\\right\\}\\,."
+            },
+            {
+                "prediction": "V_{\\pm}=\\frac{a(a\\mp\\frac{\\mu}{\\sqrt{2}})f^{2}+(a(b\\mp\\frac{\\nu}{\\sqrt{2}})+b(a\\mp \\frac{\\mu}{\\sqrt{2}}))f+b(b\\mp\\frac{\\nu}{\\sqrt{2}})}{(f^{\\prime})^{2}}\\pm\\frac{a }{\\sqrt{2}}.",
+                "reference": "V_{\\pm}=\\frac{a(a\\mp\\frac{\\mu}{\\sqrt{2}})f^{2}+(a(b\\mp\\frac{\\nu}{\\sqrt{2}})+b(a\\mp\\frac{\\mu}{\\sqrt{2}}))f+b(b\\mp\\frac{\\nu}{\\sqrt{2}})}{(f^{\\prime})^{2}}\\pm\\frac{a}{\\sqrt{2}}."
+            },
+            {
+                "prediction": "",
+                "reference": "L_{0}=\\Phi(w)=\\bigtriangleup\\Phi(w),"
+            },
+            {
+                "prediction": "Static, local expectation values are defined as \\langle\\Psi^{(0)}|\\hat{O}|\\Psi^{(0)}\\rangle, while non-local expectation values, such as the energy for the impurity cluster, can be defined through a partial trace of the density matrices with the Hamiltonian, as defined in Ref.",
+                "reference": "Static, local expectation values are defined as \\langle\\Psi^{(0)}|{\\hat O}|\\Psi^{(0)}\\rangle, while non-local expectation values, such as the energy for the impurity cluster, can be defined through a partial trace of the density matrices with the Hamiltonian, as defined in Ref."
+            },
+            {
+                "prediction": "I=2\\left(\\frac{\\alpha}{\\sinh^{2}A+\\sin^{2}\\frac{\\gamma}{2}}-\\frac{\\sinh\\frac{2A}{ \\alpha}}{\\sinh 2A}\\ \\frac{1}{\\left(\\sinh^{2}\\frac{A}{\\alpha}+\\sin^{2}\\frac{[ \\gamma]}{2\\alpha}\\right)}\\right)\\ \\",
+                "reference": "I=2\\left({\\frac{\\alpha}{\\sinh^{2}A+\\sin^{2}{\\frac{\\gamma}{2}}}}-{\\frac{\\sinh{\\frac{2A}{\\alpha}}}{\\sinh{2A}}}~{\\frac{1}{(\\sinh^{2}{\\frac{A}{\\alpha}}+\\sin^{2}{\\frac{[\\gamma]}{2\\alpha}})}}\\right)~~."
+            },
+            {
+                "prediction": "\\DeltaE{}_{\\rm up}\\equiv\\frac{1}{T(0)}\\frac{4e^{5}(0)\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})+4e^{5}(0",
+                "reference": "\\Delta E_{\\mathrm{up}}=\\frac{1}{T^{(0)}}\\frac{4e^{S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})+4e^{S^{(0)}}}{4e^{2S^{(0)}}\\tan^{2}\\frac{1}{2}(\\phi_{\\alpha}+\\phi_{\\gamma})-1},"
+            },
+            {
+                "prediction": "SSSS These models serve as soluble paradigms for symmetry breaking phenomena in both strong interaction particle physics and in condensed matter physics. We consider these models in the 't Hooft limit,",
+                "reference": "These models serve as soluble paradigms for symmetry breaking phenomena in both strong interaction particle physics and in condensed matter physics . We consider these models in the \u2019t\u00a0Hooft limit,"
+            },
+            {
+                "prediction": "If this is the case, the detection of the idler photon in a state \\left|\\phi\\right\\rangle_{i} will project the signal photon onto an entangled state between wavevector and wavelength; once the information about the wavelength is traced out, the signal photon will be left in a statistical mixture of different wavevectors, which will not couple, well into the fundamental mode of an optical fiber.",
+                "reference": "If this is the case, the detection of the idler photon in a state \\vert\\phi\\rangle_{i} will project the signal photon onto an entangled state between wavevector and wavelength; once the information about the wavelength is traced out, the signal photon will be left in a statistical mixture of different wavevectors, which will not couple well into the fundamental mode of an optical fiber."
+            },
+            {
+                "prediction": "### Relativistic hydrodynamics on 2+1-dimensional curved backgrounds\n\nIn the hydrodynamic limit the energy-momentum tensor T^{\\mu\\nu} of a neutral fluid is a function of the local temperature T(x), of the velocity field u^{\\mu}(x), of the background metric g_{\\mu\\nu}(x) and of their covariant derivatives.",
+                "reference": "## Relativistic hydrodynamics on 2+1-dimensional curved backgrounds\n\nIn the hydrodynamic limit the energy\u2013momentum tensor T^{\\mu\\nu} of a neutral fluid is a function of the local temperature T(x), of the velocity field u^\\mu(x), of the background metric g_{\\mu\\nu}(x) and of their covariant derivatives."
+            }
+        ]
+    }
+}

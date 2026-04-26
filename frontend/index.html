@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCR Math Solver — AWS Serverless + Multi-AZ</title>
+  <meta name="description" content="Upload a photo of any math equation. Serverless AWS pipeline (API Gateway, Cognito, ECS Fargate, Bedrock) extracts LaTeX via OCR and solves it step-by-step." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">∑</span>
+        <span class="logo-text">OCR<span class="logo-accent">Math</span></span>
+      </div>
+      <nav class="aws-badge-row" aria-label="AWS services used">
+        <span class="aws-badge">🔐 Cognito</span>
+        <span class="aws-badge">⚡ Lambda</span>
+        <span class="aws-badge">📦 ECS Fargate</span>
+        <span class="aws-badge">⚖️ ALB</span>
+        <span class="aws-badge">📨 SQS</span>
+        <span class="aws-badge">🪣 S3</span>
+        <span class="aws-badge">🗄 DynamoDB</span>
+        <span class="aws-badge">🤖 Bedrock</span>
+        <span class="aws-badge">📈 Auto Scaling</span>
+      </nav>
+      <div class="demo-toggle-wrap">
+        <label class="demo-toggle" for="demo-mode-switch" title="Toggle between live AWS and local demo">
+          <input type="checkbox" id="demo-mode-switch" checked />
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label">Demo Mode</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 class="hero-title">
+      Photo → LaTeX → <span class="gradient-text">Solution</span>
+    </h1>
+    <p class="hero-subtitle">
+      Snap a photo of any handwritten or printed equation. Our
+      <strong>serverless AWS pipeline</strong> extracts the LaTeX with OCR,
+      then solves it step-by-step using <strong>Claude 3 on Amazon Bedrock</strong>.
+    </p>
+    <div class="arch-flow" aria-label="Architecture flow">
+      <span class="arch-step">🔐 Cognito</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">🌐 API Gateway</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">⚡ Lambda</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">📨 SQS</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">📦 ECS Fargate</span>
+      <span class="arch-arrow">→</span>
+      <span class="arch-step">🤖 Bedrock</span>
+    </div>
+  </section>
+
+  <div id="auth-modal" class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <span class="logo-icon">∑</span>
+        <span class="logo-text">OCR<span class="logo-accent">Math</span></span>
+      </div>
+      <h2 id="auth-title" class="auth-heading">Sign in to continue</h2>
+      <p class="auth-sub">Powered by <strong>Amazon Cognito</strong> — your session is secured with JWT tokens.</p>
+
+      <div id="auth-tabs" class="auth-tab-row">
+        <button class="auth-tab-btn active" id="signin-tab" data-form="signin">Sign In</button>
+        <button class="auth-tab-btn" id="signup-tab" data-form="signup">Sign Up</button>
+      </div>
+
+      <form id="signin-form" class="auth-form" novalidate>
+        <div class="auth-field">
+          <label for="signin-email" class="auth-label">Email</label>
+          <input type="email" id="signin-email" class="auth-input" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="auth-field">
+          <label for="signin-password" class="auth-label">Password</label>
+          <input type="password" id="signin-password" class="auth-input" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <div id="signin-error" class="auth-error hidden"></div>
+        <button type="submit" class="auth-submit-btn" id="signin-btn">Sign In</button>
+      </form>
+
+      <form id="signup-form" class="auth-form hidden" novalidate>
+        <div class="auth-field">
+          <label for="signup-email" class="auth-label">Email</label>
+          <input type="email" id="signup-email" class="auth-input" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="auth-field">
+          <label for="signup-password" class="auth-label">Password</label>
+          <input type="password" id="signup-password" class="auth-input" placeholder="Min 8 chars, 1 uppercase, 1 number" autocomplete="new-password" />
+        </div>
+        <div id="signup-error" class="auth-error hidden"></div>
+        <button type="submit" class="auth-submit-btn" id="signup-btn">Create Account</button>
+      </form>
+
+      <div class="auth-demo-hint">
+        <span class="demo-pill">Demo Mode</span>
+        Toggle Demo Mode in the header to skip auth and test locally.
+      </div>
+
+      <div class="auth-badges">
+        <span class="auth-badge-item">🔒 JWT Tokens</span>
+        <span class="auth-badge-item">📧 Email Verified</span>
+        <span class="auth-badge-item">🔄 Refresh Tokens</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="app-container">
+    <div class="panel-grid">
+
+      <div class="panel upload-panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-icon">📤</span> Upload Equation
+          </h2>
+          <span id="api-status-badge" class="status-badge status-demo">Demo Mode</span>
+        </div>
+
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0"
+             aria-label="Click or drag to upload an image of a math equation">
+          <div class="drop-zone-inner">
+            <div class="drop-icon">⬆️</div>
+            <p class="drop-primary">Drop your equation image here</p>
+            <p class="drop-secondary">PNG, JPG, JPEG, GIF, WebP — or PDF page screenshots</p>
+            <label class="upload-btn" for="file-input" id="upload-btn-label">
+              Browse Files
+            </label>
+            <input type="file" id="file-input" accept="image/*" class="sr-only" aria-label="Choose image file" />
+          </div>
+        </div>
+
+        <div id="preview-wrap" class="preview-wrap hidden">
+          <div class="preview-header">
+            <span class="preview-label">Preview</span>
+            <button id="clear-btn" class="icon-btn" aria-label="Clear image">✕</button>
+          </div>
+          <div class="preview-canvas-wrap">
+            <canvas id="preview-canvas" aria-label="Uploaded image preview"></canvas>
+            <canvas id="selection-canvas" id="selection-canvas" aria-label="Draw a selection box"></canvas>
+          </div>
+          <p class="hint-text">✏️ Draw a box around the equation to OCR a specific region, or leave blank to OCR the full image.</p>
+        </div>
+
+        <button id="solve-btn" class="solve-btn hidden" aria-label="Start OCR and solve equation">
+          <span class="solve-btn-icon">⚡</span>
+          Solve with AWS
+        </button>
+
+        <div id="config-row" class="config-row hidden">
+          <div class="config-field">
+            <label for="api-url-input" class="config-label">API Gateway URL</label>
+            <input type="url" id="api-url-input" class="config-input"
+                   placeholder="https://xxxxxxxx.execute-api.us-east-1.amazonaws.com/dev" />
+          </div>
+        </div>
+      </div>
+
+      <div class="panel results-panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-icon">🧮</span> Results
+          </h2>
+          <div id="job-id-badge" class="job-id hidden">
+            <span class="job-icon">🔗</span>
+            <code id="job-id-text" class="job-id-text">—</code>
+          </div>
+        </div>
+
+        <div id="result-idle" class="result-state result-idle">
+          <div class="idle-graphic">∫ √ Σ π</div>
+          <p>Upload an image to get started.</p>
+          <p class="idle-sub">Results appear here in seconds.</p>
+        </div>
+
+        <div id="result-processing" class="result-state result-processing hidden">
+          <div class="pipeline-steps" id="pipeline-steps" aria-live="polite">
+            <div class="pipeline-step" id="step-upload" data-step="upload">
+              <span class="step-icon">🪣</span>
+              <span class="step-label">Storing to S3</span>
+              <span class="step-status">⏳</span>
+            </div>
+            <div class="pipeline-step" id="step-ocr" data-step="ocr">
+              <span class="step-icon">👁</span>
+              <span class="step-label">Running OCR (Texify model)</span>
+              <span class="step-status">—</span>
+            </div>
+            <div class="pipeline-step" id="step-bedrock" data-step="bedrock">
+              <span class="step-icon">🤖</span>
+              <span class="step-label">Calling Bedrock (Claude 3)</span>
+              <span class="step-status">—</span>
+            </div>
+            <div class="pipeline-step" id="step-done" data-step="done">
+              <span class="step-icon">✅</span>
+              <span class="step-label">Complete</span>
+              <span class="step-status">—</span>
+            </div>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <p id="processing-eta" class="processing-eta">Estimating…</p>
+        </div>
+
+        <div id="result-done" class="result-state result-done hidden">
+          <div class="result-tabs" role="tablist">
+            <button class="result-tab active" id="tab-rendered" role="tab"
+                    aria-selected="true" aria-controls="panel-rendered">
+              Rendered LaTeX
+            </button>
+            <button class="result-tab" id="tab-raw" role="tab"
+                    aria-selected="false" aria-controls="panel-raw">
+              Raw LaTeX
+            </button>
+            <button class="result-tab" id="tab-solution" role="tab"
+                    aria-selected="false" aria-controls="panel-solution">
+              AI Solution
+            </button>
+          </div>
+
+          <div id="panel-rendered" class="tab-panel active" role="tabpanel" aria-labelledby="tab-rendered">
+            <div id="latex-rendered" class="latex-display"></div>
+          </div>
+
+          <div id="panel-raw" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-raw">
+            <div class="raw-header">
+              <span class="raw-label">LaTeX Source</span>
+              <button id="copy-latex-btn" class="icon-btn icon-btn-outline" aria-label="Copy LaTeX to clipboard">
+                📋 Copy
+              </button>
+            </div>
+            <pre id="latex-raw" class="latex-raw"></pre>
+          </div>
+
+          <div id="panel-solution" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-solution">
+            <div id="solution-content" class="solution-content" aria-live="polite"></div>
+          </div>
+
+          <div class="result-meta">
+            <span class="meta-item">⏱ <span id="elapsed-time">—</span>s</span>
+            <span class="meta-item">🗄 DynamoDB tracked</span>
+            <span class="meta-item" id="az-badge" style="display:none">🌐 AZ: <code id="az-name">—</code></span>
+          </div>
+
+          <button id="reset-btn" class="reset-btn" aria-label="Solve a new equation">
+            + Solve Another
+          </button>
+        </div>
+
+        <div id="result-error" class="result-state result-error hidden">
+          <div class="error-icon">⚠️</div>
+          <p class="error-title">Processing Failed</p>
+          <p id="error-message" class="error-message"></p>
+          <button id="retry-btn" class="reset-btn" aria-label="Retry">Try Again</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="arch-section" aria-labelledby="arch-heading">
+      <h2 id="arch-heading" class="arch-title">
+        <span class="gradient-text">AWS Architecture</span>
+      </h2>
+      <div class="arch-diagram">
+
+        <div class="arch-layer">
+          <div class="arch-node arch-node-client">
+            <div class="node-icon">🌐</div>
+            <div class="node-label">Browser</div>
+            <div class="node-sub">Vanilla JS + KaTeX</div>
+          </div>
+          <div class="arch-node arch-node-cognito">
+            <div class="node-icon">🔐</div>
+            <div class="node-label">Amazon Cognito</div>
+            <div class="node-sub">User Pool · JWT Auth</div>
+          </div>
+        </div>
+
+        <div class="arch-connector">↕ HTTPS + Bearer JWT</div>
+
+        <div class="arch-layer">
+          <div class="arch-node arch-node-gateway">
+            <div class="node-icon">🚪</div>
+            <div class="node-label">API Gateway</div>
+            <div class="node-sub">REST · Cognito Authorizer · CORS</div>
+          </div>
+        </div>
+
+        <div class="arch-connector">↕ Lambda Proxy</div>
+
+        <div class="arch-layer">
+          <div class="arch-node arch-node-lambda">
+            <div class="node-icon">⚡</div>
+            <div class="node-label">API Handler λ</div>
+            <div class="node-sub">POST /upload · GET /solve</div>
+          </div>
+          <div class="arch-node arch-node-s3">
+            <div class="node-icon">🪣</div>
+            <div class="node-label">Amazon S3</div>
+            <div class="node-sub">Input · Results · 7-day TTL</div>
+          </div>
+          <div class="arch-node arch-node-dynamo">
+            <div class="node-icon">🗄</div>
+            <div class="node-label">DynamoDB</div>
+            <div class="node-sub">Job Tracking · 24h TTL</div>
+          </div>
+        </div>
+
+        <div class="arch-connector">↕ SendMessage</div>
+
+        <div class="arch-layer">
+          <div class="arch-node arch-node-sqs">
+            <div class="node-icon">📨</div>
+            <div class="node-label">Amazon SQS</div>
+            <div class="node-sub">Job Queue · DLQ · Long Poll</div>
+          </div>
+        </div>
+
+        <div class="arch-connector">↕ CloudWatch Alarm → Auto Scaling</div>
+
+        <div class="arch-layer">
+          <div class="arch-node arch-node-alb">
+            <div class="node-icon">⚖️</div>
+            <div class="node-label">App Load Balancer</div>
+            <div class="node-sub">internet-facing · 2 AZs · Health Checks</div>
+          </div>
+          <div class="arch-node arch-node-autoscaling">
+            <div class="node-icon">📈</div>
+            <div class="node-label">Auto Scaling</div>
+            <div class="node-sub">SQS depth · 0→5 tasks</div>
+          </div>
+        </div>
+
+        <div class="arch-connector">↕ Fargate Spot (70% cheaper)</div>
+
+        <div class="arch-vpc-box">
+          <div class="vpc-label">🏠 VPC — 10.0.0.0/16 · Multi-AZ · Private Subnets · NAT Gateway</div>
+          <div class="arch-layer arch-layer-ecs">
+            <div class="arch-node arch-node-ecs-az1">
+              <div class="az-badge">AZ-1</div>
+              <div class="node-icon">📦</div>
+              <div class="node-label">ECS Fargate</div>
+              <div class="node-sub">OCR Worker · 2 vCPU · 8 GB</div>
+            </div>
+            <div class="arch-node arch-node-ecs-az2">
+              <div class="az-badge">AZ-2</div>
+              <div class="node-icon">📦</div>
+              <div class="node-label">ECS Fargate</div>
+              <div class="node-sub">OCR Worker · 2 vCPU · 8 GB</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-connector">↕ InvokeModel</div>
+
+        <div class="arch-layer">
+          <div class="arch-node arch-node-bedrock">
+            <div class="node-icon">🤖</div>
+            <div class="node-label">Amazon Bedrock</div>
+            <div class="node-sub">Claude 3 Haiku</div>
+          </div>
+          <div class="arch-node arch-node-texify">
+            <div class="node-icon">👁</div>
+            <div class="node-label">Texify OCR</div>
+            <div class="node-sub">Donut · im2latex 100K</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Built with <strong>AWS SAM</strong> · <strong>Cognito</strong> · <strong>ECS Fargate</strong> ·
+      <strong>ALB</strong> · <strong>Auto Scaling</strong> · <strong>Amazon Bedrock</strong> ·
+      <a href="https://github.com/PrkRaju2003/ocr_chat" target="_blank" rel="noopener" class="footer-link">
+        View on GitHub →
+      </a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

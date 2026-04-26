@@ -1,0 +1,835 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Description: >
+  ocr-chat-math-solver — Production-grade serverless + container hybrid
+  Services: VPC (multi-AZ) · ALB · ECS Fargate · Auto Scaling · SQS · Cognito
+             API Gateway · Lambda · S3 · DynamoDB · Bedrock · ECR
+
+
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues: [dev, staging, prod]
+
+  BedrockModel:
+    Type: String
+    Default: anthropic.claude-3-haiku-20240307-v1:0
+
+  VpcCidr:
+    Type: String
+    Default: "10.0.0.0/16"
+
+  PublicSubnet1Cidr:
+    Type: String
+    Default: "10.0.0.0/24"    
+
+  PublicSubnet2Cidr:
+    Type: String
+    Default: "10.0.1.0/24"    
+
+  PrivateSubnet1Cidr:
+    Type: String
+    Default: "10.0.10.0/24"   
+
+  PrivateSubnet2Cidr:
+    Type: String
+    Default: "10.0.11.0/24"  
+
+  EcsWorkerMinCount:
+    Type: Number
+    Default: 0        
+    Description: "Minimum ECS task count (0 = scale to zero)"
+
+  EcsWorkerMaxCount:
+    Type: Number
+    Default: 5
+    Description: "Maximum ECS tasks for burst capacity"
+
+  EcsWorkerDesiredCount:
+    Type: Number
+    Default: 0
+
+
+  CognitoCallbackUrl:
+    Type: String
+    Default: "http://localhost:8080"
+    Description: "Allowed callback URL for Cognito Hosted UI (update to CloudFront URL in prod)"
+
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Timeout: 30
+    MemorySize: 256
+    Environment:
+      Variables:
+        ENVIRONMENT:      !Ref Environment
+        JOBS_TABLE:       !Ref JobsTable
+        INPUT_BUCKET:     !Ref InputBucket
+        RESULTS_BUCKET:   !Ref ResultsBucket
+        BEDROCK_MODEL:    !Ref BedrockModel
+        JOB_QUEUE_URL:    !Ref JobQueue
+
+
+Resources:
+
+# ═════════════════════════════════════════════════════════════════════════════
+# 1.  VPC — Multi-AZ Networking
+#     Cost note: Single NAT Gateway (shared across AZs) saves ~$32/AZ/month.
+#     In production you'd add one per AZ for AZ-level resilience.
+# ═════════════════════════════════════════════════════════════════════════════
+
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref VpcCidr
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-vpc-${Environment}"
+
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-igw-${Environment}"
+
+  VPCGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId:             !Ref VPC
+      InternetGatewayId: !Ref InternetGateway
+
+
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:               !Ref VPC
+      CidrBlock:           !Ref PublicSubnet1Cidr
+      AvailabilityZone:    !Select [0, !GetAZs ""]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-public-1-${Environment}"
+
+  PublicSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:               !Ref VPC
+      CidrBlock:           !Ref PublicSubnet2Cidr
+      AvailabilityZone:    !Select [1, !GetAZs ""]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-public-2-${Environment}"
+
+
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:            !Ref VPC
+      CidrBlock:        !Ref PrivateSubnet1Cidr
+      AvailabilityZone: !Select [0, !GetAZs ""]
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-private-1-${Environment}"
+
+  PrivateSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:            !Ref VPC
+      CidrBlock:        !Ref PrivateSubnet2Cidr
+      AvailabilityZone: !Select [1, !GetAZs ""]
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-private-2-${Environment}"
+
+  # ── Single NAT Gateway in AZ-1 (cost-efficient: ~$32/mo vs $64/mo for 2) ──
+  NatEIP:
+    Type: AWS::EC2::EIP
+    DependsOn: VPCGatewayAttachment
+    Properties:
+      Domain: vpc
+
+  NatGateway:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt NatEIP.AllocationId
+      SubnetId:     !Ref PublicSubnet1
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-nat-${Environment}"
+
+
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+
+  PublicRoute:
+    Type: AWS::EC2::Route
+    DependsOn: VPCGatewayAttachment
+    Properties:
+      RouteTableId:         !Ref PublicRouteTable
+      DestinationCidrBlock: "0.0.0.0/0"
+      GatewayId:            !Ref InternetGateway
+
+  PublicSubnet1RouteAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:     !Ref PublicSubnet1
+      RouteTableId: !Ref PublicRouteTable
+
+  PublicSubnet2RouteAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:     !Ref PublicSubnet2
+      RouteTableId: !Ref PublicRouteTable
+
+  PrivateRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+
+  PrivateRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId:         !Ref PrivateRouteTable
+      DestinationCidrBlock: "0.0.0.0/0"
+      NatGatewayId:         !Ref NatGateway   # outbound via single NAT GW
+
+  PrivateSubnet1RouteAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:     !Ref PrivateSubnet1
+      RouteTableId: !Ref PrivateRouteTable
+
+  PrivateSubnet2RouteAssoc:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:     !Ref PrivateSubnet2
+      RouteTableId: !Ref PrivateRouteTable
+
+
+
+  AlbSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "ALB — allow HTTP/HTTPS from internet"
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort:   80
+          CidrIp:   "0.0.0.0/0"
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort:   443
+          CidrIp:   "0.0.0.0/0"
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-alb-sg-${Environment}"
+
+  EcsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "ECS tasks — allow traffic only from ALB"
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8080
+          ToPort:   8080
+          SourceSecurityGroupId: !Ref AlbSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "ocr-chat-ecs-sg-${Environment}"
+
+
+
+  CognitoUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: !Sub "ocr-chat-users-${Environment}"
+      UsernameAttributes:
+        - email
+      AutoVerifiedAttributes:
+        - email
+      PasswordPolicy:
+        MinimumLength: 8
+        RequireUppercase: true
+        RequireLowercase: true
+        RequireNumbers: true
+        RequireSymbols: false
+      MfaConfiguration: "OFF"           # Simple for resume/demo; enable TOTP in prod
+      AccountRecoverySetting:
+        RecoveryMechanisms:
+          - Name: verified_email
+            Priority: 1
+      Schema:
+        - Name: email
+          AttributeDataType: String
+          Required: true
+          Mutable: false
+      UserPoolTags:
+        Environment: !Ref Environment
+
+  CognitoUserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: !Sub "ocr-chat-web-client-${Environment}"
+      UserPoolId:  !Ref CognitoUserPool
+      GenerateSecret: false           # Public client (SPA / browser)
+      ExplicitAuthFlows:
+        - ALLOW_USER_SRP_AUTH
+        - ALLOW_REFRESH_TOKEN_AUTH
+        - ALLOW_USER_PASSWORD_AUTH
+      AllowedOAuthFlows:
+        - implicit
+        - code
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthScopes:
+        - email
+        - openid
+        - profile
+      CallbackURLs:
+        - !Ref CognitoCallbackUrl
+      LogoutURLs:
+        - !Ref CognitoCallbackUrl
+      SupportedIdentityProviders:
+        - COGNITO
+      PreventUserExistenceErrors: ENABLED
+      AccessTokenValidity:   60         # 60 minutes
+      IdTokenValidity:       60
+      RefreshTokenValidity:  30         # 30 days
+
+  CognitoUserPoolDomain:
+    Type: AWS::Cognito::UserPoolDomain
+    Properties:
+      Domain:     !Sub "ocr-chat-${Environment}-${AWS::AccountId}"
+      UserPoolId: !Ref CognitoUserPool
+
+
+  JobDeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub "ocr-chat-dlq-${Environment}"
+      MessageRetentionPeriod: 1209600   # 14 days — keep failed jobs for analysis
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+
+  JobQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName:                    !Sub "ocr-chat-jobs-${Environment}"
+      VisibilityTimeout:            360   # > ECS task max processing time (300s)
+      MessageRetentionPeriod:       86400 # 1 day
+      ReceiveMessageWaitTimeSeconds: 20   # Long polling — reduces empty receives
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt JobDeadLetterQueue.Arn
+        maxReceiveCount:     3            # After 3 failures → DLQ
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+
+
+  InputBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "ocr-chat-input-${Environment}-${AWS::AccountId}"
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteInputAfter7Days
+            Status: Enabled
+            ExpirationInDays: 7
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders: ["*"]
+            AllowedMethods: [PUT, POST, GET]
+            AllowedOrigins: ["*"]
+            MaxAge: 3600
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  ResultsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "ocr-chat-results-${Environment}-${AWS::AccountId}"
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteResultsAfter30Days
+            Status: Enabled
+            ExpirationInDays: 30
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+
+  JobsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName:    !Sub "ocr-chat-jobs-${Environment}"
+      BillingMode:  PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: job_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: job_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+
+
+  ApiHandlerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "ocr-chat-api-handler-role-${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: ApiHandlerPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:PutObject, s3:GetObject]
+                Resource:
+                  - !Sub "arn:aws:s3:::${InputBucket}/*"
+                  - !Sub "arn:aws:s3:::${ResultsBucket}/*"
+              - Effect: Allow
+                Action: [dynamodb:GetItem, dynamodb:PutItem, dynamodb:UpdateItem]
+                Resource: !GetAtt JobsTable.Arn
+              - Effect: Allow
+                Action: [sqs:SendMessage, sqs:GetQueueAttributes]
+                Resource: !GetAtt JobQueue.Arn
+
+  EcsTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "ocr-chat-ecs-exec-role-${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+        # Grants: ECR pull, CloudWatch Logs write, Secrets Manager read
+
+  EcsTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "ocr-chat-ecs-task-role-${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: EcsTaskPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:GetObject]
+                Resource: !Sub "arn:aws:s3:::${InputBucket}/*"
+              - Effect: Allow
+                Action: [s3:PutObject]
+                Resource: !Sub "arn:aws:s3:::${ResultsBucket}/*"
+              - Effect: Allow
+                Action: [dynamodb:UpdateItem]
+                Resource: !GetAtt JobsTable.Arn
+              - Effect: Allow
+                Action:
+                  - sqs:ReceiveMessage
+                  - sqs:DeleteMessage
+                  - sqs:ChangeMessageVisibility
+                  - sqs:GetQueueAttributes
+                Resource: !GetAtt JobQueue.Arn
+              - Effect: Allow
+                Action: [bedrock:InvokeModel]
+                Resource: !Sub "arn:aws:bedrock:${AWS::Region}::foundation-model/${BedrockModel}"
+
+  EcsAutoScalingRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "ocr-chat-ecs-autoscaling-role-${Environment}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: application-autoscaling.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole
+
+
+  ApplicationLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name:   !Sub "ocr-chat-alb-${Environment}"
+      Type:   application
+      Scheme: internet-facing
+      Subnets:
+        - !Ref PublicSubnet1    # AZ-1
+        - !Ref PublicSubnet2    # AZ-2
+      SecurityGroups:
+        - !Ref AlbSecurityGroup
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: "120"
+        - Key: deletion_protection.enabled
+          Value: !If [IsProd, "true", "false"]
+        - Key: access_logs.s3.enabled
+          Value: "false"        # Enable in prod for audit trail
+
+  AlbTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name:            !Sub "ocr-chat-tg-${Environment}"
+      Port:            8080
+      Protocol:        HTTP
+      TargetType:      ip          # Required for Fargate
+      VpcId:           !Ref VPC
+      HealthCheckPath: /health
+      HealthCheckIntervalSeconds:       30
+      HealthCheckTimeoutSeconds:        10
+      HealthyThresholdCount:            2
+      UnhealthyThresholdCount:          3
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: "30"            # Faster scale-in (default 300s is too slow)
+
+  AlbListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref ApplicationLoadBalancer
+      Port:            80
+      Protocol:        HTTP
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref AlbTargetGroup
+
+
+
+  EcsCluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: !Sub "ocr-chat-cluster-${Environment}"
+      CapacityProviders:
+        - FARGATE
+        - FARGATE_SPOT           # Use Spot for up to 70% cost saving on OCR tasks
+      DefaultCapacityProviderStrategy:
+        - CapacityProvider: FARGATE_SPOT
+          Weight: 3              # Prefer Spot
+          Base:   0
+        - CapacityProvider: FARGATE
+          Weight: 1              # Fall back to on-demand if Spot unavailable
+          Base:   0
+      ClusterSettings:
+        - Name: containerInsights
+          Value: enabled         # CloudWatch Container Insights for monitoring
+
+  EcsLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName:      !Sub "/ecs/ocr-chat-worker-${Environment}"
+      RetentionInDays:   14
+
+  EcsTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family:                  !Sub "ocr-chat-worker-${Environment}"
+      NetworkMode:             awsvpc        # Required for Fargate
+      RequiresCompatibilities: [FARGATE]
+      Cpu:                     "2048"        # 2 vCPU
+      Memory:                  "8192"        # 8 GB RAM — model needs ~3.5 GB
+      ExecutionRoleArn:        !GetAtt EcsTaskExecutionRole.Arn
+      TaskRoleArn:             !GetAtt EcsTaskRole.Arn
+      ContainerDefinitions:
+        - Name: ocr-worker
+          # Image is pushed to ECR by deploy.sh
+          Image: !Sub "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/ocr-chat-worker-${Environment}:latest"
+          Essential: true
+          PortMappings:
+            - ContainerPort: 8080
+              Protocol:      tcp
+          Environment:
+            - Name:  ENVIRONMENT
+              Value: !Ref Environment
+            - Name:  INPUT_BUCKET
+              Value: !Ref InputBucket
+            - Name:  RESULTS_BUCKET
+              Value: !Ref ResultsBucket
+            - Name:  JOBS_TABLE
+              Value: !Ref JobsTable
+            - Name:  JOB_QUEUE_URL
+              Value: !Ref JobQueue
+            - Name:  BEDROCK_MODEL
+              Value: !Ref BedrockModel
+            - Name:  AWS_REGION
+              Value: !Ref AWS::Region
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group:         !Ref EcsLogGroup
+              awslogs-region:        !Ref AWS::Region
+              awslogs-stream-prefix: "worker"
+          HealthCheck:
+            Command:     ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+            Interval:    30
+            Timeout:     10
+            Retries:     3
+            StartPeriod: 60       # Allow model load time on cold start
+
+  EcsService:
+    Type: AWS::ECS::Service
+    DependsOn: AlbListener
+    Properties:
+      ServiceName:    !Sub "ocr-chat-worker-svc-${Environment}"
+      Cluster:        !Ref EcsCluster
+      TaskDefinition: !Ref EcsTaskDefinition
+      DesiredCount:   !Ref EcsWorkerDesiredCount
+      LaunchType:     FARGATE       # Overridden by capacity provider strategy
+      CapacityProviderStrategy:
+        - CapacityProvider: FARGATE_SPOT
+          Weight: 3
+          Base:   0
+        - CapacityProvider: FARGATE
+          Weight: 1
+          Base:   0
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          Subnets:
+            - !Ref PrivateSubnet1   # AZ-1 private
+            - !Ref PrivateSubnet2   # AZ-2 private
+          SecurityGroups:
+            - !Ref EcsSecurityGroup
+          AssignPublicIp: DISABLED  # Private subnet — outbound via NAT GW
+      LoadBalancers:
+        - ContainerName:    ocr-worker
+          ContainerPort:    8080
+          TargetGroupArn:   !Ref AlbTargetGroup
+      DeploymentConfiguration:
+        MinimumHealthyPercent: 50   # Allow rolling deploys with minimal tasks
+        MaximumPercent:        200
+      EnableExecuteCommand: true    # Allows `ecs execute-command` for debugging
+
+
+  EcsScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity:       !Ref EcsWorkerMaxCount
+      MinCapacity:       !Ref EcsWorkerMinCount
+      ResourceId:        !Sub "service/${EcsCluster}/${EcsService.Name}"
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace:  ecs
+      RoleARN:           !GetAtt EcsAutoScalingRole.Arn
+
+  EcsScaleOutPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName:            !Sub "ocr-chat-scale-out-${Environment}"
+      PolicyType:            StepScaling
+      ScalingTargetId:       !Ref EcsScalableTarget
+      StepScalingPolicyConfiguration:
+        AdjustmentType:         ChangeInCapacity
+        MetricAggregationType:  Maximum
+        Cooldown: 60
+        StepAdjustments:
+          - MetricIntervalLowerBound: 0     # queue >= 1 message
+            MetricIntervalUpperBound: 5
+            ScalingAdjustment: 1           # add 1 task
+          - MetricIntervalLowerBound: 5     # queue >= 5 messages
+            MetricIntervalUpperBound: 20
+            ScalingAdjustment: 2           # add 2 tasks
+          - MetricIntervalLowerBound: 20    # queue >= 20 messages (burst)
+            ScalingAdjustment: 4           # add 4 tasks
+
+  EcsScaleInPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName:       !Sub "ocr-chat-scale-in-${Environment}"
+      PolicyType:       StepScaling
+      ScalingTargetId:  !Ref EcsScalableTarget
+      StepScalingPolicyConfiguration:
+        AdjustmentType:        ChangeInCapacity
+        MetricAggregationType: Maximum
+        Cooldown: 120          
+        StepAdjustments:
+          - MetricIntervalUpperBound: 0
+            ScalingAdjustment: -1          # Remove 1 task when queue empty
+
+  # CloudWatch Alarm: triggers scale-OUT when messages appear
+  QueueDepthHighAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName:          !Sub "ocr-chat-queue-depth-high-${Environment}"
+      AlarmDescription:   "OCR job queue is growing — scale out ECS"
+      MetricName:         ApproximateNumberOfMessagesVisible
+      Namespace:          AWS/SQS
+      Statistic:          Maximum
+      Period:             60
+      EvaluationPeriods:  1
+      Threshold:          1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Dimensions:
+        - Name:  QueueName
+          Value: !GetAtt JobQueue.QueueName
+      AlarmActions:
+        - !Ref EcsScaleOutPolicy
+
+  # CloudWatch Alarm: triggers scale-IN when queue drains
+  QueueDepthLowAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName:          !Sub "ocr-chat-queue-depth-low-${Environment}"
+      AlarmDescription:   "OCR job queue is empty — scale in ECS"
+      MetricName:         ApproximateNumberOfMessagesVisible
+      Namespace:          AWS/SQS
+      Statistic:          Maximum
+      Period:             60
+      EvaluationPeriods:  3   # 3 consecutive empty checks before scale-in
+      Threshold:          1
+      ComparisonOperator: LessThanThreshold
+      Dimensions:
+        - Name:  QueueName
+          Value: !GetAtt JobQueue.QueueName
+      AlarmActions:
+        - !Ref EcsScaleInPolicy
+
+
+  MathOcrApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name:      !Sub "ocr-chat-api-${Environment}"
+      StageName: !Ref Environment
+      Cors:
+        AllowMethods: "'GET,POST,OPTIONS'"
+        AllowHeaders: "'Content-Type,Authorization,X-Amz-Date'"
+        AllowOrigin:  "'*'"
+      Auth:
+        DefaultAuthorizer: CognitoJwtAuthorizer
+        Authorizers:
+          CognitoJwtAuthorizer:
+            UserPoolArn: !GetAtt CognitoUserPool.Arn
+            AuthorizationScopes:
+              - "openid"
+              - "email"
+        # Allow OPTIONS (preflight) without auth
+        AddDefaultAuthorizerToCorsPreflight: false
+
+
+  ApiHandlerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "ocr-chat-api-handler-${Environment}"
+      CodeUri:      ../lambdas/api_handler/
+      Handler:      handler.lambda_handler
+      Role:         !GetAtt ApiHandlerRole.Arn
+      Description:  "POST /upload (→ S3 + SQS) and GET /solve (← DynamoDB)"
+      Events:
+        UploadEndpoint:
+          Type: Api
+          Properties:
+            RestApiId: !Ref MathOcrApi
+            Path:      /upload
+            Method:    POST
+        SolveEndpoint:
+          Type: Api
+          Properties:
+            RestApiId: !Ref MathOcrApi
+            Path:      /solve
+            Method:    GET
+        HealthEndpoint:
+          Type: Api
+          Properties:
+            RestApiId: !Ref MathOcrApi
+            Path:      /health
+            Method:    GET
+            Auth:
+              Authorizer: NONE   # Public health check
+
+
+
+Conditions:
+  IsProd: !Equals [!Ref Environment, prod]
+
+
+
+Outputs:
+  ApiGatewayUrl:
+    Description: "REST API URL (Cognito-protected)"
+    Value: !Sub "https://${MathOcrApi}.execute-api.${AWS::Region}.amazonaws.com/${Environment}"
+    Export:
+      Name: !Sub "OcrChatApiUrl-${Environment}"
+
+  AlbDnsName:
+    Description: "Application Load Balancer DNS (multi-AZ)"
+    Value: !GetAtt ApplicationLoadBalancer.DNSName
+    Export:
+      Name: !Sub "OcrChatAlbDns-${Environment}"
+
+  CognitoUserPoolId:
+    Description: "Cognito User Pool ID"
+    Value: !Ref CognitoUserPool
+    Export:
+      Name: !Sub "OcrChatUserPoolId-${Environment}"
+
+  CognitoClientId:
+    Description: "Cognito App Client ID (for frontend)"
+    Value: !Ref CognitoUserPoolClient
+    Export:
+      Name: !Sub "OcrChatClientId-${Environment}"
+
+  CognitoHostedUiUrl:
+    Description: "Cognito Hosted UI login URL"
+    Value: !Sub "https://ocr-chat-${Environment}-${AWS::AccountId}.auth.${AWS::Region}.amazoncognito.com/login?client_id=${CognitoUserPoolClient}&response_type=code&scope=email+openid+profile&redirect_uri=${CognitoCallbackUrl}"
+
+  JobQueueUrl:
+    Description: "SQS Job Queue URL"
+    Value: !Ref JobQueue
+
+  EcsClusterName:
+    Description: "ECS Cluster name"
+    Value: !Ref EcsCluster
+
+  InputBucketName:
+    Description: "S3 bucket for image uploads"
+    Value: !Ref InputBucket
+
+  ResultsBucketName:
+    Description: "S3 bucket for OCR results"
+    Value: !Ref ResultsBucket
+
+  JobsTableName:
+    Description: "DynamoDB table"
+    Value: !Ref JobsTable
+
+  VpcId:
+    Description: "VPC ID"
+    Value: !Ref VPC

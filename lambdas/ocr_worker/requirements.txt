@@ -1,0 +1,9 @@
+# OCR Worker Lambda — Python dependencies
+# Note: torch and transformers are large; they are included in the Docker image
+# rather than a Lambda layer to stay within size limits.
+
+boto3>=1.34.0
+Pillow>=10.1.0
+texify>=0.1.0        # Math OCR model (Donut architecture, im2latex-trained)
+torch>=2.1.2         # CPU build used inside Lambda container
+transformers>=4.36.2

@@ -1,0 +1,14 @@
+allowBuilds:
+  esbuild: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - '@cloudflare/kv-asset-handler@0.5.1'
+  - '@cloudflare/workerd-darwin-64@1.20261118.1'
+  - '@cloudflare/workerd-darwin-arm64@1.20261118.1'
+  - '@cloudflare/workerd-linux-64@1.20261118.1'
+  - '@cloudflare/workerd-linux-arm64@1.20261118.1'
+  - '@cloudflare/workerd-windows-64@1.20261118.1'
+  - '@cloudflare/workers-utils@0.55.0'
+  - miniflare@5.20261118.0-beta
+  - workerd@1.20261118.1
+  - wrangler@4.165.0

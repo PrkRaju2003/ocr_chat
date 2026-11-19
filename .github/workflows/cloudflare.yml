@@ -1,0 +1,17 @@
+name: Cloudflare Worker checks
+on:
+  push:
+    paths: ["cloudflare/**", ".github/workflows/cloudflare.yml"]
+  pull_request:
+    paths: ["cloudflare/**", ".github/workflows/cloudflare.yml"]
+permissions:
+  contents: read
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Check JavaScript syntax
+        run: node --check cloudflare/src/index.mjs && node --check cloudflare/public/app.js
+      - name: Test API contracts and independent checks
+        run: node --test cloudflare/tests/*.test.mjs

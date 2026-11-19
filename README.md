@@ -1,3 +1,23 @@
+# Math Lab · Cloudflare Workers AI
+
+[Open the Math Lab website](https://prk-math-solver.prk-math-ocr-worker.workers.dev/)
+
+The new portfolio demo is implemented in [`cloudflare/`](cloudflare/README.md): image transcription, editable OCR, solver/reviewer agent roles, independent polynomial root checks, a responsive website, and rate-limited Worker APIs. It uses Cloudflare-hosted Gemma 4 (26B total / about 4B active parameters), with no AWS resources or local GPU required for this version.
+
+```sh
+cd cloudflare
+pnpm install --frozen-lockfile
+pnpm test
+pnpm exec wrangler login
+pnpm deploy
+```
+
+See [the Cloudflare implementation guide](cloudflare/README.md) for deployment, limits, pricing, API contracts, and verification scope. Live inference must be verified against your own Cloudflare account; automated tests mock the provider and are not OCR accuracy benchmarks.
+
+The original AWS/Texify implementation is preserved below for reference.
+
+---
+
 # OCR Math Solver — AWS Serverless + Multi-AZ
 
 > **Upload a photo of any math equation → Cognito auth → OCR on ECS Fargate → solve it step-by-step with Claude 3 on Amazon Bedrock**

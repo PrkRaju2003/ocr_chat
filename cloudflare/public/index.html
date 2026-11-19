@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f5f7fc" />
+    <meta
+      name="description"
+      content="A math OCR workspace by Raju Pusapati. Read an equation, understand the steps, and check the answer with Cloudflare Workers AI."
+    />
+    <title>Math Lab — See the problem. Understand the solution.</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="vendor/katex.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="vendor/katex.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to workspace</a>
+    <header>
+      <a class="brand" href="/"
+        ><span class="brand-icon">∑</span>math<span>lab.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a
+        ><a
+          href="https://github.com/PrkRaju2003/ocr_chat"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Source code</a
+        ><a
+          class="owner"
+          href="https://raju-pusapati-portfolio.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Built by PRK</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">
+            <span class="cloud-icon">☁</span> POWERED BY CLOUDFLARE WORKERS AI
+          </p>
+          <h1>Every problem has<br />a <em>way through.</em></h1>
+          <p class="subtitle">
+            From a scribble to a solution. Read your equation,<br
+              class="desktop"
+            />
+            follow the steps, and see what checks out.
+          </p>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <span class="art-label">A LITTLE CLARITY GOES A LONG WAY</span>
+          <div class="equation-art">x² − 5x + 6 = 0</div>
+          <div class="hand-line"></div>
+          <div class="roots-art">
+            <span>x = 2</span><span>x = 3</span><b>✓</b>
+          </div>
+          <span class="art-note">let’s work it out.</span>
+        </div>
+      </section>
+      <section
+        id="workspace"
+        class="workspace"
+        aria-label="Math solver workspace"
+      >
+        <div class="workspace-bar">
+          <div>
+            <span class="workspace-icon">✳</span>
+            <h2>Your working space</h2>
+          </div>
+          <span id="connection" class="connection"
+            >Connecting to Workers AI</span
+          >
+        </div>
+        <div class="work-grid">
+          <section class="input-panel" aria-labelledby="input-title">
+            <div class="panel-heading">
+              <span class="section-label">THE PROBLEM</span
+              ><span class="small-tag">IMAGE OR TEXT</span>
+            </div>
+            <h3 id="input-title">Start with what you have.</h3>
+            <label class="dropzone" id="dropzone" for="image"
+              ><input
+                id="image"
+                type="file"
+                accept="image/png,image/jpeg" /><span id="upload-empty"
+                ><span class="upload-icon">⊞</span
+                ><strong>Drop an equation here</strong
+                ><span>or click to choose an image</span
+                ><small>PNG or JPG · up to 1.5 MB</small></span
+              ><img id="preview" alt="Your uploaded equation" hidden
+            /></label>
+            <div class="image-controls" hidden id="image-controls">
+              <span id="filename"></span
+              ><button id="remove-image" class="text-button" type="button">
+                Remove
+              </button>
+            </div>
+            <button
+              id="read-image"
+              class="secondary full"
+              type="button"
+              disabled
+            >
+              Read equation
+            </button>
+            <div class="divider"><span>or type it out</span></div>
+            <label class="field-label" for="equation"
+              >Equation to solve <span>Review the OCR text here</span></label
+            ><textarea
+              id="equation"
+              maxlength="1000"
+              rows="3"
+              placeholder="e.g. x^2 - 5x + 6 = 0"
+              spellcheck="false"
+            >
+x^2 - 5x + 6 = 0</textarea>
+            <p id="ocr-note" class="field-note">
+              Use ^ for powers and * for multiplication.
+            </p>
+            <button id="solve" class="primary full" type="button">
+              Work it out <span>✳</span>
+            </button>
+            <p class="privacy">
+              Your image is sent to Cloudflare only when you click Read
+              equation. This app does not save uploads or solutions.
+            </p>
+            <div class="examples">
+              <span class="section-label">TRY A STARTING POINT</span>
+              <div>
+                <button type="button" data-example="quadratic">Quadratic</button
+                ><button type="button" data-example="linear">Linear</button
+                ><button type="button" data-example="calculus">Calculus</button>
+              </div>
+              <button type="button" id="sample-image" class="text-button">
+                Use a sample equation image
+              </button>
+            </div>
+          </section>
+          <section class="output-panel" aria-labelledby="output-title">
+            <div class="panel-heading">
+              <span class="section-label" id="output-title">THE SOLUTION</span
+              ><button type="button" class="text-button" id="copy" hidden>
+                Copy answer
+              </button>
+            </div>
+            <ol class="pipeline" aria-label="Solution workflow">
+              <li id="stage-read">
+                <span>◎</span>
+                <div>Read<small>Image to equation</small></div>
+              </li>
+              <li id="stage-solve">
+                <span>∑</span>
+                <div>Solve<small>Step by step</small></div>
+              </li>
+              <li id="stage-check">
+                <span>✓</span>
+                <div>Review<small>Check the result</small></div>
+              </li>
+            </ol>
+            <div id="status" role="status" aria-live="polite"></div>
+            <div id="empty-result" class="empty-result">
+              <div class="empty-art" aria-hidden="true">
+                <span>f(x)</span
+                ><svg viewBox="0 0 260 160">
+                  <path
+                    d="M10 130H250M55 10V150"
+                    stroke="currentColor"
+                    opacity=".2"
+                  />
+                  <path
+                    d="M20 25 Q130 240 240 25"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  />
+                  <circle cx="80" cy="103" r="5" />
+                  <circle cx="180" cy="103" r="5" />
+                </svg>
+              </div>
+              <h3>The next step starts here.</h3>
+              <p>
+                Upload a problem or choose an example.<br />Your solution will
+                unfold in this space.
+              </p>
+              <span class="empty-note"
+                >REAL INFERENCE. VISIBLE STEPS. NO CANNED ANSWERS.</span
+              >
+            </div>
+            <div id="result" hidden>
+              <div class="result-top">
+                <span id="problem-type" class="section-label"></span
+                ><span id="timing"></span>
+              </div>
+              <h3>Your equation</h3>
+              <div id="recognized" class="math-block"></div>
+              <ol id="steps" class="steps"></ol>
+              <div class="answer-card">
+                <span class="section-label">THE ANSWER</span>
+                <div id="answer" class="answer-math"></div>
+              </div>
+              <div id="verification" class="verification"></div>
+              <div id="review" class="review"></div>
+              <div id="assumptions" class="assumptions"></div>
+              <p class="result-note">
+                AI can misread symbols or make mistakes. Review your equation
+                and each step. A model review is not a mathematical proof.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section id="how-it-works" class="how">
+        <div>
+          <p class="eyebrow">A SMALL MODEL. A THOUGHTFUL WORKFLOW.</p>
+          <h2>A clear path from<br /><em>input to insight.</em></h2>
+          <p>
+            Three bounded agent roles share one Cloudflare-hosted vision model.
+            You stay in control of the equation.
+          </p>
+          <a
+            href="https://github.com/PrkRaju2003/ocr_chat/tree/main/cloudflare"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Explore the implementation</a
+          >
+        </div>
+        <div class="how-details">
+          <article>
+            <span>◎</span>
+            <div>
+              <h3>Read, then confirm.</h3>
+              <p>
+                The reader transcribes your photo. Edit unclear symbols before
+                solving.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span>∑</span>
+            <div>
+              <h3>Understand the steps.</h3>
+              <p>
+                The solver turns the confirmed equation into a concise,
+                structured explanation.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span>✓</span>
+            <div>
+              <h3>Check what can be checked.</h3>
+              <p>
+                A reviewer looks for errors. A separate calculation checks real
+                roots of linear and quadratic equations.
+              </p>
+            </div>
+          </article>
+          <div class="model-info">
+            <span>GEMMA 4 · 26B A4B</span>
+            <p>
+              About 4B active parameters per token · 26B total.<br />Inference
+              runs on Cloudflare; no local model download.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="/">math<span>lab.</span></a>
+      <p>An engineering project by Rama Krishna Raju Pusapati.</p>
+      <a
+        href="https://github.com/PrkRaju2003/ocr_chat"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+    </footer>
+  </body>
+</html>

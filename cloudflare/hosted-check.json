@@ -25,5 +25,19 @@
     "linear_root": 5,
     "independent_checks": "passed",
     "native_mathml": "rendered successfully"
+  },
+  "cached_image_examples": {
+    "quadratic": "Composite quadratic, roots 8/3 and 1/3",
+    "linear": "Three-variable system, solution (2, 3, -1)",
+    "calculus": "Integration by parts on [0,1], result 1",
+    "inference_per_example_view": 0
+  },
+  "protection": {
+    "shared_daily_estimated_neurons": 7500,
+    "max_concurrent_inference_calls": 2,
+    "global_inference_starts_per_minute": 20,
+    "automatic_tests": 19,
+    "guarded_live_custom_solve": "7x + 3 = 45, root 6, passed",
+    "quota_exhaustion_and_reset": "verified in isolated automated tests, not by exhausting the live account"
   }
 }

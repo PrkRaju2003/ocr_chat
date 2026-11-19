@@ -959,3 +959,43 @@ footer > a:last-child {
     transition: none !important;
   }
 }
+
+.examples .example-images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 14px;
+}
+.examples .example-images button[data-example] {
+  border-radius: 9px;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  background: #fff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.example-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.5;
+  object-fit: contain;
+  border-bottom: 1px solid var(--line);
+}
+.example-images button span {
+  display: block;
+  padding: 10px 9px;
+  font-size: 12px;
+}
+.example-images button[aria-pressed="true"] {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+.example-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 0;
+}

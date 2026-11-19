@@ -1,0 +1,52 @@
+{
+  "equation": "(3x - 2)^2 - 5(3x - 2) - 6 = 0",
+  "solution": {
+    "title": "Quadratic Equation by Substitution",
+    "answer": "x = \\frac{8}{3}, \\frac{1}{3}",
+    "steps": [
+      {
+        "explanation": "Let $u = 3x - 2$ to transform the equation into a standard quadratic form.",
+        "latex": "u^2 - 5u - 6 = 0"
+      },
+      {
+        "explanation": "Factor the quadratic equation $u^2 - 5u - 6 = 0$ into two binomials.",
+        "latex": "(u - 6)(u + 1) = 0"
+      },
+      {
+        "explanation": "Solve for $u$ by setting each factor to zero.",
+        "latex": "u = 6 \\text{ or } u = -1"
+      },
+      {
+        "explanation": "Substitute $3x - 2$ back in for $u$ to solve for $x$.",
+        "latex": "3x - 2 = 6 \\text{ and } 3x - 2 = -1"
+      },
+      {
+        "explanation": "Solve the first linear equation: $3x = 8$.",
+        "latex": "x = \\frac{8}{3}"
+      },
+      {
+        "explanation": "Solve the second linear equation: $3x = 1$.",
+        "latex": "x = \\frac{1}{3}"
+      }
+    ],
+    "real_roots": [2.6666666666666665, 0.3333333333333333],
+    "assumptions": []
+  },
+  "review": {
+    "verdict": "consistent",
+    "note": "The substitution method and subsequent linear equations are solved correctly."
+  },
+  "check": {
+    "status": "passed",
+    "summary": "All real roots match an independent polynomial calculation and satisfy the original equation.",
+    "coefficients": [8, -27, 9]
+  },
+  "model": "@cf/google/gemma-4-26b-a4b-it",
+  "elapsed_ms": 3962,
+  "request_id": "b08db7c9-5632-400b-9cbf-1342d2a9ad8e",
+  "recorded_at": "2026-11-19T00:39:24.988Z",
+  "cache": {
+    "kind": "example",
+    "note": "Previously generated with Workers AI. No live inference used."
+  }
+}

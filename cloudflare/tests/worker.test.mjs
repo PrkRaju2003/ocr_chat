@@ -19,6 +19,13 @@ function env(
 ) {
   let calls = [];
   return {
+    INFERENCE_BUDGET: {
+      idFromName: (n) => n,
+      get: () => ({
+        fetch: async () =>
+          Response.json({ id: "test-reservation", settled: true }),
+      }),
+    },
     REQUEST_LIMITER: allowed,
     TOTAL_LIMITER: allowed,
     AI: {
@@ -37,7 +44,7 @@ function env(
     calls,
   };
 }
-function solve(equation = "x^2-5x+6=0", extra = {}) {
+function solve(equation = "x^2-5*x+6=0", extra = {}) {
   return new Request(base + "/api/solve", {
     method: "POST",
     headers: { "Content-Type": "application/json", Origin: base },
@@ -158,7 +165,7 @@ test("sample image OCR uses vision content and returns transcription for confirm
   const form = new FormData();
   form.append(
     "image",
-    new Blob([bytes], { type: "image/png" }),
+    new Blob([bytes, new Uint8Array([0])], { type: "image/png" }),
     "quadratic.png",
   );
   const r = await worker.fetch(

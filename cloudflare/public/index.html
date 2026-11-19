@@ -116,8 +116,7 @@
               rows="3"
               placeholder="e.g. x^2 - 5x + 6 = 0"
               spellcheck="false"
-            >
-x^2 - 5x + 6 = 0</textarea>
+            ></textarea>
             <p id="ocr-note" class="field-note">
               Use ^ for powers and * for multiplication.
             </p>
@@ -126,18 +125,45 @@ x^2 - 5x + 6 = 0</textarea>
             </button>
             <p class="privacy">
               Your image is sent to Cloudflare only when you click Read
-              equation. This app does not save uploads or solutions.
+              equation. This app does not save your uploads or live solutions.
+              Live use has a daily safety budget; the example images use
+              recorded results.
             </p>
             <div class="examples">
               <span class="section-label">TRY A STARTING POINT</span>
-              <div>
-                <button type="button" data-example="quadratic">Quadratic</button
-                ><button type="button" data-example="linear">Linear</button
-                ><button type="button" data-example="calculus">Calculus</button>
+              <div class="example-images">
+                <button type="button" data-example="quadratic">
+                  <img
+                    src="/samples/quadratic.png"
+                    alt="Composite quadratic: 3x minus 2 squared minus 5 times 3x minus 2 minus 6 equals zero"
+                    width="1100"
+                    height="500"
+                    loading="lazy"
+                  /><span>Composite quadratic</span>
+                </button>
+                <button type="button" data-example="linear">
+                  <img
+                    src="/samples/linear.png"
+                    alt="Three equations in x, y, and z"
+                    width="1100"
+                    height="500"
+                    loading="lazy"
+                  /><span>Linear system</span>
+                </button>
+                <button type="button" data-example="calculus">
+                  <img
+                    src="/samples/calculus.png"
+                    alt="Definite integral of x times e to the x from zero to one"
+                    width="1100"
+                    height="500"
+                    loading="lazy"
+                  /><span>Integration by parts</span>
+                </button>
               </div>
-              <button type="button" id="sample-image" class="text-button">
-                Use a sample equation image
-              </button>
+              <p class="example-note">
+                Recorded AI examples · no live inference used. Custom problems
+                use the protected live budget.
+              </p>
             </div>
           </section>
           <section class="output-panel" aria-labelledby="output-title">
@@ -187,7 +213,7 @@ x^2 - 5x + 6 = 0</textarea>
                 unfold in this space.
               </p>
               <span class="empty-note"
-                >REAL INFERENCE. VISIBLE STEPS. NO CANNED ANSWERS.</span
+                >LIVE UPLOADS. CACHED EXAMPLES. VISIBLE CHECKS.</span
               >
             </div>
             <div id="result" hidden>

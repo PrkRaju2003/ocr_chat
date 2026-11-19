@@ -5,11 +5,7 @@ let selectedFile = null,
   busy = false,
   lastAnswer = "",
   cooldownUntil = 0;
-const examples = {
-  quadratic: "x^2 - 5x + 6 = 0",
-  linear: "3x + 7 = 22",
-  calculus: "Find the derivative of f(x) = x^3 + 2x.",
-};
+let selectedExample = null;
 function status(message, error = false) {
   $("#status").textContent = message;
   $("#status").classList.toggle("error", error);
@@ -24,7 +20,6 @@ function lock(value) {
   $("#equation").disabled = value;
   $("#image").disabled = value;
   $("#remove-image").disabled = value;
-  $("#sample-image").disabled = value;
   document
     .querySelectorAll("[data-example]")
     .forEach((b) => (b.disabled = value));
@@ -81,8 +76,8 @@ function math(element, latex) {
     }
   } else element.textContent = latex;
 }
-async function choose(file) {
-  if (busy) return;
+async function choose(file, owned = false) {
+  if (busy && !owned) return;
   if (!file || !["image/png", "image/jpeg"].includes(file.type))
     throw Error("Choose a PNG or JPEG image.");
   if (file.size > 1572864)
@@ -95,6 +90,14 @@ async function choose(file) {
   if (previewUrl) URL.revokeObjectURL(previewUrl);
   previewUrl = URL.createObjectURL(file);
   selectedFile = file;
+  selectedExample = null;
+  $("#equation").value = "";
+  $("#result").hidden = true;
+  $("#empty-result").hidden = false;
+  $("#copy").hidden = true;
+  document
+    .querySelectorAll("[data-example]")
+    .forEach((b) => b.setAttribute("aria-pressed", "false"));
   $("#preview").src = previewUrl;
   $("#preview").hidden = false;
   $("#upload-empty").hidden = true;
@@ -134,17 +137,14 @@ for (const name of ["dragleave", "drop"])
 $("#dropzone").addEventListener("drop", (e) =>
   choose(e.dataTransfer.files[0]).catch((e) => status(e.message, true)),
 );
-$("#sample-image").addEventListener("click", async () => {
-  try {
-    const response = await fetch("/samples/quadratic.png");
-    const blob = await response.blob();
-    await choose(new File([blob], "quadratic.png", { type: "image/png" }));
-  } catch (e) {
-    status(e.message, true);
-  }
-});
 $("#read-image").addEventListener("click", async () => {
   if (busy || !selectedFile) return;
+  if (selectedExample) {
+    $("#equation").value = selectedExample.equation;
+    stage("read", "done");
+    status("Cached image example recognized. No live AI quota used.");
+    return;
+  }
   lock(true);
   stage("read", "active");
   stage("solve", "");
@@ -159,7 +159,11 @@ $("#read-image").addEventListener("click", async () => {
       ? "Please check: " + data.uncertainties.join("; ")
       : "Transcribed. Check the symbols, then click Work it out.";
     stage("read", "done");
-    status("Equation transcribed. Review and edit it before solving.");
+    status(
+      data.cache
+        ? "Cached image example recognized. No live AI quota used."
+        : "Equation transcribed. Review and edit it before solving.",
+    );
     $("#equation").focus();
   } catch (e) {
     stage("read", "");
@@ -173,6 +177,13 @@ $("#solve").addEventListener("click", async () => {
   const equation = $("#equation").value.trim();
   if (!equation) {
     status("Enter or read an equation first.", true);
+    return;
+  }
+  if (selectedExample && equation === selectedExample.equation) {
+    render({ ...selectedExample, elapsed_ms: 0 });
+    stage("solve", "done");
+    stage("check", "done");
+    status("Recorded AI example · no live inference used.");
     return;
   }
   lock(true);
@@ -191,7 +202,11 @@ $("#solve").addEventListener("click", async () => {
     render(data);
     stage("solve", "done");
     stage("check", data.review.verdict === "unavailable" ? "" : "done");
-    status("Solution ready. Review the steps and the check below.");
+    status(
+      data.cache
+        ? "Recorded AI example · no live inference used."
+        : "Solution ready. Review the steps and the check below.",
+    );
   } catch (e) {
     stage("solve", "");
     stage("check", "");
@@ -205,8 +220,9 @@ function render(data) {
   $("#result").hidden = false;
   $("#copy").hidden = false;
   $("#problem-type").textContent = data.solution.title;
-  $("#timing").textContent =
-    (data.elapsed_ms / 1000).toFixed(1) + "s · Workers AI";
+  $("#timing").textContent = data.cache
+    ? "Cached example · no live inference"
+    : (data.elapsed_ms / 1000).toFixed(1) + "s · Workers AI";
   $("#recognized").textContent = data.equation;
   $("#steps").replaceChildren();
   for (const step of data.solution.steps) {
@@ -247,13 +263,36 @@ function render(data) {
     : "";
 }
 for (const button of document.querySelectorAll("[data-example]"))
-  button.addEventListener("click", () => {
+  button.addEventListener("click", async () => {
     if (busy) return;
-    $("#equation").value = examples[button.dataset.example];
-    $("#ocr-note").textContent =
-      "Typed example · sends a real request to Workers AI.";
-    stage("read", "");
-    status("Example ready. Click Work it out.");
+    lock(true);
+    try {
+      const id = button.dataset.example;
+      const response = await fetch("/api/examples/" + id);
+      if (!response.ok) throw Error("Could not load this example.");
+      const item = await response.json();
+      const image = await fetch(item.image);
+      if (!image.ok) throw Error("Could not load the example image.");
+      await choose(
+        new File([await image.blob()], id + ".png", { type: "image/png" }),
+        true,
+      );
+      selectedExample = item;
+      $("#equation").value = item.equation;
+      $("#ocr-note").textContent =
+        "Recorded image example. Edit the equation to try live inference.";
+      stage("read", "done");
+      stage("solve", "");
+      stage("check", "");
+      button.setAttribute("aria-pressed", "true");
+      status(
+        "Image example ready. Click Work it out; no live AI quota will be used.",
+      );
+    } catch (e) {
+      status(e.message, true);
+    } finally {
+      lock(false);
+    }
   });
 $("#copy").addEventListener("click", async () => {
   try {

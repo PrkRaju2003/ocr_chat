@@ -1,0 +1,47 @@
+{
+  "equation": "Evaluate the definite integral from 0 to 1 of x * exp(x) dx, using integration by parts.",
+  "solution": {
+    "title": "Definite Integral using Integration by Parts",
+    "answer": "1",
+    "steps": [
+      {
+        "explanation": "Identify parts for integration by parts: let $u = x$ and $dv = e^x dx$. Then $du = dx$ and $v = e^x$.",
+        "latex": "\\int x e^x \\, dx = x e^x - \\int e^x \\, dx"
+      },
+      {
+        "explanation": "Evaluate the remaining integral of $e^x$.",
+        "latex": "\\int x e^x \\, dx = x e^x - e^x + C"
+      },
+      {
+        "explanation": "Apply the fundamental theorem of calculus with limits from 0 to 1.",
+        "latex": "[x e^x - e^x]_0^1"
+      },
+      {
+        "explanation": "Substitute the upper limit (1) and the lower limit (0) into the antiderivative.",
+        "latex": "(1e^1 - e^1) - (0e^0 - e^0)"
+      },
+      {
+        "explanation": "Simplify the expression.",
+        "latex": "(e - e) - (0 - 1) = 0 - (-1) = 1"
+      }
+    ],
+    "real_roots": [],
+    "assumptions": ["The function is continuous on [0, 1]"]
+  },
+  "review": {
+    "verdict": "consistent",
+    "note": "The integration by parts and the application of the fundamental theorem of calculus are mathematically correct."
+  },
+  "check": {
+    "status": "not_supported",
+    "summary": "Independent checking supports real linear and quadratic equations in x. This solution has not been independently verified."
+  },
+  "model": "@cf/google/gemma-4-26b-a4b-it",
+  "elapsed_ms": 7956,
+  "request_id": "16ad58ef-808a-401e-af32-138d31348882",
+  "recorded_at": "2026-11-19T00:39:42.941Z",
+  "cache": {
+    "kind": "example",
+    "note": "Previously generated with Workers AI. No live inference used."
+  }
+}

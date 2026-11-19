@@ -2,7 +2,7 @@
 
 [Open the Math Lab website](https://prk-math-solver.prk-math-ocr-worker.workers.dev/)
 
-The new portfolio demo is implemented in [`cloudflare/`](cloudflare/README.md): image transcription, editable OCR, solver/reviewer agent roles, independent polynomial root checks, a responsive website, advanced cached image examples, and Worker APIs protected by rate limits and a shared daily inference budget. It uses Cloudflare-hosted Gemma 4 (26B total / about 4B active parameters), with no AWS resources or local GPU required for this version.
+The new portfolio demo is implemented in [`cloudflare/`](cloudflare/README.md): image transcription, editable OCR, solver/reviewer agent roles, independent polynomial root checks, a responsive website, advanced image examples with live inference, and Worker APIs protected by rate limits and a shared daily inference budget. It uses Cloudflare-hosted Gemma 4 (26B total / about 4B active parameters), with no AWS resources or local GPU required for this version.
 
 ```sh
 cd cloudflare

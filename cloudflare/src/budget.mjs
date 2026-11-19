@@ -70,15 +70,13 @@ export class InferenceBudget {
       let error, retry_after;
       if (state.spent + RESERVE_NEURONS > DAILY_NEURONS) {
         error =
-          "The daily live AI budget is resting. Try the example images, or return after 00:00 UTC.";
+          "The daily live AI budget is resting. Please return after 00:00 UTC.";
         retry_after = Math.ceil(((day + 1) * 86400000 - now) / 1000);
       } else if (state.calls >= CALLS_PER_MINUTE) {
-        error =
-          "Live inference is busy. Try an example image or wait a minute.";
+        error = "Live inference is busy. Please wait a minute.";
         retry_after = 60;
       } else if (Object.keys(state.pending).length >= MAX_IN_FLIGHT) {
-        error =
-          "Two AI tasks are already running. Try an example or wait a moment.";
+        error = "Two AI tasks are already running. Please wait a moment.";
         retry_after = 15;
       }
       if (error) {
@@ -101,7 +99,7 @@ export class InferenceBudget {
 export async function budgetCall(env, body) {
   if (!env.INFERENCE_BUDGET)
     throw Object.assign(
-      Error("Live AI protection is unavailable. Example images still work."),
+      Error("Live AI protection is unavailable. Please try again later."),
       { status: 503 },
     );
   const stub = env.INFERENCE_BUDGET.get(

@@ -26,18 +26,18 @@
     "independent_checks": "passed",
     "native_mathml": "rendered successfully"
   },
-  "cached_image_examples": {
-    "quadratic": "Composite quadratic, roots 8/3 and 1/3",
-    "linear": "Three-variable system, solution (2, 3, -1)",
-    "calculus": "Integration by parts on [0,1], result 1",
-    "inference_per_example_view": 0
-  },
   "protection": {
     "shared_daily_estimated_neurons": 7500,
     "max_concurrent_inference_calls": 2,
     "global_inference_starts_per_minute": 20,
-    "automatic_tests": 19,
+    "automatic_tests": 20,
     "guarded_live_custom_solve": "7x + 3 = 45, root 6, passed",
     "quota_exhaustion_and_reset": "verified in isolated automated tests, not by exhausting the live account"
+  },
+  "example_mode": "live inference only; input images and metadata are the only bundled example content",
+  "live_only_examples": {
+    "metadata": "title and image URL only",
+    "bundled_solutions": false,
+    "browser_verified": "Composite quadratic image loaded with blank equation; live OCR, solver and reviewer ran; roots 8/3 and 1/3 passed independent check"
   }
 }

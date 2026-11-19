@@ -92,28 +92,15 @@ test("global minute cap cannot be bypassed by fast settlement", async () => {
   assert.equal(r.status, 429);
   assert.match(r.error, /minute/);
 });
-test("cached examples need no AI or budget binding", async () => {
-  const env = {
-    REQUEST_LIMITER: { limit: async () => ({ success: true }) },
-    TOTAL_LIMITER: { limit: async () => ({ success: true }) },
-  };
+test("example metadata contains images only, never saved AI outputs", async () => {
   for (const id of ["linear", "quadratic", "calculus"]) {
     const r = await worker.fetch(
       new Request("https://example.com/api/examples/" + id),
-      env,
+      {},
     );
     assert.equal(r.status, 200);
-    const e = await r.json();
-    assert.equal(e.cache.kind, "example");
-    const solved = await worker.fetch(
-      new Request("https://example.com/api/solve", {
-        method: "POST",
-        body: JSON.stringify({ equation: e.equation }),
-      }),
-      env,
-    );
-    assert.equal(solved.status, 200);
-    assert.equal((await solved.json()).cache.kind, "example");
+    const data = await r.json();
+    assert.deepEqual(Object.keys(data).sort(), ["image", "title"]);
   }
 });
 test("uncached problems fail closed when the budget binding is missing", async () => {
@@ -138,32 +125,73 @@ test("uncached problems fail closed when the budget binding is missing", async (
   assert.equal(invoked, false);
 });
 
-test("advanced images match their recorded equations and reference answers", async () => {
+test("every built-in image requires the live AI budget; none bypass it", async () => {
   const { readFile } = await import("node:fs/promises");
-  const { examples, cachedImage } = await import("../src/examples.mjs");
-  const { checkRoots } = await import("../src/math.mjs");
+  let invoked = false;
+  const env = {
+    REQUEST_LIMITER: { limit: async () => ({ success: true }) },
+    TOTAL_LIMITER: { limit: async () => ({ success: true }) },
+    AI: {
+      run: async () => {
+        invoked = true;
+      },
+    },
+  };
   for (const id of ["quadratic", "linear", "calculus"]) {
     const bytes = await readFile(
       new URL("../public/samples/" + id + ".png", import.meta.url),
     );
-    const result = await cachedImage(bytes);
-    assert.equal(result.equation, examples[id].equation);
+    const form = new FormData();
+    form.append("image", new Blob([bytes], { type: "image/png" }), id + ".png");
+    const r = await worker.fetch(
+      new Request("https://example.com/api/ocr", {
+        method: "POST",
+        body: form,
+      }),
+      env,
+    );
+    assert.equal(r.status, 503);
   }
-  assert.equal(
-    checkRoots(
-      examples.quadratic.equation,
-      examples.quadratic.solution.real_roots,
-    ).status,
-    "passed",
+  assert.equal(invoked, false);
+});
+test("a previously recorded example now calls the solver and reviewer live", async () => {
+  let calls = 0;
+  const result = {
+    title: "Composite quadratic",
+    steps: [
+      { explanation: "Substitute t=3x-2 and factor.", latex: "(t-6)(t+1)=0" },
+    ],
+    answer: "x=8/3,1/3",
+    real_roots: [8 / 3, 1 / 3],
+    assumptions: [],
+  };
+  const env = {
+    REQUEST_LIMITER: { limit: async () => ({ success: true }) },
+    TOTAL_LIMITER: { limit: async () => ({ success: true }) },
+    INFERENCE_BUDGET: {
+      idFromName: (n) => n,
+      get: () => ({ fetch: async () => Response.json({ id: "test-only" }) }),
+    },
+    AI: {
+      run: async () => ({
+        response: JSON.stringify(
+          ++calls === 1
+            ? result
+            : { verdict: "consistent", note: "Checked by review." },
+        ),
+      }),
+    },
+  };
+  const r = await worker.fetch(
+    new Request("https://example.com/api/solve", {
+      method: "POST",
+      body: JSON.stringify({ equation: "(3x - 2)^2 - 5(3x - 2) - 6 = 0" }),
+    }),
+    env,
   );
-  assert.match(
-    examples.linear.solution.answer.replace(/\s/g, ""),
-    /x=2.*y=3.*z=-1/,
-  );
-  assert.equal(2 * 2 + 3 - -1, 8);
-  assert.equal(-3 * 2 - 3 + 2 * -1, -11);
-  assert.equal(-2 * 2 + 3 + 2 * -1, -3);
-  assert.equal(examples.calculus.solution.answer, "1");
-  // F(x)=e^x(x-1), so F(1)-F(0)=1; the runtime does not claim general calculus verification.
-  assert.equal(Math.exp(1) * (1 - 1) - Math.exp(0) * (0 - 1), 1);
+  assert.equal(r.status, 200);
+  const data = await r.json();
+  assert.equal(calls, 2);
+  assert.equal(data.cache, undefined);
+  assert.equal(data.check.status, "passed");
 });

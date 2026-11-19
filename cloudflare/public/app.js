@@ -66,15 +66,19 @@ async function call(path, options) {
 function math(element, latex) {
   element.replaceChildren();
   if (window.katex) {
-    katex.render(latex, element, {
-      throwOnError: false,
-      trust: false,
-      strict: "ignore",
-      maxExpand: 200,
-      maxSize: 12,
-      output: "htmlAndMathml",
-      displayMode: true,
-    });
+    try {
+      katex.render(latex, element, {
+        throwOnError: true,
+        trust: false,
+        strict: "ignore",
+        maxExpand: 200,
+        maxSize: 12,
+        output: "mathml",
+        displayMode: true,
+      });
+    } catch {
+      element.textContent = latex;
+    }
   } else element.textContent = latex;
 }
 async function choose(file) {

@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7.0.1
+      - name: Install locked test dependencies
+        working-directory: cloudflare
+        run: |
+          npm install --global pnpm@11.25.0
+          pnpm install --frozen-lockfile --ignore-scripts
       - name: Check JavaScript syntax
         run: node --check cloudflare/src/index.mjs && node --check cloudflare/public/app.js
       - name: Test API contracts and independent checks

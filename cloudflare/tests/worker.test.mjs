@@ -174,3 +174,22 @@ test("sample image OCR uses vision content and returns transcription for confirm
     ),
   );
 });
+
+test("math output uses native MathML without inline styles or executable markup", async () => {
+  const katex = (await import("katex")).default;
+  for (const latex of [
+    "(x-2)(x-3)=0",
+    "x=2,3",
+    "\\frac{d}{dx}x^3=3x^2",
+    "\\int x^2 dx=\\frac{x^3}{3}+C",
+  ]) {
+    const html = katex.renderToString(latex, {
+      output: "mathml",
+      trust: false,
+      throwOnError: true,
+    });
+    assert.ok(html.includes("<math"));
+    assert.ok(!html.includes("style="));
+    assert.ok(!/<script|onerror=|onclick=/.test(html));
+  }
+});

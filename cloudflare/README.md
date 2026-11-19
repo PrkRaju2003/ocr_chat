@@ -46,7 +46,7 @@ Inputs are bounded before model calls. Two Cloudflare rate-limit bindings allow 
 
 Uploads and solutions are not persisted by this application. They are sent to Cloudflare for inference. Worker observability is disabled to avoid logging prompts and images. This does not assert that Cloudflare's infrastructure has no request metadata. Authentication is unnecessary for the public demo. For a wider launch, add Turnstile and a strict cross-location quota/spend policy.
 
-All model content is rendered through text nodes or local KaTeX with `trust:false` and bounded expansion. Scripts/fonts are local, with a restrictive CSP. Browser tokens and service API keys are not required. Equation text from images is data, never authorization or instructions.
+All model content is rendered through text nodes or local KaTeX with `trust:false` and bounded expansion. Scripts/fonts are local, with a restrictive CSP. KaTeX produces native MathML, which renders without inline styles. Static-asset headers are declared in `public/_headers`, since Cloudflare can serve assets without invoking the Worker. Browser tokens and service API keys are not required. Equation text from images is data, never authorization or instructions.
 
 ## Validation
 
@@ -61,3 +61,7 @@ All model content is rendered through text nodes or local KaTeX with `trust:fals
 - [Workers AI pricing](https://developers.cloudflare.com/workers-ai/platform/pricing/)
 
 KaTeX 0.16.22 is bundled under its MIT license in `public/vendor/KATEX-LICENSE.txt`.
+
+## Hosted verification
+
+`hosted-check.json` records successful live printed-image OCR, quadratic/linear solutions, independent root checks, static CSP and 429/Retry-After throttling. Reproduce contract checks with `node scripts/smoke.mjs <url> --rate-limit`; this script does not invoke inference. Live browser checks are a small functional smoke test, not a handwriting accuracy benchmark.

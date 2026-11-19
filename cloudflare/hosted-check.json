@@ -1,0 +1,29 @@
+{
+  "url": "https://prk-math-solver.prk-math-ocr-worker.workers.dev",
+  "health": "passed",
+  "website": "passed",
+  "model": "@cf/google/gemma-4-26b-a4b-it",
+  "rate_limit": "passed",
+  "inference": "real Workers AI calls verified via the browser",
+  "invalid_input_statuses": [
+    422,
+    422,
+    422,
+    422,
+    422,
+    422,
+    429
+  ],
+  "verified_at": "2026-11-18T19:15:59.852169-05:00",
+  "manual_browser_checks": {
+    "printed_quadratic_ocr": "x^2 - 5x + 6 = 0",
+    "quadratic_roots": [
+      2,
+      3
+    ],
+    "linear_equation": "3x + 7 = 22",
+    "linear_root": 5,
+    "independent_checks": "passed",
+    "native_mathml": "rendered successfully"
+  }
+}
